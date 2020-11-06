@@ -111,33 +111,38 @@ start:复制起始位置，默认为0，可为负数end:复制结束位置，默
   
 总结一下。不会改变原数组的方法： 
 
-map\(\)  
-filter\(\)  
-every\(\)  
-some\(\)  
-reduce\(\)  
-concat\(\)  
-Array.from\(arraylike\)  
-Array.of\(\)  
-find\(\(item,index,arr\) =&gt; xxx\)  
-findIndex\(\)  
-entries\(\)、keys\(\)、values\(\)  
-includes\(item,index\)  
-flat\(\)  
-flatMap\(\)  
-slice\(\)  
-  
-会改变原数组的方法：  
-push\(\)  
-pop\(\)  
-shift\(\)  
-unshift\(\)  
-splice\(index,num,item\)  
-copyWithin\(target, start = 0, end = this.length\)  
-fill\(item,start,end\)  
-sort\(\)  
-reverse\(\)  
-  
+```javascript
+map()
+filter()
+every()
+some()
+reduce()
+concat()
+Array.from(arraylike)
+Array.of()
+find((item,index,arr) => xxx)
+findIndex()
+entries()、keys()、values()
+includes(item,index)
+flat()
+flatMap()
+slice()
+```
+
+会改变原数组的方法：
+
+```javascript
+push()
+pop()
+shift()
+unshift()
+splice(index,num,item)
+copyWithin(target, start = 0, end = this.length)
+fill(item,start,end)
+sort()
+reverse()
+```
+
 其中forEach\(\(item,index,arr\) =&gt;{}\)这样的函数比较特殊，在参数中可以拿到arr原数组对象，从而可以达到改变原数组的目的，但是不常见。  
   
   
