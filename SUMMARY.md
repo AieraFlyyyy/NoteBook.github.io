@@ -13,4 +13,5 @@
 * [浏览器缓存策略](interview-question/liu-lan-qi-huan-cun-ce-lve.md)
 * [位运算](interview-question/wei-yun-suan.md)
 * [Event Loop](interview-question/event-loop.md)
+* [关于react的setState](interview-question/guan-yu-react-de-setstate.md)
 
