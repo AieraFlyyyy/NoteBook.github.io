@@ -14,4 +14,5 @@
 * [位运算](interview-question/wei-yun-suan.md)
 * [Event Loop](interview-question/event-loop.md)
 * [关于react的setState](interview-question/guan-yu-react-de-setstate.md)
+* [防抖节流函数](interview-question/fang-dou-jie-liu-han-shu.md)
 
