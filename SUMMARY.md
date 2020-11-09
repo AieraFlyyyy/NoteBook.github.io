@@ -15,4 +15,5 @@
 * [Event Loop](interview-question/event-loop.md)
 * [关于react的setState](interview-question/guan-yu-react-de-setstate.md)
 * [防抖节流函数](interview-question/fang-dou-jie-liu-han-shu.md)
+* [跨域解决方案](interview-question/kua-yu-jie-jue-fang-an.md)
 
