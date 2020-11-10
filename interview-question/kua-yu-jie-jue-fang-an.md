@@ -27,7 +27,7 @@ cors是目前主流的跨域解决方案，跨域资源共享\(CORS\) 是一种�
 nginx是一款极其强大的web服务器，其优点就是轻量级、启动快、高并发。现在的新项目中nginx几乎是首选，我们用node或者java开发的服务通常都需要经过nginx的反向代理。  
 
 
-其它跨域方案
+### 其它跨域方案
 
 1. HTML5 XMLHttpRequest 有一个API，postMessage\(\)方法允许来自不同源的脚本采用异步方式进行有限的通信，可以实现跨文本档、多窗口、跨域消息传递。
 2. WebSocket 是一种双向通信协议，在建立连接之后，WebSocket 的 server 与 client 都能主动向对方发送或接收数据，连接建立好了之后 client 与 server 之间的双向通信就与 HTTP 无关了，因此可以跨域。
