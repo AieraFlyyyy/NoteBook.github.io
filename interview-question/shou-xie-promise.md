@@ -426,5 +426,76 @@ const resolvePromise = (promise2, x, resolve, reject) => {
 
 现在我们可以来实现promise的其他方法了：
 
+1.finally
+
+```javascript
+finally = (callback) => {
+  return this.then(value => {
+    return MyPromise.resolve(callback()).then(() => value)
+  }, reason => {
+    return MyPromise.resolve(callback()).then(() => {
+      throw reason
+    })
+  })
+}
+```
+
+2. all
+
+```javascript
+all = (array) =>{
+  let result = [];
+  let index = 0;
+
+  return new MyPromise((resolve, reject) => {
+    function addData(key, value) {
+      result[key] = value;
+      index++;
+
+      // 如果current是一个值，则等到所有array中的方法执行完毕后，再resolve()
+      if (index == array.length) {
+        resolve(result)
+      }
+    }
+
+    // 循环执行array中的方法
+    for (let i = 0; i < array.length; i++) {
+      const current = array[i];
+
+      // 执行之前也是判断current对象，是否是Promise
+      if (current instanceof MyPromise) {
+        // 是则then，继续传递
+        current.then(value => {
+          addData(i, value);
+        }, err => {
+          // 有错误就reject
+          reject(err)
+        })
+      } else {
+        addData(i, array[i])
+      }
+    }
+  })
+}
+```
+
+3. race
+
+```javascript
+race = (promises) =>{
+  return new Promise((resolve, reject) => {
+    // 一起执行就是for循环
+    for (let i = 0; i < promises.length; i++) {
+      let val = promises[i];
+      if (val && typeof val.then === 'function') {
+        val.then(resolve, reject);
+      } else { // 普通值
+        resolve(val)
+      }
+    }
+  });
+}
+```
+
 
 
