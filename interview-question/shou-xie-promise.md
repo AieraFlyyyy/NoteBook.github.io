@@ -2,7 +2,7 @@
 
 ## 开门见山
 
-#### 根据Promise的几个核心点：
+#### 根据Promise的几个特点：
 
 ```javascript
 Promise 核心实现 - 状态、then
