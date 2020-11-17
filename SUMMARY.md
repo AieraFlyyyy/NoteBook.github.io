@@ -18,3 +18,7 @@
 * [手写实现new](interview-question/shou-xie-shi-xian-new.md)
 * [手写Promise](interview-question/shou-xie-promise.md)
 
+## 算法题
+
+* [移掉K位数字](suan-fa-ti/yi-diaokwei-shu-zi.md)
+

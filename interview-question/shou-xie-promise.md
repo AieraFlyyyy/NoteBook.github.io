@@ -7,19 +7,19 @@
 ```javascript
 Promise 核心实现 - 状态、then
 
-Promise.resolve
+Promise.resolve、reject
 
 Promise 异步实现
 
-then 方法多次调用 
-
-链式调用实现
+then 方法多次调用：链式调用实现
 
 promise.prototype.all
 
 promise.prototype.finally
 
 promise.prototype.catch
+
+...
 ```
 
 #### 全文我们分三个步骤来推导：一、满足基本逻辑；二、满足链式调用；三、其他
@@ -290,7 +290,7 @@ then = (onFulfilled,onRejected) =>{
 }
 
 const resolvePromise = (promise2, x, resolve, reject) => {
-  // Promise2如果等于x，则直接报错，防止循环检索
+  // 这里可以理解为： Promise2如果等于x，则直接报错，防止循环检索
   if (promise2 === x) {
     return reject(new TypeError('Chaining cycle detected form promise #<Promise>'))
   }
@@ -430,6 +430,7 @@ const resolvePromise = (promise2, x, resolve, reject) => {
 
 ```javascript
 finally = (callback) => {
+  // 其实就是单独执行一遍then方法 
   return this.then(value => {
     return MyPromise.resolve(callback()).then(() => value)
   }, reason => {
