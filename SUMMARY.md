@@ -17,6 +17,7 @@
 * [跨域解决方案](interview-question/kua-yu-jie-jue-fang-an.md)
 * [手写实现new](interview-question/shou-xie-shi-xian-new.md)
 * [手写Promise](interview-question/shou-xie-promise.md)
+* [手写Intenceof](interview-question/shou-xie-intenceof.md)
 
 ## 算法题
 
