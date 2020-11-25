@@ -37,47 +37,12 @@ res = 'acfggfca';
 
 
 
-### 两种解法
+### 解法
 
-**1. 普通思路：**  
-字符串比大小的意思是比较ASCII码的大小。  
-先把`s` 由字符串转成数组，然后遍历数组把所有字符串转成ASCII码。  
-然后再循环遍历，先找小的数，再找大的数。
-
-```javascript
-var sortString = function(s) {
-  s = s.split('').map(v => v.codePointAt())
-  var res = []
-  while(s.length) {
-    let min = -Infinity
-    let max = Infinity
-    while(true) {
-      min = Math.min(...s.filter(v => v > min))
-      if(min === Infinity) {
-        break;
-      }
-      res.push(min)
-      s.splice(s.indexOf(min), 1)
-    }
-    while(true) {
-      max = Math.max(...s.filter(v => v < max))
-      if(max === -Infinity) {
-        break;
-      }
-      res.push(max)
-      s.splice(s.indexOf(max), 1)
-    }
-  }
-  return res.map(v => String.fromCharCode(v)).join('')
-};
-```
-
-这种方法会稍微慢一点，接下来介绍一个更快的方法
-
-**2.优化方法**  
-使用hash优化速度，建一个hash对象，长度为26（26个字母长度）  
-接着遍历整个hash对象，根据 a-z  --&gt;  hash\[0-25\]  --&gt;  hash\[\(97-122\) - 97\]的对应顺序，设置字符串出现次数 --&gt; hash\[s.charCodeAt\(i\) - 97\]++  
-处理之后，i越小hash\[i\]越小，所以从**最小值**挑选则let i = 0; i++ ，从最大值挑选则let i = 25; i--   
+1.建一个hash对象，使用hash记录每个字符串出现次数，长度为26（26个字母长度）  
+2.接着遍历整个hash对象，根据 a-z  --&gt;  hash\[0-25\]  --&gt;  hash\[\(97-122\) - 97\]的对应顺序，设置字符串出现次数 --&gt; hash\[s.charCodeAt\(i\) - 97\]++  
+3.处理之后，i越小hash\[i\]越小，所以从**最小值**挑选则let i = 0; i++ ，从最大值挑选则let i = 25; i--   
+  
 过程说明：
 
 ```javascript
