@@ -18,7 +18,7 @@ js在诞生之初，就是一个**单线程**的**脚本语言**。
 举个例子，一道经典面试题：
 
 ```javascript
-setTimeout(() => console.log(4))
+setTimeout(_ => console.log(4))
 
 new Promise(resolve => {
   resolve()
