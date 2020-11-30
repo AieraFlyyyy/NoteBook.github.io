@@ -18,7 +18,7 @@ js在诞生之初，就是一个**单线程**的**脚本语言**。
 举个例子，一道经典面试题：
 
 ```javascript
-setTimeout(_ => console.log(4))
+setTimeout(() => console.log(4))
 
 new Promise(resolve => {
   resolve()
@@ -30,8 +30,8 @@ new Promise(resolve => {
 console.log(2)
 ```
 
-`setTimeout`就是作为宏任务来存在的，而`Promise.then`则是具有代表性的微任务，上述代码的执行顺序就是按照序号来输出的。  
-所以上述代码首先执行Promise中的**1**，然后遇到`Promise.then`是微任务，所以会先挂起，先执行最外部的**2**，本轮宏任务到此执行完毕，然后开始执行微任务：Promise.then\(\)，所以输出**3**，setTimeout\(\)作为下轮宏任务执行其内部逻辑。  
+  
+所以上述代码首先执行Promise中的**1**，然后遇到`Promise.then`是微任务，所以会先挂起，先执行最外部的**2**，本轮宏任务到此执行完毕，然后开始执行微任务：Promise.then\(\)，所以输出**3**，setTimeout\(\)作为下轮宏任务执行其内部逻辑。`setTimeout`就是作为宏任务来存在的，而`Promise.then`则是具有代表性的微任务，上述代码的执行顺序就是按照序号来输出的。  
 `Promise()`在实例化过程中，内部所执行的代码相当于是同步的。
 
 所以输出顺序为：  
