@@ -59,6 +59,87 @@ Process.nextTick（Node独有）、
 MutationObserver（浏览器独有）
 ```
 
-  
 
+
+现在来两道题，看看自己有没有理解到位？
+
+```javascript
+new Promise((resolve,reject) =>{
+    resolve();
+    console.log('promise 1');
+}).then(() =>{
+    setTimeout(() =>{
+        console.log('timeout 1');
+    }, 2000);
+    console.log('then 1');
+})
+
+new Promise((resolve,reject) =>{
+    console.log('promise 2');
+    resolve();
+}).then(() =>{
+    console.log('then 2');
+    setTimeout(() =>{
+        console.log('timeout 2');
+    }, 0);
+})
+```
+
+```javascript
+
+setTimeout(() =>{
+    new Promise((resolve,reject) =>{
+        resolve();
+        console.log('promise 1');
+    }).then(() =>{
+        console.log('then 1');
+    })
+    console.log('timeout 1');
+}, 0);
+
+
+new Promise((resolve,reject) =>{
+    console.log('promise 2');
+    resolve();
+}).then(() =>{
+    console.log('then 2');
+    setTimeout(() =>{
+        console.log('timeout 2');
+    }, 100);
+})
+```
+
+试试看能不能迅速说出结果来
+
+我们数三二一公布结果
+
+
+
+三
+
+二
+
+一
+
+
+
+```javascript
+第一题：
+promise 1
+promise 2
+then 1
+then 2
+timeout 2
+timeout 1
+
+
+第二题：
+promise 2
+then 2
+promise 1
+timeout 1
+then 1
+timeout 2
+
+```
 
