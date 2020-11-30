@@ -23,4 +23,5 @@
 
 * [移掉K位数字](suan-fa-ti/yi-diaokwei-shu-zi.md)
 * [上升下降字符串](suan-fa-ti/shang-sheng-xia-jiang-zi-fu-chuan.md)
+* [重构字符串](suan-fa-ti/zhong-gou-zi-fu-chuan.md)
 
