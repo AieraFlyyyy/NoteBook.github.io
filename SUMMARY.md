@@ -4,8 +4,6 @@
 
 ## 面试问题 <a id="interview-question"></a>
 
-* [Event Loop中的宏任务与微任务](interview-question/event-loop.md)
-* [手写Promise](interview-question/shou-xie-promise.md)
 * [数组方法](interview-question/shu-zu-fang-fa.md)
 * [字符串方法](interview-question/untitled-1.md)
 * [阻止冒泡和捕获](interview-question/zu-zhi-mao-pao-he-bu-huo.md)
@@ -18,12 +16,15 @@
 * [跨域解决方案](interview-question/kua-yu-jie-jue-fang-an.md)
 * [手写实现new](interview-question/shou-xie-shi-xian-new.md)
 * [手写Intenceof](interview-question/shou-xie-intenceof.md)
+* [手写Promise](interview-question/shou-xie-promise.md)
+* [Event Loop中的宏任务与微任务](interview-question/event-loop.md)
 
 ## 算法题
 
 * [移掉K位数字](suan-fa-ti/yi-diaokwei-shu-zi.md)
 * [上升下降字符串](suan-fa-ti/shang-sheng-xia-jiang-zi-fu-chuan.md)
 * [重构字符串](suan-fa-ti/zhong-gou-zi-fu-chuan.md)
+* [计数质数](suan-fa-ti/ji-shu-zhi-shu.md)
 
 ## 工具类知识整理
 

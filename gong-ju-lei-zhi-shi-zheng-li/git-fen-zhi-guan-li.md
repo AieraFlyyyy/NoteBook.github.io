@@ -15,7 +15,7 @@ Git有什么特点？简单来说就是：高端大气上档次！
 如果你用Microsoft Word写过长篇大论，那你一定有这样的经历：  
 想删除一个段落，又怕将来想恢复找不回来怎么办？有办法，先把当前文件“另存为……”一个新的Word文件，再接着改，改到一定程度，再“另存为……”一个新文件，这样一直改下去，最后你的Word文档变成了这样：
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 过了一周，你想找回被删除的文字，但是已经记不清删除前保存在哪个文件里了，只好一个一个文件去找，真麻烦。
 
@@ -27,7 +27,7 @@ Git有什么特点？简单来说就是：高端大气上档次！
 
 这个软件用起来就应该像这个样子，能记录每次文件的改动：
 
-![](../.gitbook/assets/image%20%289%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 这样，你就结束了手动管理多个“版本”的史前时代，进入到版本控制的20世纪。
 
@@ -42,7 +42,7 @@ Git有什么特点？简单来说就是：高端大气上档次！
 
 首先，代码库应该有一个、且仅有一个主分支。所有提供给用户使用的正式版本，都在这个主分支上发布。
 
-![&#x56FE;&#x7247;&#x6765;&#x6E90;&#xFF08;http://www.ruanyifeng.com/blog/2012/07/git.html&#xFF09;](../.gitbook/assets/image%20%288%29.png)
+![&#x56FE;&#x7247;&#x6765;&#x6E90;&#xFF08;http://www.ruanyifeng.com/blog/2012/07/git.html&#xFF09;](../.gitbook/assets/image%20%2810%29.png)
 
 Git主分支的名字，默认叫做Master。它是自动建立的，版本库初始化以后，默认就是在主分支在进行开发。
 
@@ -50,7 +50,7 @@ Git主分支的名字，默认叫做Master。它是自动建立的，版本库�
 
 主分支只用来分布重大版本，日常开发应该在另一条分支上完成。我们把开发用的分支，叫做Develop。
 
-![&#x56FE;&#x7247;&#x6765;&#x6E90;&#xFF08;http://www.ruanyifeng.com/blog/2012/07/git.html&#xFF09;](../.gitbook/assets/image%20%287%29.png)
+![&#x56FE;&#x7247;&#x6765;&#x6E90;&#xFF08;http://www.ruanyifeng.com/blog/2012/07/git.html&#xFF09;](../.gitbook/assets/image%20%289%29.png)
 
 这个分支可以用来生成代码的最新隔夜版本（nightly）。如果想正式对外发布，就在Master分支上，对Develop分支进行"合并"（merge）。
 
@@ -73,7 +73,7 @@ Git主分支的名字，默认叫做Master。它是自动建立的，版本库�
 
 第一种是功能分支，它是为了开发某种特定功能，从Develop分支上面分出来的。开发完成后，要再并入Develop。
 
-![&#x56FE;&#x7247;&#x6765;&#x6E90;&#xFF08;http://www.ruanyifeng.com/blog/2012/07/git.html&#xFF09;](../.gitbook/assets/image%20%2810%29.png)
+![&#x56FE;&#x7247;&#x6765;&#x6E90;&#xFF08;http://www.ruanyifeng.com/blog/2012/07/git.html&#xFF09;](../.gitbook/assets/image%20%2812%29.png)
 
 **五、预发布分支**
 
@@ -90,5 +90,5 @@ Git主分支的名字，默认叫做Master。它是自动建立的，版本库�
   
 
 
-![&#x56FE;&#x7247;&#x6765;&#x6E90;&#xFF08;http://www.ruanyifeng.com/blog/2012/07/git.html&#xFF09;](../.gitbook/assets/image%20%285%29.png)
+![&#x56FE;&#x7247;&#x6765;&#x6E90;&#xFF08;http://www.ruanyifeng.com/blog/2012/07/git.html&#xFF09;](../.gitbook/assets/image%20%286%29.png)
 
