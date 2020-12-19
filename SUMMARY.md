@@ -26,6 +26,7 @@
 * [重构字符串](suan-fa-ti/zhong-gou-zi-fu-chuan.md)
 * [计数质数](suan-fa-ti/ji-shu-zhi-shu.md)
 * [不同路径](suan-fa-ti/bu-tong-lu-jing.md)
+* [找不同](suan-fa-ti/zhao-bu-tong.md)
 
 ## 工具类知识整理
 
