@@ -32,4 +32,5 @@
 ## 工具类知识整理
 
 * [Git 分支管理](gong-ju-lei-zhi-shi-zheng-li/git-fen-zhi-guan-li.md)
+* [清除Git中的缓存凭据](gong-ju-lei-zhi-shi-zheng-li/qing-chu-git-zhong-de-huan-cun-ping-ju.md)
 
