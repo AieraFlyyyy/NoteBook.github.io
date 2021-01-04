@@ -21,13 +21,14 @@
 
 ## 算法题
 
-* [移掉K位数字](suan-fa-ti/yi-diaokwei-shu-zi.md)
-* [上升下降字符串](suan-fa-ti/shang-sheng-xia-jiang-zi-fu-chuan.md)
-* [重构字符串](suan-fa-ti/zhong-gou-zi-fu-chuan.md)
-* [计数质数](suan-fa-ti/ji-shu-zhi-shu.md)
-* [不同路径](suan-fa-ti/bu-tong-lu-jing.md)
-* [找不同](suan-fa-ti/zhao-bu-tong.md)
-* [旋转图像](suan-fa-ti/xuan-zhuan-tu-xiang.md)
+* [48.旋转图像](suan-fa-ti/xuan-zhuan-tu-xiang.md)
+* [62.不同路径](suan-fa-ti/bu-tong-lu-jing.md)
+* [86.分隔链表](suan-fa-ti/188.-mai-mai-gu-piao-de-zui-jia-shi-ji.md)
+* [204.计数质数](suan-fa-ti/ji-shu-zhi-shu.md)
+* [389.找不同](suan-fa-ti/zhao-bu-tong.md)
+* [402.移掉K位数字](suan-fa-ti/yi-diaokwei-shu-zi.md)
+* [767.重构字符串](suan-fa-ti/zhong-gou-zi-fu-chuan.md)
+* [1370.上升下降字符串](suan-fa-ti/shang-sheng-xia-jiang-zi-fu-chuan.md)
 
 ## 工具类知识整理
 
