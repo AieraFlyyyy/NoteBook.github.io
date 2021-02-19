@@ -16,24 +16,18 @@
   * [手写Intenceof](js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.md)
   * [手写Promise](js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-promise.md)
   * [Event Loop中的宏任务与微任务](js-fu-zhi-zi-ding-yi-nei-rong/event-loop.md)
-
-## 算法题
-
-* [48.旋转图像](suan-fa-ti/xuan-zhuan-tu-xiang.md)
-* [62.不同路径](suan-fa-ti/bu-tong-lu-jing.md)
-* [86.分隔链表](suan-fa-ti/188.-mai-mai-gu-piao-de-zui-jia-shi-ji.md)
-* [204.计数质数](suan-fa-ti/ji-shu-zhi-shu.md)
-* [389.找不同](suan-fa-ti/zhao-bu-tong.md)
-* [402.移掉K位数字](suan-fa-ti/yi-diaokwei-shu-zi.md)
-* [767.重构字符串](suan-fa-ti/zhong-gou-zi-fu-chuan.md)
-* [1370.上升下降字符串](suan-fa-ti/shang-sheng-xia-jiang-zi-fu-chuan.md)
-
-## 工具类知识整理
-
-* [Git 分支管理](gong-ju-lei-zhi-shi-zheng-li/git-fen-zhi-guan-li.md)
-* [清除Git中的缓存凭据](gong-ju-lei-zhi-shi-zheng-li/qing-chu-git-zhong-de-huan-cun-ping-ju.md)
-
-## React相关
-
-* [Fiber](react-xiang-guan/fiber.md)
+* [算法题](suan-fa-ti-1/README.md)
+  * [48.旋转图像](suan-fa-ti-1/xuan-zhuan-tu-xiang.md)
+  * [62.不同路径](suan-fa-ti-1/bu-tong-lu-jing.md)
+  * [86.分隔链表](suan-fa-ti-1/188.-mai-mai-gu-piao-de-zui-jia-shi-ji.md)
+  * [204.计数质数](suan-fa-ti-1/ji-shu-zhi-shu.md)
+  * [389.找不同](suan-fa-ti-1/zhao-bu-tong.md)
+  * [402.移掉K位数字](suan-fa-ti-1/yi-diaokwei-shu-zi.md)
+  * [767.重构字符串](suan-fa-ti-1/zhong-gou-zi-fu-chuan.md)
+  * [1370.上升下降字符串](suan-fa-ti-1/shang-sheng-xia-jiang-zi-fu-chuan.md)
+* [工具类知识整理](gong-ju-lei-zhi-shi-zheng-li-1/README.md)
+  * [Git 分支管理](gong-ju-lei-zhi-shi-zheng-li-1/git-fen-zhi-guan-li.md)
+  * [清除Git中的缓存凭据](gong-ju-lei-zhi-shi-zheng-li-1/qing-chu-git-zhong-de-huan-cun-ping-ju.md)
+* [React相关](react-xiang-guan-1/README.md)
+  * [Fiber](react-xiang-guan-1/fiber.md)
 
