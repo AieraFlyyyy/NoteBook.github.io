@@ -9,13 +9,15 @@ description: '搬运：https://react.jokcy.me/book/update/expiration-time.html �
 讲公式就有必要把代码亮出来了，毕竟代码量也不多
 
 ```javascript
-const UNIT_SIZE = 10
-const MAGIC_NUMBER_OFFSET = 2
+const UNIT_SIZE = 10             //直翻：单位大小
+const MAGIC_NUMBER_OFFSET = 2    // 直翻：魔法偏移量
 
+// 直翻：ms转化为ExpirationTime
 export function msToExpirationTime(ms: number): ExpirationTime {
   return ((ms / UNIT_SIZE) | 0) + MAGIC_NUMBER_OFFSET
 }
 
+// 直翻：ExpirationTime转化为ms
 export function expirationTimeToMs(expirationTime: ExpirationTime): number {
   return (expirationTime - MAGIC_NUMBER_OFFSET) * UNIT_SIZE
 }
@@ -24,6 +26,7 @@ function ceiling(num: number, precision: number): number {
   return (((num / precision) | 0) + 1) * precision
 }
 
+// 直翻：计算Expiration存储桶
 function computeExpirationBucket(
   currentTime,
   expirationInMs,
@@ -38,9 +41,12 @@ function computeExpirationBucket(
   )
 }
 
+// 直翻：低优先级Expiration
 export const LOW_PRIORITY_EXPIRATION = 5000
+// 直翻：低优先级批量Size
 export const LOW_PRIORITY_BATCH_SIZE = 250
 
+// 直翻：计算异步Expiration
 export function computeAsyncExpiration(
   currentTime: ExpirationTime,
 ): ExpirationTime {
@@ -51,9 +57,12 @@ export function computeAsyncExpiration(
   )
 }
 
+// 直翻：高优先级Expiration
 export const HIGH_PRIORITY_EXPIRATION = __DEV__ ? 500 : 150
+// 直翻：高优先级批量Size
 export const HIGH_PRIORITY_BATCH_SIZE = 100
 
+// 直翻：计算交互式Expiration
 export function computeInteractiveExpiration(currentTime: ExpirationTime) {
   return computeExpirationBucket(
     currentTime,
@@ -90,14 +99,17 @@ React 这么设计抹相当于抹平了`25ms`内计算过期时间的误差，�
 ```javascript
 function requestCurrentTime() {
   if (isRendering) {
+    // 直翻：当前计划时间
     return currentSchedulerTime
   }
   findHighestPriorityRoot()
   if (
+    // 直翻：下一个刷新的ExpirationTime
     nextFlushedExpirationTime === NoWork ||
     nextFlushedExpirationTime === Never
   ) {
     recomputeCurrentRendererTime()
+                           // 直翻：当前计划时间
     currentSchedulerTime = currentRendererTime
     return currentSchedulerTime
   }
@@ -249,7 +261,8 @@ _注意：这里只讨论没有其他副作用的情况，比如使用老的`con
 * 在`onUncaughtError`的时候设置为`NoWork`
 * `onSuspend`的时候又会设置回当次更新的`expirationTime`
 
-**这里的不同选择我到目前也没有非常清晰的理解，尝试跟**_**dan**_**沟通了解没得到什么反馈，跟**_**司徒正美**_**大大聊起过，他觉得这部分功能目前其实还不是特别稳定，有些代码还是比较临时性的，所以现在可以不必要太深究，所以目前来说大家只要知道代码逻辑就可以**
+**这里的不同选择我到目前也没有非常清晰的理解，尝试跟**_**dan**_**沟通了解没得到什么反馈，跟**_**司徒正美**_**大大聊起过，他觉得这部分功能目前其实还不是特别稳定，有些代码还是比较临时性的，所以现在可以不必要太深究，所以目前来说大家只要知道代码逻辑就可以  
+（这一段意思是可以忽略这些选择的逻辑）**
 
 展示一下代码：
 
