@@ -1,7 +1,8 @@
 # Table of contents
 
 * [介绍](README.md)
-* [JS复制自定义内容](js-fu-zhi-zi-ding-yi-nei-rong/README.md)
+* [面试知识点](js-fu-zhi-zi-ding-yi-nei-rong/README.md)
+  * [JS复制自定义内容](js-fu-zhi-zi-ding-yi-nei-rong/js-fu-zhi-zi-ding-yi-nei-rong.md)
   * [数组方法](js-fu-zhi-zi-ding-yi-nei-rong/shu-zu-fang-fa.md)
   * [字符串方法](js-fu-zhi-zi-ding-yi-nei-rong/untitled-1.md)
   * [防抖节流函数](js-fu-zhi-zi-ding-yi-nei-rong/fang-dou-jie-liu-han-shu.md)
