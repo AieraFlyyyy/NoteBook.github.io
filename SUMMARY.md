@@ -31,4 +31,5 @@
 * [React相关](react-xiang-guan-1/README.md)
   * [Fiber](react-xiang-guan-1/fiber.md)
   * [ExpirationTime](react-xiang-guan-1/expirationtime.md)
+  * [React源码常用方法、全局变量](react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.md)
 
