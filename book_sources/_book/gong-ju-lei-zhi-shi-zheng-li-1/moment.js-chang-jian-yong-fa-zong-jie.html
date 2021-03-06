@@ -1,0 +1,906 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Moment.js常见用法总结 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../react-xiang-guan-1/" />
+    
+    
+    <link rel="prev" href="qing-chu-git-zhong-de-huan-cun-ping-ju.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/">
+            
+                    
+                    面试知识点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/js-fu-zhi-zi-ding-yi-nei-rong.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/js-fu-zhi-zi-ding-yi-nei-rong.html">
+            
+                    
+                    JS复制自定义内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shu-zu-fang-fa.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shu-zu-fang-fa.html">
+            
+                    
+                    数组方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/untitled-1.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/untitled-1.html">
+            
+                    
+                    字符串方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/fang-dou-jie-liu-han-shu.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/fang-dou-jie-liu-han-shu.html">
+            
+                    
+                    防抖节流函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/guan-yu-react-de-setstate.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/guan-yu-react-de-setstate.html">
+            
+                    
+                    关于react的setState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/wei-yun-suan.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/wei-yun-suan.html">
+            
+                    
+                    位运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/liu-lan-qi-huan-cun-ce-lve.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/liu-lan-qi-huan-cun-ce-lve.html">
+            
+                    
+                    浏览器缓存策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/pan-duan-ye-mian-shi-fou-hua-dong-dao-zui-di-bu.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/pan-duan-ye-mian-shi-fou-hua-dong-dao-zui-di-bu.html">
+            
+                    
+                    判断页面是否滑动到最底部
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/zu-zhi-mao-pao-he-bu-huo.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/zu-zhi-mao-pao-he-bu-huo.html">
+            
+                    
+                    阻止冒泡和捕获
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/kua-yu-jie-jue-fang-an.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/kua-yu-jie-jue-fang-an.html">
+            
+                    
+                    跨域解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-shi-xian-new.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-shi-xian-new.html">
+            
+                    
+                    手写实现new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.html">
+            
+                    
+                    手写Intenceof
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-promise.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-promise.html">
+            
+                    
+                    手写Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/event-loop.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/event-loop.html">
+            
+                    
+                    Event Loop中的宏任务与微任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../suan-fa-ti-1/">
+            
+                <a href="../suan-fa-ti-1/">
+            
+                    
+                    算法题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../suan-fa-ti-1/xuan-zhuan-tu-xiang.html">
+            
+                <a href="../suan-fa-ti-1/xuan-zhuan-tu-xiang.html">
+            
+                    
+                    48.旋转图像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../suan-fa-ti-1/bu-tong-lu-jing.html">
+            
+                <a href="../suan-fa-ti-1/bu-tong-lu-jing.html">
+            
+                    
+                    62.不同路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../suan-fa-ti-1/188.-mai-mai-gu-piao-de-zui-jia-shi-ji.html">
+            
+                <a href="../suan-fa-ti-1/188.-mai-mai-gu-piao-de-zui-jia-shi-ji.html">
+            
+                    
+                    86.分隔链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../suan-fa-ti-1/ji-shu-zhi-shu.html">
+            
+                <a href="../suan-fa-ti-1/ji-shu-zhi-shu.html">
+            
+                    
+                    204.计数质数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../suan-fa-ti-1/zhao-bu-tong.html">
+            
+                <a href="../suan-fa-ti-1/zhao-bu-tong.html">
+            
+                    
+                    389.找不同
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../suan-fa-ti-1/yi-diaokwei-shu-zi.html">
+            
+                <a href="../suan-fa-ti-1/yi-diaokwei-shu-zi.html">
+            
+                    
+                    402.移掉K位数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../suan-fa-ti-1/zhong-gou-zi-fu-chuan.html">
+            
+                <a href="../suan-fa-ti-1/zhong-gou-zi-fu-chuan.html">
+            
+                    
+                    767.重构字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../suan-fa-ti-1/shang-sheng-xia-jiang-zi-fu-chuan.html">
+            
+                <a href="../suan-fa-ti-1/shang-sheng-xia-jiang-zi-fu-chuan.html">
+            
+                    
+                    1370.上升下降字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    工具类知识整理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="git-fen-zhi-guan-li.html">
+            
+                <a href="git-fen-zhi-guan-li.html">
+            
+                    
+                    Git 分支管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="qing-chu-git-zhong-de-huan-cun-ping-ju.html">
+            
+                <a href="qing-chu-git-zhong-de-huan-cun-ping-ju.html">
+            
+                    
+                    清除Git中的缓存凭据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="moment.js-chang-jian-yong-fa-zong-jie.html">
+            
+                <a href="moment.js-chang-jian-yong-fa-zong-jie.html">
+            
+                    
+                    Moment.js常见用法总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../react-xiang-guan-1/">
+            
+                <a href="../react-xiang-guan-1/">
+            
+                    
+                    React相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../react-xiang-guan-1/fiber.html">
+            
+                <a href="../react-xiang-guan-1/fiber.html">
+            
+                    
+                    Fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../react-xiang-guan-1/expirationtime.html">
+            
+                <a href="../react-xiang-guan-1/expirationtime.html">
+            
+                    
+                    ExpirationTime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.html">
+            
+                <a href="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.html">
+            
+                    
+                    React源码常用方法、全局变量<一>
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang-er.html">
+            
+                <a href="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang-er.html">
+            
+                    
+                    React源码常用方法、全局变量<二>
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Moment.js常见用法总结</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#momentjs&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#x603B;&#x7ED3;"><b></b>Moment.js&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#x603B;&#x7ED3;</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x83B7;&#x53D6;&#x65F6;&#x95F4;"><b></b>1.&#x83B7;&#x53D6;&#x65F6;&#x95F4;</a></li><li><span class="title-icon "></span><a href="#2&#x8BBE;&#x7F6E;&#x65F6;&#x95F4;"><b></b>2.&#x8BBE;&#x7F6E;&#x65F6;&#x95F4;</a></li><li><span class="title-icon "></span><a href="#3&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x95F4;"><b></b>3.&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x95F4;</a></li><li><span class="title-icon "></span><a href="#4&#x6BD4;&#x8F83;&#x65F6;&#x95F4;"><b></b>4.&#x6BD4;&#x8F83;&#x65F6;&#x95F4;</a></li><li><span class="title-icon "></span><a href="#5&#x8F6C;&#x5316;&#x4E3A;javascript&#x539F;&#x751F;date&#x5BF9;&#x8C61;"><b></b>5.&#x8F6C;&#x5316;&#x4E3A;JavaScript&#x539F;&#x751F;Date&#x5BF9;&#x8C61;</a></li></ul></ul></ul></div><a href="#momentjs&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#x603B;&#x7ED3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="momentjs&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#x603B;&#x7ED3;"><a name="momentjs&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#momentjs&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>Moment.js&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#x603B;&#x7ED3;</h1>
+<h3 id="1&#x83B7;&#x53D6;&#x65F6;&#x95F4;"><a name="1&#x83B7;&#x53D6;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#1&#x83B7;&#x53D6;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.&#x83B7;&#x53D6;&#x65F6;&#x95F4;</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x83B7;&#x53D6;&#x4ECA;&#x5929;0&#x65F6;0&#x5206;0&#x79D2;</span>
+moment().startOf(<span class="hljs-string">&apos;day&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x672C;&#x5468;&#x7B2C;&#x4E00;&#x5929;(&#x5468;&#x65E5;)0&#x65F6;0&#x5206;0&#x79D2;</span>
+moment().startOf(<span class="hljs-string">&apos;week&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x672C;&#x5468;&#x5468;&#x4E00;0&#x65F6;0&#x5206;0&#x79D2;</span>
+moment().startOf(<span class="hljs-string">&apos;isoWeek&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6708;&#x7B2C;&#x4E00;&#x5929;0&#x65F6;0&#x5206;0&#x79D2;</span>
+moment().startOf(<span class="hljs-string">&apos;month&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x4ECA;&#x5929;23&#x65F6;59&#x5206;59&#x79D2;</span>
+moment().endOf(<span class="hljs-string">&apos;day&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x672C;&#x5468;&#x6700;&#x540E;&#x4E00;&#x5929;(&#x5468;&#x516D;)23&#x65F6;59&#x5206;59&#x79D2;</span>
+moment().endOf(<span class="hljs-string">&apos;week&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x672C;&#x5468;&#x5468;&#x65E5;23&#x65F6;59&#x5206;59&#x79D2;</span>
+moment().endOf(<span class="hljs-string">&apos;isoWeek&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6708;&#x6700;&#x540E;&#x4E00;&#x5929;23&#x65F6;59&#x5206;59&#x79D2;</span>
+moment().endOf(<span class="hljs-string">&apos;month&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6708;&#x7684;&#x603B;&#x5929;&#x6570;</span>
+moment().daysInMonth()
+
+**********************************************
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x65F6;&#x95F4;&#x6233;(&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;)</span>
+moment().format(<span class="hljs-string">&apos;X&apos;</span>) <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</span>
+moment().unix() <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x6570;&#x503C;&#x578B;</span>
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x65F6;&#x95F4;&#x6233;(&#x4EE5;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;)</span>
+moment().format(<span class="hljs-string">&apos;x&apos;</span>) <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</span>
+moment().valueOf() <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x6570;&#x503C;&#x578B;</span>
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5E74;&#x4EFD;</span>
+moment().year()
+moment().get(<span class="hljs-string">&apos;year&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x6708;&#x4EFD;</span>
+moment().month() (<span class="hljs-number">0</span>~<span class="hljs-number">11</span>, <span class="hljs-number">0</span>: January, <span class="hljs-number">11</span>: December)
+moment().get(<span class="hljs-string">&apos;month&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x6708;&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x5929;</span>
+moment().date()
+moment().get(<span class="hljs-string">&apos;date&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x661F;&#x671F;&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x5929;</span>
+moment().day() (<span class="hljs-number">0</span>~<span class="hljs-number">6</span>, <span class="hljs-number">0</span>: Sunday, <span class="hljs-number">6</span>: Saturday)
+moment().weekday() (<span class="hljs-number">0</span>~<span class="hljs-number">6</span>, <span class="hljs-number">0</span>: Sunday, <span class="hljs-number">6</span>: Saturday)
+moment().isoWeekday() (<span class="hljs-number">1</span>~<span class="hljs-number">7</span>, <span class="hljs-number">1</span>: Monday, <span class="hljs-number">7</span>: Sunday)
+moment().get(<span class="hljs-string">&apos;day&apos;</span>)
+mment().get(<span class="hljs-string">&apos;weekday&apos;</span>)
+moment().get(<span class="hljs-string">&apos;isoWeekday&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5C0F;&#x65F6;</span>
+moment().hours()
+moment().get(<span class="hljs-string">&apos;hours&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5206;&#x949F;</span>
+moment().minutes()
+moment().get(<span class="hljs-string">&apos;minutes&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x79D2;&#x6570;</span>
+moment().seconds()
+moment().get(<span class="hljs-string">&apos;seconds&apos;</span>)
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5E74;&#x6708;&#x65E5;&#x65F6;&#x5206;&#x79D2;</span>
+moment().toArray() <span class="hljs-comment">// [years, months, date, hours, minutes, seconds, milliseconds]</span>
+moment().toObject() <span class="hljs-comment">// {years: xxxx, months: x, date: xx ...}</span>
+</code></pre>
+<h3 id="2&#x8BBE;&#x7F6E;&#x65F6;&#x95F4;"><a name="2&#x8BBE;&#x7F6E;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#2&#x8BBE;&#x7F6E;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>2.&#x8BBE;&#x7F6E;&#x65F6;&#x95F4;</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Set Time</span>
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x65F6;&#x95F4;</span>
+moment().year(<span class="hljs-built_in">Number</span>), moment().month(<span class="hljs-built_in">Number</span>)...
+moment().set(<span class="hljs-built_in">String</span>, Int)
+moment().set(<span class="hljs-built_in">Object</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5E74;&#x4EFD;</span>
+moment().year(<span class="hljs-number">2019</span>)
+moment().set(<span class="hljs-string">&apos;year&apos;</span>, <span class="hljs-number">2019</span>)
+moment().set({year: <span class="hljs-number">2019</span>})
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x6708;&#x4EFD;</span>
+moment().month(<span class="hljs-number">11</span>) (<span class="hljs-number">0</span>~<span class="hljs-number">11</span>, <span class="hljs-number">0</span>: January, <span class="hljs-number">11</span>: December)
+moment().set(<span class="hljs-string">&apos;month&apos;</span>, <span class="hljs-number">11</span>) 
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x67D0;&#x4E2A;&#x6708;&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x5929;</span>
+moment().date(<span class="hljs-number">15</span>)
+moment().set(<span class="hljs-string">&apos;date&apos;</span>, <span class="hljs-number">15</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x67D0;&#x4E2A;&#x661F;&#x671F;&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x5929;</span>
+moment().weekday(<span class="hljs-number">0</span>) <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x65E5;&#x671F;&#x4E3A;&#x672C;&#x5468;&#x7B2C;&#x4E00;&#x5929;&#xFF08;&#x5468;&#x65E5;&#xFF09;</span>
+moment().isoWeekday(<span class="hljs-number">1</span>) <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x65E5;&#x671F;&#x4E3A;&#x672C;&#x5468;&#x5468;&#x4E00;</span>
+moment().set(<span class="hljs-string">&apos;weekday&apos;</span>, <span class="hljs-number">0</span>)
+moment().set(<span class="hljs-string">&apos;isoWeekday&apos;</span>, <span class="hljs-number">1</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5C0F;&#x65F6;</span>
+moment().hours(<span class="hljs-number">12</span>)
+moment().set(<span class="hljs-string">&apos;hours&apos;</span>, <span class="hljs-number">12</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5206;&#x949F;</span>
+moment().minutes(<span class="hljs-number">30</span>)
+moment().set(<span class="hljs-string">&apos;minutes&apos;</span>, <span class="hljs-number">30</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x79D2;&#x6570;</span>
+moment().seconds(<span class="hljs-number">30</span>)
+moment().set(<span class="hljs-string">&apos;seconds&apos;</span>, <span class="hljs-number">30</span>)
+
+**********************************************
+
+<span class="hljs-comment">// Add Time</span>
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5E74;&#x4EFD;</span>
+moment().add(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;years&apos;</span>)
+moment().add({years: <span class="hljs-number">1</span>})
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x6708;&#x4EFD;</span>
+moment().add(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;months&apos;</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x65E5;&#x671F;</span>
+moment().add(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;days&apos;</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x661F;&#x671F;</span>
+moment().add(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;weeks&apos;</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5C0F;&#x65F6;</span>
+moment().add(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;hours&apos;</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5206;&#x949F;</span>
+moment().add(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;minutes&apos;</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x79D2;&#x6570;</span>
+moment().add(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;seconds&apos;</span>)
+
+**********************************************
+
+<span class="hljs-comment">// Subtract Time</span>
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5E74;&#x4EFD;</span>
+moment().subtract(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;years&apos;</span>)
+moment().subtract({years: <span class="hljs-number">1</span>})
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x6708;&#x4EFD;</span>
+moment().subtract(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;months&apos;</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x65E5;&#x671F;</span>
+moment().subtract(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;days&apos;</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x661F;&#x671F;</span>
+moment().subtract(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;weeks&apos;</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5C0F;&#x65F6;</span>
+moment().subtract(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;hours&apos;</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5206;&#x949F;</span>
+moment().subtract(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;minutes&apos;</span>)
+
+<span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x79D2;&#x6570;</span>
+moment().subtract(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;seconds&apos;</span>)
+</code></pre>
+<h3 id="3&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x95F4;"><a name="3&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#3&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>3.&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x95F4;</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x683C;&#x5F0F;&#x5316;&#x5E74;&#x6708;&#x65E5;&#xFF1A; </span>
+<span class="hljs-comment">// xxxx&#x5E74;xx&#x6708;xx&#x65E5;</span>
+<span class="hljs-comment">// YYYY-MM-DD</span>
+<span class="hljs-comment">// HH&#x65F6;mm&#x5206;ss&#x79D2; &#xFF08;24&#x5C0F;&#x65F6;&#x5236;&#xFF09;</span>
+<span class="hljs-comment">// hh:mm:ss a/p&apos; &#xFF08;12&#x5C0F;&#x65F6;&#x5236;&#xFF09;</span>
+moment().format(<span class="hljs-string">&apos;YYYY&#x5E74;MM&#x6708;DD&#x65E5;&apos;</span>)
+moment().format(<span class="hljs-string">&apos;YYYY-MM-DD&apos;</span>)
+moment().format(<span class="hljs-string">&apos;HH&#x65F6;mm&#x5206;ss&#x79D2;&apos;</span>)
+moment().format(<span class="hljs-string">&apos;hh:mm:ss a&apos;</span>)
+</code></pre>
+<h3 id="4&#x6BD4;&#x8F83;&#x65F6;&#x95F4;"><a name="4&#x6BD4;&#x8F83;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#4&#x6BD4;&#x8F83;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>4.&#x6BD4;&#x8F83;&#x65F6;&#x95F4;</h3>
+<pre><code class="lang-javascript">moment().diff(Moment|<span class="hljs-built_in">String</span>|<span class="hljs-built_in">Number</span>|<span class="hljs-built_in">Date</span>|<span class="hljs-built_in">Array</span>)
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x65E5;&#x671F;&#x4E4B;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x5DEE;</span>
+<span class="hljs-keyword">let</span> start_date = moment().subtract(<span class="hljs-number">1</span>, <span class="hljs-string">&apos;weeks&apos;</span>)
+<span class="hljs-keyword">let</span> end_date = moment()
+
+end_date.diff(start_date) <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x6BEB;&#x79D2;&#x6570;</span>
+end_date.diff(start_date, <span class="hljs-string">&apos;months&apos;</span>) <span class="hljs-comment">// 0</span>
+end_date.diff(start_date, <span class="hljs-string">&apos;weeks&apos;</span>) <span class="hljs-comment">// 1</span>
+end_date.diff(start_date, <span class="hljs-string">&apos;days&apos;</span>) <span class="hljs-comment">// 7</span>
+start_date.diff(end_date, <span class="hljs-string">&apos;days&apos;</span>) <span class="hljs-comment">// -7</span>
+</code></pre>
+<h3 id="5&#x8F6C;&#x5316;&#x4E3A;javascript&#x539F;&#x751F;date&#x5BF9;&#x8C61;"><a name="5&#x8F6C;&#x5316;&#x4E3A;javascript&#x539F;&#x751F;date&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#5&#x8F6C;&#x5316;&#x4E3A;javascript&#x539F;&#x751F;date&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>5.&#x8F6C;&#x5316;&#x4E3A;JavaScript&#x539F;&#x751F;Date&#x5BF9;&#x8C61;</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// moment().toDate()</span>
+<span class="hljs-comment">// new Date(moment())</span>
+<span class="hljs-comment">// &#x5C06;Moment&#x65F6;&#x95F4;&#x8F6C;&#x6362;&#x4E3A;JavaScript&#x539F;&#x751F;Date&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">let</span> m = moment()
+<span class="hljs-keyword">let</span> nativeDate1 = m.toDate()
+<span class="hljs-keyword">let</span> nativeDate2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(m)
+
+<span class="hljs-built_in">String</span>(nativeDate1) === <span class="hljs-built_in">String</span>(nativeDate2)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="qing-chu-git-zhong-de-huan-cun-ping-ju.html" class="navigation navigation-prev " aria-label="Previous page: 清除Git中的缓存凭据">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../react-xiang-guan-1/" class="navigation navigation-next " aria-label="Next page: React相关">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Moment.js常见用法总结","level":"1.4.3","depth":2,"next":{"title":"React相关","level":"1.5","depth":1,"path":"react-xiang-guan-1/README.md","ref":"react-xiang-guan-1/README.md","articles":[{"title":"Fiber","level":"1.5.1","depth":2,"path":"react-xiang-guan-1/fiber.md","ref":"react-xiang-guan-1/fiber.md","articles":[]},{"title":"ExpirationTime","level":"1.5.2","depth":2,"path":"react-xiang-guan-1/expirationtime.md","ref":"react-xiang-guan-1/expirationtime.md","articles":[]},{"title":"React源码常用方法、全局变量<一>","level":"1.5.3","depth":2,"path":"react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.md","ref":"react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.md","articles":[]},{"title":"React源码常用方法、全局变量<二>","level":"1.5.4","depth":2,"path":"react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang-er.md","ref":"react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang-er.md","articles":[]}]},"previous":{"title":"清除Git中的缓存凭据","level":"1.4.2","depth":2,"path":"gong-ju-lei-zhi-shi-zheng-li-1/qing-chu-git-zhong-de-huan-cun-ping-ju.md","ref":"gong-ju-lei-zhi-shi-zheng-li-1/qing-chu-git-zhong-de-huan-cun-ping-ju.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","theme-comscore","ga","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Github","base":"https://github.com/AieraFlyyyy/NoteBook"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gong-ju-lei-zhi-shi-zheng-li-1/moment.js-chang-jian-yong-fa-zong-jie.md","mtime":"2021-03-06T03:02:13.709Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-06T03:50:49.302Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

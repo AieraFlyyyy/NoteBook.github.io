@@ -1,0 +1,974 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ExpirationTime · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="搬运：https://react.jokcy.me/book/update/expiration-time.html （jocy老师的react源码分析）">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.html" />
+    
+    
+    <link rel="prev" href="fiber.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/">
+            
+                    
+                    面试知识点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/js-fu-zhi-zi-ding-yi-nei-rong.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/js-fu-zhi-zi-ding-yi-nei-rong.html">
+            
+                    
+                    JS复制自定义内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shu-zu-fang-fa.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shu-zu-fang-fa.html">
+            
+                    
+                    数组方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/untitled-1.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/untitled-1.html">
+            
+                    
+                    字符串方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/fang-dou-jie-liu-han-shu.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/fang-dou-jie-liu-han-shu.html">
+            
+                    
+                    防抖节流函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/guan-yu-react-de-setstate.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/guan-yu-react-de-setstate.html">
+            
+                    
+                    关于react的setState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/wei-yun-suan.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/wei-yun-suan.html">
+            
+                    
+                    位运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/liu-lan-qi-huan-cun-ce-lve.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/liu-lan-qi-huan-cun-ce-lve.html">
+            
+                    
+                    浏览器缓存策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/pan-duan-ye-mian-shi-fou-hua-dong-dao-zui-di-bu.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/pan-duan-ye-mian-shi-fou-hua-dong-dao-zui-di-bu.html">
+            
+                    
+                    判断页面是否滑动到最底部
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/zu-zhi-mao-pao-he-bu-huo.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/zu-zhi-mao-pao-he-bu-huo.html">
+            
+                    
+                    阻止冒泡和捕获
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/kua-yu-jie-jue-fang-an.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/kua-yu-jie-jue-fang-an.html">
+            
+                    
+                    跨域解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-shi-xian-new.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-shi-xian-new.html">
+            
+                    
+                    手写实现new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.html">
+            
+                    
+                    手写Intenceof
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-promise.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-promise.html">
+            
+                    
+                    手写Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/event-loop.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/event-loop.html">
+            
+                    
+                    Event Loop中的宏任务与微任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../suan-fa-ti-1/">
+            
+                <a href="../suan-fa-ti-1/">
+            
+                    
+                    算法题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../suan-fa-ti-1/xuan-zhuan-tu-xiang.html">
+            
+                <a href="../suan-fa-ti-1/xuan-zhuan-tu-xiang.html">
+            
+                    
+                    48.旋转图像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../suan-fa-ti-1/bu-tong-lu-jing.html">
+            
+                <a href="../suan-fa-ti-1/bu-tong-lu-jing.html">
+            
+                    
+                    62.不同路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../suan-fa-ti-1/188.-mai-mai-gu-piao-de-zui-jia-shi-ji.html">
+            
+                <a href="../suan-fa-ti-1/188.-mai-mai-gu-piao-de-zui-jia-shi-ji.html">
+            
+                    
+                    86.分隔链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../suan-fa-ti-1/ji-shu-zhi-shu.html">
+            
+                <a href="../suan-fa-ti-1/ji-shu-zhi-shu.html">
+            
+                    
+                    204.计数质数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../suan-fa-ti-1/zhao-bu-tong.html">
+            
+                <a href="../suan-fa-ti-1/zhao-bu-tong.html">
+            
+                    
+                    389.找不同
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../suan-fa-ti-1/yi-diaokwei-shu-zi.html">
+            
+                <a href="../suan-fa-ti-1/yi-diaokwei-shu-zi.html">
+            
+                    
+                    402.移掉K位数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../suan-fa-ti-1/zhong-gou-zi-fu-chuan.html">
+            
+                <a href="../suan-fa-ti-1/zhong-gou-zi-fu-chuan.html">
+            
+                    
+                    767.重构字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../suan-fa-ti-1/shang-sheng-xia-jiang-zi-fu-chuan.html">
+            
+                <a href="../suan-fa-ti-1/shang-sheng-xia-jiang-zi-fu-chuan.html">
+            
+                    
+                    1370.上升下降字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/">
+            
+                    
+                    工具类知识整理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/git-fen-zhi-guan-li.html">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/git-fen-zhi-guan-li.html">
+            
+                    
+                    Git 分支管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/qing-chu-git-zhong-de-huan-cun-ping-ju.html">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/qing-chu-git-zhong-de-huan-cun-ping-ju.html">
+            
+                    
+                    清除Git中的缓存凭据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/moment.js-chang-jian-yong-fa-zong-jie.html">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/moment.js-chang-jian-yong-fa-zong-jie.html">
+            
+                    
+                    Moment.js常见用法总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    React相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="fiber.html">
+            
+                <a href="fiber.html">
+            
+                    
+                    Fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="expirationtime.html">
+            
+                <a href="expirationtime.html">
+            
+                    
+                    ExpirationTime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.html">
+            
+                <a href="react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.html">
+            
+                    
+                    React源码常用方法、全局变量<一>
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang-er.html">
+            
+                <a href="react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang-er.html">
+            
+                    
+                    React源码常用方法、全局变量<二>
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ExpirationTime</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#expirationtime"><b></b>ExpirationTime</a></li><ul><li><span class="title-icon "></span><a href="#expirationtime-&#x516C;&#x5F0F;-"><b></b>expirationTime &#x516C;&#x5F0F; </a></li><li><span class="title-icon "></span><a href="#currenttime-"><b></b>currentTime </a></li><li><span class="title-icon "></span><a href="#&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7684;-expirationtime-"><b></b>&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7684; expirationTime </a></li></ul></ul></div><a href="#expirationtime" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="expirationtime"><a name="expirationtime" class="anchor-navigation-ex-anchor" href="#expirationtime"><i class="fa fa-link" aria-hidden="true"></i></a>ExpirationTime</h1>
+<h2 id="expirationtime-&#x516C;&#x5F0F;-"><a name="expirationtime-&#x516C;&#x5F0F;-" class="anchor-navigation-ex-anchor" href="#expirationtime-&#x516C;&#x5F0F;-"><i class="fa fa-link" aria-hidden="true"></i></a>expirationTime &#x516C;&#x5F0F; <a id="expirationtime-&#x516C;&#x5F0F;"></a></h2>
+<p>&#x8BB2;&#x516C;&#x5F0F;&#x5C31;&#x6709;&#x5FC5;&#x8981;&#x628A;&#x4EE3;&#x7801;&#x4EAE;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x6BD5;&#x7ADF;&#x4EE3;&#x7801;&#x91CF;&#x4E5F;&#x4E0D;&#x591A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> UNIT_SIZE = <span class="hljs-number">10</span>             <span class="hljs-comment">//&#x76F4;&#x7FFB;&#xFF1A;&#x5355;&#x4F4D;&#x5927;&#x5C0F;</span>
+<span class="hljs-keyword">const</span> MAGIC_NUMBER_OFFSET = <span class="hljs-number">2</span>    <span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x9B54;&#x6CD5;&#x504F;&#x79FB;&#x91CF;</span>
+
+<span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;ms&#x8F6C;&#x5316;&#x4E3A;ExpirationTime</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">msToExpirationTime</span>(<span class="hljs-params">ms: number</span>): <span class="hljs-title">ExpirationTime</span> </span>{
+  <span class="hljs-keyword">return</span> ((ms / UNIT_SIZE) | <span class="hljs-number">0</span>) + MAGIC_NUMBER_OFFSET
+}
+
+<span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;ExpirationTime&#x8F6C;&#x5316;&#x4E3A;ms</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">expirationTimeToMs</span>(<span class="hljs-params">expirationTime: ExpirationTime</span>): <span class="hljs-title">number</span> </span>{
+  <span class="hljs-keyword">return</span> (expirationTime - MAGIC_NUMBER_OFFSET) * UNIT_SIZE
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ceiling</span>(<span class="hljs-params">num: number, precision: number</span>): <span class="hljs-title">number</span> </span>{
+  <span class="hljs-keyword">return</span> (((num / precision) | <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>) * precision
+}
+
+<span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x8BA1;&#x7B97;Expiration&#x5B58;&#x50A8;&#x6876;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">computeExpirationBucket</span>(<span class="hljs-params">
+  currentTime,
+  expirationInMs,
+  bucketSizeMs,
+</span>): <span class="hljs-title">ExpirationTime</span> </span>{
+  <span class="hljs-keyword">return</span> (
+    MAGIC_NUMBER_OFFSET +
+    ceiling(
+      currentTime - MAGIC_NUMBER_OFFSET + expirationInMs / UNIT_SIZE,
+      bucketSizeMs / UNIT_SIZE,
+    )
+  )
+}
+
+<span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x4F4E;&#x4F18;&#x5148;&#x7EA7;Expiration</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> LOW_PRIORITY_EXPIRATION = <span class="hljs-number">5000</span>
+<span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x4F4E;&#x4F18;&#x5148;&#x7EA7;&#x6279;&#x91CF;Size</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> LOW_PRIORITY_BATCH_SIZE = <span class="hljs-number">250</span>
+
+<span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x8BA1;&#x7B97;&#x5F02;&#x6B65;Expiration</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">computeAsyncExpiration</span>(<span class="hljs-params">
+  currentTime: ExpirationTime,
+</span>): <span class="hljs-title">ExpirationTime</span> </span>{
+  <span class="hljs-keyword">return</span> computeExpirationBucket(
+    currentTime,
+    LOW_PRIORITY_EXPIRATION,
+    LOW_PRIORITY_BATCH_SIZE,
+  )
+}
+
+<span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;Expiration</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> HIGH_PRIORITY_EXPIRATION = __DEV__ ? <span class="hljs-number">500</span> : <span class="hljs-number">150</span>
+<span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#x6279;&#x91CF;Size</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> HIGH_PRIORITY_BATCH_SIZE = <span class="hljs-number">100</span>
+
+<span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x8BA1;&#x7B97;&#x4EA4;&#x4E92;&#x5F0F;Expiration</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">computeInteractiveExpiration</span>(<span class="hljs-params">currentTime: ExpirationTime</span>) </span>{
+  <span class="hljs-keyword">return</span> computeExpirationBucket(
+    currentTime,
+    HIGH_PRIORITY_EXPIRATION,
+    HIGH_PRIORITY_BATCH_SIZE,
+  )
+}
+</code></pre>
+<p>React &#x4E2D;&#x6709;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#x7684;<code>ExpirationTime</code>&#xFF0C;&#x4E00;&#x4E2A;&#x662F;<code>Interactive</code>&#x7684;&#xFF0C;&#x53E6;&#x4E00;&#x79CD;&#x662F;&#x666E;&#x901A;&#x7684;&#x5F02;&#x6B65;&#x3002;<code>Interactive</code>&#x7684;&#x6BD4;&#x5982;&#x8BF4;&#x662F;&#x7531;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x4ED6;&#x7684;&#x54CD;&#x5E94;&#x4F18;&#x5148;&#x7EA7;&#x4F1A;&#x6BD4;&#x8F83;&#x9AD8;&#x56E0;&#x4E3A;&#x6D89;&#x53CA;&#x5230;&#x4EA4;&#x4E92;&#x3002;</p>
+<p>&#x5728;&#x6574;&#x4E2A;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x4E2D;&#x53EA;&#x6709;<code>currentTime</code>&#x662F;&#x53D8;&#x91CF;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x3002;&#x6211;&#x4EEC;&#x62FF;<code>computeAsyncExpiration</code>&#x4E3E;&#x4F8B;&#xFF0C;&#x5728;<code>computeExpirationBucket</code>&#x4E2D;&#x63A5;&#x6536;&#x7684;&#x5C31;&#x662F;<code>currentTime</code>&#x3001;<code>5000</code>&#x548C;<code>250</code></p>
+<p>&#x6700;&#x7EC8;&#x7684;&#x516C;&#x5F0F;&#x5C31;&#x662F;&#x9171;&#x7D2B;&#x7684;&#xFF1A;<code>((((currentTime - 2 + 5000 / 10) / 25) | 0) + 1) * 25</code></p>
+<p>&#x5176;&#x4E2D;<code>25</code>&#x662F;<code>250 / 10</code>&#xFF0C;<code>| 0</code>&#x7684;&#x4F5C;&#x7528;&#x662F;&#x53D6;&#x6574;&#x6570;</p>
+<p>&#x7FFB;&#x8BD1;&#x4E00;&#x4E0B;&#x5C31;&#x662F;&#xFF1A;<strong>&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x52A0;&#x4E0A;<code>498</code>&#x7136;&#x540E;&#x5904;&#x4EE5;<code>25</code>&#x53D6;&#x6574;&#x518D;&#x52A0;<code>1</code>&#x518D;&#x4E58;&#x4EE5; 5&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x8FD9;&#x91CC;&#x7684;<code>currentTime</code>&#x662F;&#x7ECF;&#x8FC7;<code>msToExpirationTime</code>&#x5904;&#x7406;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;<code>((now / 10) | 0) + 2</code>&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x7684;&#x51CF;&#x53BB;<code>2</code>&#x53EF;&#x4EE5;&#x65E0;&#x89C6;&#xFF0C;&#x800C;&#x9664;&#x4EE5; 10 &#x53D6;&#x6574;&#x5E94;&#x8BE5;&#x662F;&#x8981;&#x62B9;&#x5E73; 10 &#x6BEB;&#x79D2;&#x5185;&#x7684;&#x8BEF;&#x5DEE;&#xFF0C;&#x5F53;&#x7136;&#x6700;&#x7EC8;&#x8981;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x5DEE;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8C03;&#x7528;<code>expirationTimeToMs</code>&#x6062;&#x590D;&#x56DE;&#x53BB;&#xFF0C;&#x4F46;&#x662F;&#x88AB;&#x53D6;&#x6574;&#x53BB;&#x6389;&#x7684; 10 &#x6BEB;&#x79D2;&#x8BEF;&#x5DEE;&#x80AF;&#x5B9A;&#x662F;&#x56DE;&#x4E0D;&#x53BB;&#x7684;&#x3002;</strong></p>
+<p>&#x73B0;&#x5728;&#x5E94;&#x8BE5;&#x5F88;&#x660E;&#x767D;&#x4E86;&#x5427;&#xFF1F;&#x518D;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;&#x5427;&#xFF1A;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x662F;&#x4EE5;<code>25</code>&#x4E3A;&#x5355;&#x4F4D;&#x5411;&#x4E0A;&#x589E;&#x52A0;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#x6211;&#x4EEC;&#x8F93;&#x5165;<code>10002 - 10026</code>&#x4E4B;&#x95F4;&#xFF0C;&#x6700;&#x7EC8;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x90FD;&#x662F;<code>10525</code>&#xFF0C;&#x4F46;&#x662F;&#x5230;&#x4E86;<code>10027</code>&#x7684;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;<code>10550</code>&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x9664;&#x4EE5;<code>25</code>&#x53D6;&#x6574;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x8981;&#x63D0;&#x7684;&#x5C31;&#x662F;<code>msToExpirationTime</code>&#x548C;<code>expirationTimeToMs</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4ED6;&#x4EEC;&#x662F;&#x60F3;&#x6362;&#x8F6C;&#x6362;&#x7684;&#x5173;&#x7CFB;&#x3002;<strong>&#x6709;&#x4E00;&#x70B9;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x7528;&#x6765;&#x8BA1;&#x7B97;<code>expirationTime</code>&#x7684;<code>currentTime</code>&#x662F;&#x901A;&#x8FC7;<code>msToExpirationTime(now)</code>&#x5F97;&#x5230;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x9884;&#x5148;&#x5904;&#x7406;&#x8FC7;&#x7684;&#xFF0C;&#x5148;&#x5904;&#x4EE5;<code>10</code>&#x518D;&#x52A0;&#x4E86;<code>2</code>&#xFF0C;&#x6240;&#x4EE5;&#x540E;&#x9762;&#x8BA1;&#x7B97;<code>expirationTime</code>&#x8981;&#x51CF;&#x53BB;<code>2</code>&#x4E5F;&#x5C31;&#x4E0D;&#x5947;&#x602A;&#x4E86;</strong></p>
+<h4 id="&#x5C0F;&#x7ED3;&#x4E00;&#x4E0B;-"><a name="&#x5C0F;&#x7ED3;&#x4E00;&#x4E0B;-" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7ED3;&#x4E00;&#x4E0B;-"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7ED3;&#x4E00;&#x4E0B; <a id="&#x5C0F;&#x7ED3;&#x4E00;&#x4E0B;"></a></h4>
+<p>React &#x8FD9;&#x4E48;&#x8BBE;&#x8BA1;&#x62B9;&#x76F8;&#x5F53;&#x4E8E;&#x62B9;&#x5E73;&#x4E86;<code>25ms</code>&#x5185;&#x8BA1;&#x7B97;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x7684;&#x8BEF;&#x5DEE;&#xFF0C;&#x90A3;&#x4ED6;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FD9;&#x4E48;&#x505A;&#x5462;&#xFF1F;&#x6211;&#x601D;&#x8003;&#x4E86;&#x5F88;&#x4E45;&#x90FD;&#x6CA1;&#x6709;&#x5F97;&#x5230;&#x7B54;&#x6848;&#xFF0C;&#x76F4;&#x5230;&#x6709;&#x4E00;&#x5929;&#x6211;&#x76EF;&#x7740;&#x4EE3;&#x7801;&#x53D1;&#x5446;&#xFF0C;&#x770B;&#x5230;<code>LOW_PRIORITY_BATCH_SIZE</code>&#x8FD9;&#x4E2A;&#x5B57;&#x6837;&#xFF0C;<code>bacth</code>&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x5C31;&#x5BF9;&#x5E94;<code>batchedUpdates</code>&#xFF1F;&#x518D;&#x7EC6;&#x60F3;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E48;&#x505A;&#x4E5F;&#x8BB8;&#x662F;&#x4E3A;&#x4E86;&#x8BA9;&#x975E;&#x5E38;&#x76F8;&#x8FD1;&#x7684;&#x4E24;&#x6B21;&#x66F4;&#x65B0;&#x5F97;&#x5230;&#x76F8;&#x540C;&#x7684;<code>expirationTime</code>&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E00;&#x6B21;&#x66F4;&#x65B0;&#x4E2D;&#x5B8C;&#x6210;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x7684;<code>batchedUpdates</code>&#x3002;</p>
+<p>&#x4E0D;&#x7981;&#x611F;&#x53F9;&#xFF0C;&#x771F;&#x7684;&#x662F;&#x7EC6;&#x554A;&#xFF01;</p>
+<p>&#x4EE5;&#x4E0A;&#x5C31;&#x662F;<code>expirationTime</code>&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="currenttime-"><a name="currenttime-" class="anchor-navigation-ex-anchor" href="#currenttime-"><i class="fa fa-link" aria-hidden="true"></i></a>currentTime <a id="currenttime"></a></h2>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">requestCurrentTime</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (isRendering) {
+    <span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x5F53;&#x524D;&#x8BA1;&#x5212;&#x65F6;&#x95F4;</span>
+    <span class="hljs-keyword">return</span> currentSchedulerTime
+  }
+  findHighestPriorityRoot()
+  <span class="hljs-keyword">if</span> (
+    <span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x4E0B;&#x4E00;&#x4E2A;&#x5237;&#x65B0;&#x7684;ExpirationTime</span>
+    nextFlushedExpirationTime === NoWork ||
+    nextFlushedExpirationTime === Never
+  ) {
+    recomputeCurrentRendererTime()
+                           <span class="hljs-comment">// &#x76F4;&#x7FFB;&#xFF1A;&#x5F53;&#x524D;&#x8BA1;&#x5212;&#x65F6;&#x95F4;</span>
+    currentSchedulerTime = currentRendererTime
+    <span class="hljs-keyword">return</span> currentSchedulerTime
+  }
+  <span class="hljs-keyword">return</span> currentSchedulerTime
+}
+</code></pre>
+<p>&#x5728; React &#x4E2D;&#x6211;&#x4EEC;&#x8BA1;&#x7B97;<code>expirationTime</code>&#x8981;&#x57FA;&#x4E8E;&#x5F53;&#x524D;&#x5F97;<em>&#x65F6;&#x949F;&#x65F6;&#x95F4;</em>&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x83B7;&#x53D6;<code>Date.now</code>&#x6216;&#x8005;<code>performance.now</code>&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x6BCF;&#x6B21;&#x83B7;&#x53D6;&#x4E00;&#x4E0B;&#x5462;&#x6BD4;&#x8F83;&#x6D88;&#x8017;&#x6027;&#x80FD;&#xFF0C;&#x6240;&#x4EE5;&#x5462; React &#x8BBE;&#x7F6E;&#x4E86;<code>currentRendererTime</code>&#x6765;&#x8BB0;&#x5F55;&#x8FD9;&#x4E2A;&#x503C;&#xFF0C;&#x7528;&#x4E8E;&#x4E00;&#x4E9B;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x5F97;&#x573A;&#x666F;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5728; React &#x4E2D;&#x5462;&#x53C8;&#x63D0;&#x4F9B;&#x4E86;<code>currentSchedulerTime</code>&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x662F;&#x8BB0;&#x5F55;&#x8FD9;&#x4E2A;&#x503C;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;&#x4E24;&#x4E2A;&#x503C;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;<code>requestCurrentTime</code>&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<h4 id="&#x9996;&#x5148;&#x662F;-"><a name="&#x9996;&#x5148;&#x662F;-" class="anchor-navigation-ex-anchor" href="#&#x9996;&#x5148;&#x662F;-"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9996;&#x5148;&#x662F;: <a id="&#x9996;&#x5148;&#x662F;"></a></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (isRendering) {
+  <span class="hljs-keyword">return</span> currentSchedulerTime
+}
+</code></pre>
+<p>&#x8FD9;&#x4E2A;<code>isRendering</code>&#x53EA;&#x6709;&#x5728;<code>performWorkOnRoot</code>&#x7684;&#x65F6;&#x5019;&#x624D;&#x4F1A;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;<code>true</code>&#xFF0C;&#x800C;&#x5176;&#x672C;&#x8EAB;&#x662F;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x4ED6;&#x6267;&#x884C;&#x5230;&#x4E00;&#x534A;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;<code>isRendering</code>&#x4E3A;<code>false</code>&#x7684;&#x65F6;&#x5019;&#x5C31;&#x8DF3;&#x51FA;&#xFF0C;&#x90A3;&#x4E48;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x5728;&#x8FD9;&#x91CC;&#x51FA;&#x73B0;&#x65B0;&#x7684;<code>requestCurrentTime</code>&#x5462;&#xFF1F;</p>
+<ul>
+<li>&#x5728;&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;&#x4E2D;&#x8C03;&#x7528;&#x4E86;<code>setState</code></li>
+<li>&#x9700;&#x8981;&#x6302;&#x8D77;&#x4EFB;&#x52A1;&#x7684;&#x65F6;&#x5019;</li>
+</ul>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4; React &#x8981;&#x6C42;<strong>&#x5728;&#x4E00;&#x6B21;<code>rendering</code>&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x65B0;&#x4EA7;&#x751F;&#x7684;<code>update</code>&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x7684;<code>current</code>&#x5FC5;&#x987B;&#x8DDF;&#x76EE;&#x524D;&#x7684;<code>renderTime</code>&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x540C;&#x7406;&#x5728;&#x8FD9;&#x4E2A;&#x5468;&#x671F;&#x4E2D;&#x6240;&#x6709;&#x4EA7;&#x751F;&#x7684;&#x65B0;&#x7684;&#x66F4;&#x65B0;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x90FD;&#x4F1A;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF01;</strong></p>
+<h4 id="&#x7136;&#x540E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5224;&#x65AD;&#xFF1A;-"><a name="&#x7136;&#x540E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5224;&#x65AD;&#xFF1A;-" class="anchor-navigation-ex-anchor" href="#&#x7136;&#x540E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5224;&#x65AD;&#xFF1A;-"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7136;&#x540E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5224;&#x65AD;&#xFF1A; <a id="&#x7136;&#x540E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5224;&#x65AD;&#xFF1A;"></a></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (
+  nextFlushedExpirationTime === NoWork ||
+  nextFlushedExpirationTime === Never
+)
+</code></pre>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728;&#x4E00;&#x4E2A;<code>batched</code>&#x66F4;&#x65B0;&#x4E2D;&#xFF0C;&#x53EA;&#x6709;&#x7B2C;&#x4E00;&#x6B21;&#x521B;&#x5EFA;&#x66F4;&#x65B0;&#x624D;&#x4F1A;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x6240;&#x6709;&#x66F4;&#x65B0;&#x90FD;&#x4F1A;&#x590D;&#x7528;&#x7B2C;&#x4E00;&#x6B21;&#x521B;&#x5EFA;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E5F;&#x662F;&#x4E3A;&#x4E86;<strong>&#x4FDD;&#x8BC1;&#x5728;&#x4E00;&#x4E2A;&#x6279;&#x91CF;&#x66F4;&#x65B0;&#x4E2D;&#x4EA7;&#x751F;&#x7684;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x66F4;&#x65B0;&#x53EA;&#x4F1A;&#x6709;&#x76F8;&#x540C;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</strong></p>
+<h2 id="&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7684;-expirationtime-"><a name="&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7684;-expirationtime-" class="anchor-navigation-ex-anchor" href="#&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7684;-expirationtime-"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7684; expirationTime <a id="&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7684;-expirationtime"></a></h2>
+<p>&#x5728; React &#x7684;&#x8C03;&#x5EA6;&#x8FC7;&#x7A0B;&#x4E2D;&#x5B58;&#x5728;&#x7740;&#x975E;&#x5E38;&#x591A;&#x4E0D;&#x540C;&#x7684;<em><code>expirationTime</code></em>&#x53D8;&#x91CF;&#x5E2E;&#x52A9; React &#x53BB;&#x5B9E;&#x73B0;&#x5728;&#x5355;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E2D;&#x8C03;&#x5EA6;&#x4E0D;&#x540C;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x4EFB;&#x52A1;&#x8FD9;&#x4E2A;&#x9700;&#x6C42;&#xFF0C;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x6211;&#x4EEC;&#x5C31;&#x6765;&#x4E00;&#x4E00;&#x5217;&#x4E3E;&#x4ED6;&#x4EEC;&#x7684;&#x542B;&#x4E49;&#x4EE5;&#x53CA;&#x4F5C;&#x7528;&#xFF0C;&#x6765;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x66F4;&#x597D;&#x5F97;&#x7406;&#x89E3; React &#x4E2D;&#x7684;&#x6574;&#x4E2A;&#x8C03;&#x5EA6;&#x8FC7;&#x7A0B;&#x3002;</p>
+<ul>
+<li><code>root.expirationTime</code></li>
+<li><code>root.nextExpirationTimeToWorkOn</code></li>
+<li><code>root.childExpirationTime</code></li>
+<li><code>root.earliestPendingTime &amp; root.lastestPendingTime</code></li>
+<li><code>root.earliestSuspendedTime &amp; root.lastestSuspendedTime</code></li>
+<li><code>root.lastestPingedTime</code></li>
+<li><code>nextFlushedExpirationTime</code></li>
+<li><code>nextLatestAbsoluteTimeoutMs</code></li>
+<li><code>currentRendererTime</code></li>
+<li><code>currentSchedulerTime</code></li>
+</ul>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x6240;&#x6709;&#x8282;&#x70B9;&#x90FD;&#x4F1A;&#x5177;&#x6709;<code>expirationTime</code>&#x548C;<code>childExpirationTime</code>&#x4E24;&#x4E2A;&#x5C5E;&#x6027;</p>
+<p>&#x4EE5;&#x4E0A;&#x6240;&#x6709;&#x503C;&#x521D;&#x59CB;&#x90FD;&#x662F;<code>NoWork</code>&#x4E5F;&#x5C31;&#x662F;<code>0</code>&#xFF0C;&#x4EE5;&#x53CA;&#x4ED6;&#x4EEC;&#x4E00;&#x5171;&#x4F1A;&#x6709;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;</p>
+<ul>
+<li><code>NoWork</code>&#xFF0C;&#x4EE3;&#x8868;&#x6CA1;&#x6709;&#x66F4;&#x65B0;</li>
+<li><code>Sync</code>&#xFF0C;&#x4EE3;&#x8868;&#x540C;&#x6B65;&#x6267;&#x884C;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x8C03;&#x5EA6;&#x4E5F;&#x4E0D;&#x4F1A;&#x88AB;&#x6253;&#x65AD;</li>
+<li><code>async</code>&#x6A21;&#x5F0F;&#x4E0B;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF0C;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x6233;</li>
+</ul>
+<p>&#x63A5;&#x4E0B;&#x53BB;&#x7684;&#x4F8B;&#x5B50;&#x6211;&#x4EEC;&#x90FD;&#x4F1A;&#x6839;&#x636E;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x7ED3;&#x6784;&#x6765;&#x8BB2;&#xFF0C;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x6709;&#x5982;&#x4E0B;&#x7ED3;&#x6784;&#x7684;&#x4E00;&#x4E2A; React &#x8282;&#x70B9;&#x6811;&#xFF0C;&#x4ED6;&#x7684;<code>Fiber</code>&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://kgfacq.dm.files.1drv.com/y4mdey9O6FJ59ftJnhP1ej6YNMd0z1HWSQsmF42mJjlUiM8fVYKjcyV-0AlUvMdE5SpBHkRl7Wn_WcqaBlhtY-ifm4GLrc_whI9LlUsJyeKOdbmcwCdlqByqYRkCdbjm-6I8d0MuICm3TeAxxyttW3SNKRLWYPeinkDSrH31VLXI4I5M9IJ60x8d6RR1OtOcctUwRNExxMvS6yFQVUEuBulKA?width=721&amp;height=471&amp;cropmode=none" alt="&#x57FA;&#x7840;&#x7ED3;&#x6784;"></p>
+<p>&#x540E;&#x7EED;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x57FA;&#x7840;&#x4E0A;&#x8BB2;&#x89E3;&#x4E0D;&#x540C;&#x60C5;&#x51B5;&#x4E0B;<code>expirationTime</code>&#x7684;&#x60C5;&#x51B5;</p>
+<h4 id="childexpirationtime-"><a name="childexpirationtime-" class="anchor-navigation-ex-anchor" href="#childexpirationtime-"><i class="fa fa-link" aria-hidden="true"></i></a>childExpirationTime <a id="childexpirationtime"></a></h4>
+<p>&#x5728;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x8BF4;&#x8FC7;&#xFF0C;&#x6BCF;&#x6B21;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x8C03;&#x7528;<code>setState</code>&#x6216;&#x8005;<code>forceUpdate</code>&#x90FD;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x66F4;&#x65B0;&#x5E76;&#x4E14;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;<code>expirationTime</code>&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;<code>expirationTime</code>&#x5C31;&#x662F;&#x5F53;&#x65F6;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x503C;&#xFF0C;<strong>&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x66F4;&#x65B0;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x7531;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4EA7;&#x751F;&#x7684;</strong></p>
+<p>&#x6700;&#x7EC8;&#x56E0;&#x4E3A; React &#x7684;&#x66F4;&#x65B0;&#x9700;&#x8981;&#x4ECE;<code>FiberRoot</code>&#x5F00;&#x59CB;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x5411;&#x4E0A;&#x904D;&#x5386;&#x627E;&#x5230;<code>FiberRoot</code>&#xFF0C;&#x800C;&#x5411;&#x4E0A;&#x904D;&#x5386;&#x5219;&#x6B63;&#x597D;&#x662F;&#x4E00;&#x6B65;&#x6B65;&#x627E;&#x5230;<strong>&#x521B;&#x5EFA;&#x66F4;&#x65B0;&#x7684;&#x8282;&#x70B9;&#x7684;&#x7236;&#x8282;&#x70B9;</strong>&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x65F6;&#x5019; React &#x5C31;&#x4F1A;&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x7236;&#x8282;&#x70B9;&#x94FE;&#x4E0A;&#x7684;&#x8282;&#x70B9;&#x8BBE;&#x7F6E;<code>childExpirationTime</code>&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x66F4;&#x65B0;&#x662F;&#x4ED6;&#x4EEC;&#x7684;&#x5B50;&#x5B59;&#x8282;&#x70B9;&#x9020;&#x6210;&#x7684;</p>
+<p><img src="https://h2facq.dm.files.1drv.com/y4mphJBnkRInXVdei2q3h0etKGLWTB5irIH2w23DMcoAKRIl0K7EJPFHjykQ5enpm5lgi_Jp9qTPhBTM64CQF2J_6wxtL1j2raUeLNUm7zXZzclXJQ6iPXjw75oGcdUMdsYCKNm2YawmEsJy2joPddhFLBN4PK51oGM16974Ad3A7azsRa0NunaDYNB1Lvhb3ZMrwKrx-3Yvi90e4vW3A02Iw?width=841&amp;height=571&amp;cropmode=none" alt=""></p>
+<p>&#x5982;&#x4E0A;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x5FFD;&#x7565;&#x6700;&#x5DE6;&#x8FB9;&#x7684;<code>child1</code>&#x4EA7;&#x751F;&#x7684;&#x4E00;&#x6B21;&#x5F02;&#x6B65;&#x66F4;&#x65B0;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x53EA;&#x6709;<code>child2</code>&#x4EA7;&#x751F;&#x4E86;&#x4E00;&#x4E2A;<code>Sync</code>&#x66F4;&#x65B0;&#xFF0C;&#x90A3;&#x4E48;<code>App</code>&#x548C;<code>FiberRoot</code>&#x7684;<code>childExpirationTime</code>&#x90FD;&#x4F1A;&#x66F4;&#x65B0;&#x6210;<code>Sync</code></p>
+<p>&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x503C;&#x6709;&#x4EC0;&#x4E48;&#x7528;&#x5462;&#xFF1F;&#x5728;&#x6211;&#x4EEC;&#x5411;&#x4E0B;&#x66F4;&#x65B0;&#x6574;&#x68F5;<code>Fiber</code>&#x6811;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#x5BF9;&#x5E94;&#x7684;<code>update</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x8282;&#x70B9;&#x672C;&#x8EAB;&#x7684;<code>expirationTime</code>&#x548C;<code>childExpirationTime</code>&#x6765;&#x5224;&#x65AD;&#x4ED6;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8DF3;&#x8FC7;&#xFF0C;&#x4E0D;&#x66F4;&#x65B0;&#x5B50;&#x6811;&#x3002;<strong><code>expirationTime</code>&#x4EE3;&#x8868;&#x4ED6;&#x672C;&#x8EAB;&#x662F;&#x5426;&#x6709;&#x66F4;&#x65B0;&#xFF0C;&#x5982;&#x679C;&#x4ED6;&#x672C;&#x8EAB;&#x6709;&#x66F4;&#x65B0;&#xFF0C;&#x90A3;&#x4E48;&#x4ED6;&#x7684;&#x66F4;&#x65B0;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x5B50;&#x6811;&#xFF1B;<code>childExpirationTime</code>&#x8868;&#x793A;&#x4ED6;&#x7684;&#x5B50;&#x6811;&#x662F;&#x5426;&#x4EA7;&#x751F;&#x4E86;&#x66F4;&#x65B0;&#xFF1B;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x90FD;&#x6CA1;&#x6709;&#xFF0C;&#x90A3;&#x4E48;&#x5B50;&#x6811;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x3002;</strong></p>
+<p>&#x5BF9;&#x5E94;&#x56FE;&#x4E2D;&#xFF0C;&#x5982;&#x679C;<code>child1</code>&#xFF0C;<code>child3</code>&#xFF0C;<code>child4</code>&#x8FD8;&#x6709;&#x5B50;&#x6811;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x8FD9;&#x6B21;<code>child2</code>&#x7684;&#x66F4;&#x65B0;&#x4E2D;&#xFF0C;&#x4ED6;&#x4EEC;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7684;&#xFF0C;&#x5728;&#x904D;&#x5386;&#x5230;&#x4ED6;&#x4EEC;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x8DF3;&#x8FC7;</p>
+<p><em>&#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x91CC;&#x53EA;&#x8BA8;&#x8BBA;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6BD4;&#x5982;&#x4F7F;&#x7528;&#x8001;&#x7684;<code>context api</code>&#x4E4B;&#x7C7B;&#x7684;&#x6700;&#x7EC8;&#x4F1A;&#x5F3A;&#x5236;&#x5BFC;&#x81F4;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#x7684;&#x7EC4;&#x4EF6;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7684;&#x60C5;&#x51B5;&#x6211;&#x4EEC;&#x5148;&#x4E0D;&#x8003;&#x8651;&#x3002;</em></p>
+<p>&#x4E86;&#x89E3;&#x4E86;<code>childExpirationTime</code>&#x7684;&#x4F5C;&#x7528;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x6765;&#x8BB2;&#x4E00;&#x4E0B;&#x4ED6;&#x7684;&#x7279;&#x6027;&#xFF1A;</p>
+<ul>
+<li>&#x540C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x4EA7;&#x751F;&#x7684;&#x8FDE;&#x7EED;&#x4E24;&#x6B21;&#x66F4;&#x65B0;&#xFF0C;&#x6700;&#x7EA2;&#x5728;&#x7236;&#x8282;&#x70B9;&#x4E0A;&#x53EA;&#x4F1A;&#x4F53;&#x73B0;&#x4E00;&#x6B21;<code>childExpirationTime</code></li>
+<li>&#x4E0D;&#x540C;&#x5B50;&#x6811;&#x4EA7;&#x751F;&#x7684;&#x66F4;&#x65B0;&#xFF0C;&#x6700;&#x7EC8;&#x4F53;&#x73B0;&#x5728;&#x8DDF;&#x8282;&#x70B9;&#x4E0A;&#x7684;&#x662F;&#x4F18;&#x5148;&#x7EA7;&#x6700;&#x9AD8;&#x7684;&#x90A3;&#x4E2A;&#x66F4;&#x65B0;</li>
+</ul>
+<p>&#x7B2C;&#x4E00;&#x70B9;&#x5F88;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x66F4;&#x65B0;&#x8FD8;&#x6CA1;&#x6709;&#x7ED3;&#x675F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x518D;&#x6B21;&#x4EA7;&#x751F;&#x66F4;&#x65B0;&#xFF0C;&#x90A3;&#x4E48;&#x4E0D;&#x7BA1;&#x4ED6;&#x4EEC;&#x4F18;&#x5148;&#x7EA7;&#x54EA;&#x4E2A;&#x9AD8;&#xFF0C;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x6309;&#x7167;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#x90A3;&#x4E2A;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x628A;&#x6240;&#x6709;&#x66F4;&#x65B0;&#x90FD;&#x66F4;&#x65B0;&#x6389;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;<code>Fiber</code>&#x5BF9;&#x8C61;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;<code>updateQueue</code>&#x4E5F;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x65E0;&#x6CD5;&#x533A;&#x5206;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0A;&#x8FDE;&#x7EED;&#x7684;&#x4E0D;&#x540C;&#x66F4;&#x65B0;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x70B9;&#x662F;&#x56E0;&#x4E3A; React &#x5728;&#x521B;&#x5EFA;&#x66F4;&#x65B0;&#x5411;&#x4E0A;&#x5BFB;&#x627E;<code>root</code>&#x5E76;&#x8BBE;&#x7F6E;<code>childExpirationTime</code>&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x5BF9;&#x6BD4;&#x4E4B;&#x524D;&#x8BBE;&#x7F6E;&#x8FC7;&#x7684;&#x548C;&#x73B0;&#x5728;&#x7684;&#xFF0C;&#x6700;&#x7EC8;&#x4F1A;&#x7B49;&#x4E8E;<strong>&#x975E;<code>NoWork</code>&#x7684;&#x6700;&#x5C0F;&#x7684;<code>childExpirationTime</code>&#xFF0C;&#x56E0;&#x4E3A;<code>expirationTime</code>&#x8D8A;&#x5C0F;&#x4F18;&#x5148;&#x7EA7;&#x8D8A;&#x9AD8;&#xFF0C;<code>Sync</code>&#x662F;&#x6700;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;</strong></p>
+<p>&#x5BF9;&#x5E94;&#x5230;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;<code>child1</code>&#x4EA7;&#x751F;&#x7684;&#x66F4;&#x65B0;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4ED6;&#x7684;<code>expirationTime</code>&#x662F;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x90A3;&#x4E48;&#x80AF;&#x5B9A;&#x6BD4;<code>Sync</code>&#x5927;&#xFF0C;&#x6240;&#x4EE5;&#x7387;&#x5148;&#x8BB0;&#x5F55;&#x5230;&#x7236;&#x8282;&#x70B9;&#x7684;&#x662F;<code>child2</code>&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x662F;<code>child2</code>&#x7684;&#x66F4;&#x65B0;&#x5148;&#x88AB;&#x6267;&#x884C;&#x3002;<strong>&#x5373;&#x4FBF;&#x662F;<code>child1</code>&#x7684;&#x66F4;&#x65B0;&#x5148;&#x4EA7;&#x751F;&#xFF0C;&#x5982;&#x679C;&#x4ED6;&#x5728;<code>chidl2</code>&#x4EA7;&#x751F;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x4ED6;&#x8FD8;&#x6CA1;&#x66F4;&#x65B0;&#x5B8C;&#xFF0C;&#x90A3;&#x4E48;&#x4E5F;&#x4F1A;&#x88AB;&#x6253;&#x65AD;&#xFF0C;&#x5148;&#x5B8C;&#x6210;<code>child2</code>&#x7684;&#x6E32;&#x67D3;&#xFF0C;&#x518D;&#x56DE;&#x5934;&#x6765;&#x6E32;&#x67D3;<code>child1</code></strong></p>
+<p>&#x4EE5;&#x4E0A;&#x662F;<code>childExpirationTime</code>&#x7684;&#x4F5C;&#x7528;&#x548C;&#x7279;&#x6027;&#xFF0C;&#x4ED6;&#x5728;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;<code>completeWork</code>&#x7684;&#x65F6;&#x5019;&#x4F1A;<code>reset</code>&#x7236;&#x94FE;&#x4E0A;&#x7684;<code>childExpirationTime</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x5DF2;&#x7ECF;&#x66F4;&#x65B0;&#x5B8C;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x4ED6;&#x7684;<code>childExpirationTime</code>&#x4E5F;&#x5C31;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x4E86;&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x6211;&#x4EEC;&#x5728;&#x8BB2;<a href="https://react.jokcy.me/book/update/expiration-time.html" target="_blank">&#x8282;&#x70B9;&#x66F4;&#x65B0;</a>&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8BB2;&#x5230;&#xFF0C;&#x5230;&#x65F6;&#x5019;&#x5927;&#x5BB6;&#x518D;&#x5BF9;&#x5E94;&#x8D77;&#x6765;&#x770B;&#x6548;&#x679C;&#x4F1A;&#x66F4;&#x597D;&#x3002;</p>
+<h4 id="pendingtime-"><a name="pendingtime-" class="anchor-navigation-ex-anchor" href="#pendingtime-"><i class="fa fa-link" aria-hidden="true"></i></a>pendingTime <a id="pendingtime"></a></h4>
+<p>&#x5728;<code>FiberRoot</code>&#x4E0A;&#x6709;&#x4E24;&#x4E2A;&#x503C;<code>earliestPendingTime</code>&#x548C;<code>lastestPedingTime</code>&#xFF0C;&#x4ED6;&#x4EEC;&#x662F;&#x4E00;&#x5BF9;&#x503C;&#xFF0C;<strong>&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x6240;&#x6709;&#x5B50;&#x6811;&#x4E2D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#x7684;&#x66F4;&#x65B0;&#x7684;<code>expirationTime</code>&#x7684;&#x533A;&#x95F4;</strong></p>
+<p><img src="https://hmfacq.dm.files.1drv.com/y4mTm9k8wciS1LTgRpOidtojQQIgCWVhDtXluYnvYIqbK0Z6NUXFqzm76SlooXVfTHb9sAU2pE7du3AbbR23JlZU0vJ1FghvT6X5HXcoguLi4Mp4PdE25AGFt_1w2NJ1K7o3UiqV3mH-kWnlEuWd5xPlkueCdm2FfYDWvCT40ynsrbziTCoE7QMxIbpHyAg6fYkKPHh0qRDY5vrK8ssy8jzuQ?width=841&amp;height=586&amp;cropmode=none" alt="pendingTime demo"></p>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x540C;&#x65F6;&#x5728;<code>child1</code>&#x3001;<code>child2</code>&#x3001;<code>child3</code>&#x4EA7;&#x751F;&#x91CC;&#x66F4;&#x65B0;&#xFF0C;&#x5E76;&#x4E14;&#x6839;&#x636E;&#x4F18;&#x5148;&#x7EA7;&#x8BA1;&#x7B97;&#x51FA;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF08;<strong>&#x518D;&#x6B21;&#x91CD;&#x7533;&#xFF0C;&#x8BF7;&#x5FFD;&#x7565;&#x7EC6;&#x8282;&#xFF0C;&#x73B0;&#x5B9E;&#x4E2D;&#x4E0D;&#x592A;&#x4F1A;&#x51FA;&#x73B0;&#x540C;&#x65F6;&#x4EA7;&#x751F;&#x7684;&#x60C5;&#x51B5;</strong>&#xFF09;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x66F4;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;React &#x4F1A;&#x901A;&#x8FC7;<code>markPendingPriorityLevel</code>&#x6807;&#x8BB0;<code>root</code>&#x8282;&#x70B9;&#x7684;<code>earliestPendingTime</code>&#x548C;<code>lastestPedingTime</code>&#x3002;&#x4ED6;&#x4EEC;&#x53EA;&#x8BB0;&#x5F55;&#x533A;&#x95F4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x4EA7;&#x751F;&#x4E86;&#x4E09;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x53EA;&#x8BB0;&#x5F55;&#x6700;&#x5927;&#x548C;&#x6700;&#x5C0F;&#x7684;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x4ED6;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x5F88;&#x660E;&#x663E;&#x4E86;&#xFF0C;<strong>&#x901A;&#x8FC7;&#x8FFD;&#x8E2A;&#x6700;&#x5927;&#x548C;&#x6700;&#x5C0F;&#x503C;&#xFF0C;React &#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x5728;&#x5F53;&#x524D;&#x66F4;&#x65B0;&#x4E4B;&#x540E;&#x662F;&#x5426;&#x8FD8;&#x5177;&#x6709;&#x4F18;&#x5148;&#x7EA7;&#x66F4;&#x4F4E;&#x7684;&#x4EFB;&#x52A1;&#x9700;&#x8981;&#x6267;&#x884C;&#xFF08;&#x5F53;&#x524D;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x5904;&#x7406;&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x4E4B;&#x95F4;&#xFF09;&#x3002;</strong></p>
+<h4 id="suspendedtime-"><a name="suspendedtime-" class="anchor-navigation-ex-anchor" href="#suspendedtime-"><i class="fa fa-link" aria-hidden="true"></i></a>suspendedTime <a id="suspendedtime"></a></h4>
+<p>&#x540C;&#x6837;&#x7684;&#x5728;<code>ReactFiber</code>&#x4E0A;&#x6709;&#x4E24;&#x4E2A;&#x503C;<code>earliestSuspendedTime</code>&#x548C;<code>lastestSuspendedTime</code>&#xFF0C;<strong>&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x662F;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x88AB;&#x6302;&#x8D77;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x7684;</strong></p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E00;&#x4E0B;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x4EFB;&#x52A1;&#x662F;&#x88AB;&#x6302;&#x8D77;&#x7684;&#xFF1A;</p>
+<ul>
+<li>&#x51FA;&#x73B0;&#x53EF;&#x6355;&#x83B7;&#x7684;&#x9519;&#x8BEF;&#x5E76;&#x4E14;&#x8FD8;&#x6709;&#x4F18;&#x5148;&#x7EA7;&#x66F4;&#x4F4E;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x60C5;&#x51B5;&#x4E0B;</li>
+<li>&#x5F53;&#x6355;&#x83B7;&#x5230;<code>thenable</code>&#xFF0C;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x8BBE;&#x7F6E;<code>onTimeout</code>&#x7684;&#x65F6;&#x5019;</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x79F0;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x88AB;<code>suspended</code>(&#x6302;&#x8D77;)&#x4E86;&#x3002;&#x8BB0;&#x5F55;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x4E3B;&#x8981;&#x662F;&#x5728;<code>resolve</code>&#x4E86;<code>promise</code>&#x4E4B;&#x540E;&#xFF0C;&#x5224;&#x65AD;&#x88AB;&#x6302;&#x8D77;&#x7684;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0;&#x662F;&#x5426;&#x4F9D;&#x7136;&#x5904;&#x4E8E;&#x76EE;&#x524D;&#x5DF2;&#x6709;&#x7684;<code>suspenedTime</code>&#x4E2D;&#x95F4;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x7684;&#x8BDD;&#x662F;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x65B0;&#x52A0;&#x5165;&#x961F;&#x5217;&#x8FDB;&#x884C;&#x8C03;&#x5EA6;&#x66F4;&#x65B0;&#x7684;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x5C31;&#x662F;&#x5728;&#x786E;&#x5B9A;&#x76EE;&#x524D;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;<code>root.expirationTime</code>&#x548C;<code>root.nextExpirationTimeToWorkOn</code>&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x8003;&#x8651;&#x56E0;&#x7D20;&#x3002;&#x6211;&#x4EEC;&#x63A5;&#x4E0B;&#x53BB;&#x4F1A;&#x8BB2;&#x5230;</p>
+<h4 id="lastestpingedtime-"><a name="lastestpingedtime-" class="anchor-navigation-ex-anchor" href="#lastestpingedtime-"><i class="fa fa-link" aria-hidden="true"></i></a>lastestPingedTime <a id="lastestpingedtime"></a></h4>
+<p>&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x6700;&#x65B0;&#x7684;&#x4E00;&#x6B21;<code>suspended</code>&#x7EC4;&#x4EF6;<code>resolve</code>&#x4E4B;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x6302;&#x8D77;&#x4E4B;&#x524D;&#x7684;<code>expirationTime</code>&#x4F9D;&#x7136;&#x5728;<code>earliestSuspendedTime</code>&#x548C;<code>lastestSuspendedTime</code>&#x4E4B;&#x95F4;&#xFF0C;&#x5219;&#x4F1A;&#x6807;&#x5FD7;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x4E3A;<code>pingedTime</code></p>
+<p><code>pingedTime</code>&#x76EE;&#x524D;&#x770B;&#x6765;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x522B;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x552F;&#x4E00;&#x8DDF;<code>suspendedTime</code>&#x7684;&#x533A;&#x522B;&#x662F;&#x4ED6;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x6BD4;<code>suspendedTime</code>&#x9AD8;&#x4E00;&#x4E9B;&#xFF0C;&#x4F1A;&#x4F18;&#x5148;&#x9009;&#x62E9;&#x4E3A;&#x6E32;&#x67D3;&#x76EE;&#x6807;&#x3002;</p>
+<h4 id="rootexpirationtime-&#x548C;-rootnextexpirationtimetoworkon-"><a name="rootexpirationtime-&#x548C;-rootnextexpirationtimetoworkon-" class="anchor-navigation-ex-anchor" href="#rootexpirationtime-&#x548C;-rootnextexpirationtimetoworkon-"><i class="fa fa-link" aria-hidden="true"></i></a>root.expirationTime &#x548C; root.nextExpirationTimeToWorkOn <a id="rootexpirationtime-&#x548C;-rootnextexpirationtimetoworkon"></a></h4>
+<p><code>root.expirationTime</code>&#x662F;&#x7528;&#x6765;&#x6807;&#x5FD7;&#x5F53;&#x524D;&#x6E32;&#x67D3;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x7684;&#xFF0C;&#x8BF7;&#x6CE8;&#x610F;&#x4ED6;&#x53EA;&#x7BA1;&#x672C;&#x6E32;&#x67D3;&#x5468;&#x671F;&#xFF0C;&#x4ED6;&#x5E76;&#x4E0D;&#x7BA1;&#x4F60;&#x73B0;&#x5728;&#x7684;&#x6E32;&#x67D3;&#x76EE;&#x6807;&#x662F;&#x54EA;&#x4E2A;&#xFF0C;&#x6E32;&#x67D3;&#x76EE;&#x6807;&#x662F;&#x7531;<code>root.nextExpirationTimeToWorkOn</code>&#x6765;&#x51B3;&#x5B9A;&#x7684;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x4ED6;&#x4EEC;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#x5462;&#xFF1F;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x53D1;&#x6325;&#x4F5C;&#x7528;&#x7684;&#x9636;&#x6BB5;</p>
+<p><code>expirationTime</code>&#x4F5C;&#x7528;&#x4E8E;&#x8C03;&#x5EA6;&#x9636;&#x6BB5;&#xFF0C;&#x4E3B;&#x8981;&#x6307;&#x8D23;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x51B3;&#x5B9A;&#x662F;&#x5F02;&#x6B65;&#x6267;&#x884C;&#x6E32;&#x67D3;&#x8FD8;&#x662F;&#x540C;&#x6B65;&#x6267;&#x884C;&#x6E32;&#x67D3;</li>
+<li>&#x4F5C;&#x4E3A;<code>react-scheduler</code>&#x7684;<code>timeout</code>&#x6807;&#x51C6;&#xFF0C;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8981;&#x4F18;&#x5148;&#x6E32;&#x67D3;</li>
+</ul>
+<p><code>nextExpirationTimeToWorkOn</code>&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x9636;&#x6BB5;&#xFF1A;</p>
+<ul>
+<li>&#x51B3;&#x5B9A;&#x90A3;&#x4E9B;&#x66F4;&#x65B0;&#x8981;&#x5728;&#x5F53;&#x524D;&#x5468;&#x671F;&#x4E2D;&#x88AB;&#x6267;&#x884C;</li>
+<li>&#x901A;&#x8FC7;&#x8DDF;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;<code>expirationTime</code>&#x6BD4;&#x8F83;&#x51B3;&#x5B9A;&#x8BE5;&#x8282;&#x70B9;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;<code>bailout</code>&#xFF08;&#x8DF3;&#x8FC7;&#xFF09;</li>
+</ul>
+<p>&#x4ED6;&#x4EEC;&#x90FD;&#x662F;&#x901A;&#x8FC7;<code>pendingTime</code>&#x3001;<code>suspenededTime</code>&#x548C;<code>pingedTime</code>&#x4E2D;&#x5220;&#x9009;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x552F;&#x4E00;&#x7684;&#x4E0D;&#x540C;&#x662F;&#xFF0C;<code>nextExpirationTimeToWorkOn</code>&#x5728;&#x6CA1;&#x6709;<code>pending</code>&#x6216;&#x8005;<code>pinged</code>&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x9009;&#x62E9;&#x6700;&#x665A;&#x7684;<code>suspendedTime</code>&#xFF0C;&#x800C;<code>expirationTime</code>&#x4F1A;&#x9009;&#x62E9;&#x6700;&#x65E9;&#x7684;</p>
+<p><code>expirationTime</code>&#x7684;&#x53D8;&#x5316;&#xFF1A;</p>
+<ul>
+<li>&#x5728;<code>scheduleWork</code>&#x7684;&#x65F6;&#x5019;&#x901A;&#x8FC7;<code>markPendingExpirationTime</code>&#x8BBE;&#x7F6E;</li>
+<li>&#x5728;<code>beginWork</code>&#x7684;&#x65F6;&#x5019;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;<code>NoWork</code></li>
+<li>&#x5728;<code>onUncaughtError</code>&#x7684;&#x65F6;&#x5019;&#x8BBE;&#x7F6E;&#x4E3A;<code>NoWork</code></li>
+<li><code>onSuspend</code>&#x7684;&#x65F6;&#x5019;&#x53C8;&#x4F1A;&#x8BBE;&#x7F6E;&#x56DE;&#x5F53;&#x6B21;&#x66F4;&#x65B0;&#x7684;<code>expirationTime</code></li>
+</ul>
+<p><strong>&#x8FD9;&#x91CC;&#x7684;&#x4E0D;&#x540C;&#x9009;&#x62E9;&#x6211;&#x5230;&#x76EE;&#x524D;&#x4E5F;&#x6CA1;&#x6709;&#x975E;&#x5E38;&#x6E05;&#x6670;&#x7684;&#x7406;&#x89E3;&#xFF0C;&#x5C1D;&#x8BD5;&#x8DDF;</strong><em><strong>dan</strong></em><strong>&#x6C9F;&#x901A;&#x4E86;&#x89E3;&#x6CA1;&#x5F97;&#x5230;&#x4EC0;&#x4E48;&#x53CD;&#x9988;&#xFF0C;&#x8DDF;</strong><em><strong>&#x53F8;&#x5F92;&#x6B63;&#x7F8E;</strong></em><strong>&#x5927;&#x5927;&#x804A;&#x8D77;&#x8FC7;&#xFF0C;&#x4ED6;&#x89C9;&#x5F97;&#x8FD9;&#x90E8;&#x5206;&#x529F;&#x80FD;&#x76EE;&#x524D;&#x5176;&#x5B9E;&#x8FD8;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x7A33;&#x5B9A;&#xFF0C;&#x6709;&#x4E9B;&#x4EE3;&#x7801;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x4E34;&#x65F6;&#x6027;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x4E0D;&#x5FC5;&#x8981;&#x592A;&#x6DF1;&#x7A76;&#xFF0C;&#x6240;&#x4EE5;&#x76EE;&#x524D;&#x6765;&#x8BF4;&#x5927;&#x5BB6;&#x53EA;&#x8981;&#x77E5;&#x9053;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x5C31;&#x53EF;&#x4EE5;<br>&#xFF08;&#x8FD9;&#x4E00;&#x6BB5;&#x610F;&#x601D;&#x662F;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x8FD9;&#x4E9B;&#x9009;&#x62E9;&#x7684;&#x903B;&#x8F91;&#xFF09;</strong></p>
+<p>&#x5C55;&#x793A;&#x4E00;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findNextExpirationTimeToWorkOn</span>(<span class="hljs-params">completedExpirationTime, root</span>) </span>{
+  <span class="hljs-keyword">const</span> earliestSuspendedTime = root.earliestSuspendedTime
+  <span class="hljs-keyword">const</span> latestSuspendedTime = root.latestSuspendedTime
+  <span class="hljs-keyword">const</span> earliestPendingTime = root.earliestPendingTime
+  <span class="hljs-keyword">const</span> latestPingedTime = root.latestPingedTime
+
+  <span class="hljs-keyword">let</span> nextExpirationTimeToWorkOn =
+    earliestPendingTime !== NoWork ? earliestPendingTime : latestPingedTime
+
+  <span class="hljs-keyword">if</span> (
+    nextExpirationTimeToWorkOn === NoWork &amp;&amp;
+    (completedExpirationTime === NoWork ||
+      latestSuspendedTime &gt; completedExpirationTime)
+  ) {
+    nextExpirationTimeToWorkOn = latestSuspendedTime
+  }
+
+  <span class="hljs-keyword">let</span> expirationTime = nextExpirationTimeToWorkOn
+  <span class="hljs-keyword">if</span> (
+    expirationTime !== NoWork &amp;&amp;
+    earliestSuspendedTime !== NoWork &amp;&amp;
+    earliestSuspendedTime &lt; expirationTime
+  ) {
+    expirationTime = earliestSuspendedTime
+  }
+
+  root.nextExpirationTimeToWorkOn = nextExpirationTimeToWorkOn
+  root.expirationTime = expirationTime
+}
+</code></pre>
+<p>&#x6BCF;&#x6B21;&#x5F00;&#x59CB;&#x8C03;&#x5EA6;&#x4EFB;&#x52A1;&#xFF0C;&#x6216;&#x8005;&#x8BBE;&#x7F6E;<code>pendingTime</code>&#x3001;<code>suspendedTime</code>&#x3001;<code>pingedTime</code>&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CD;&#x65B0;&#x5220;&#x9009;&#x63A5;&#x4E0B;&#x53BB;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x70B9;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x60C5;&#x51B5;&#x90FD;&#x662F;&#x4ECE;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5220;&#x9009;&#x51FA;&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x5728;<code>renderRoot</code>&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x6355;&#x83B7;&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x6709;&#x66F4;&#x4F4E;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F3A;&#x5236;&#x4EE5;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x628A;&#x5F53;&#x524D;<code>expirationTime</code>&#x7684;&#x4EFB;&#x52A1;&#x518D;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x4E86;&#x4E00;&#x904D;</p>
+<pre><code class="lang-javascript">root.didError = <span class="hljs-literal">true</span>
+<span class="hljs-keyword">const</span> suspendedExpirationTime = (root.nextExpirationTimeToWorkOn = expirationTime)
+<span class="hljs-keyword">const</span> rootExpirationTime = (root.expirationTime = Sync)
+<span class="hljs-comment">// &#x4EC0;&#x4E48;&#x4E8B;&#x60C5;&#x90FD;&#x4E0D;&#x505A;&#xFF0C;&#x56DE;&#x5230;&#x4E3B;&#x7EBF;&#x7A0B;</span>
+onSuspend(
+  root,
+  rootWorkInProgress,
+  suspendedExpirationTime,
+  rootExpirationTime,
+  <span class="hljs-number">-1</span>, <span class="hljs-comment">// Indicates no timeout</span>
+)
+<span class="hljs-keyword">return</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x628A;<code>root.expirationTime</code>&#x8BBE;&#x7F6E;&#x4E3A;<code>Sync</code>&#xFF0C;&#x7136;&#x540E;&#x76F4;&#x63A5;<code>return</code>&#xFF0C;&#x8FD9;&#x6837;&#x56DE;&#x5230;<code>performWork</code>&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;<code>findHighestPriorityRoot</code>&#x4F1A;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;<code>root</code>&#x4E3A;&#x4E0B;&#x4E00;&#x4E2A;&#x6E32;&#x67D3;&#x7684;&#x76EE;&#x6807;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6B21;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#x3002;<code>performWork</code>&#x7684;&#x5FAA;&#x73AF;&#x6211;&#x4EEC;&#x5728;<a href="https://react.jokcy.me/book/update/expiration-time.html" target="_blank"><code>fiber-scheduler</code></a>&#x4E2D;&#x6709;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3;</p>
+<h4 id="nextflushedexpirationtime-"><a name="nextflushedexpirationtime-" class="anchor-navigation-ex-anchor" href="#nextflushedexpirationtime-"><i class="fa fa-link" aria-hidden="true"></i></a>nextFlushedExpirationTime <a id="nextflushedexpirationtime"></a></h4>
+<p>&#x8FD9;&#x4E2A;&#x662F;&#x5728;<code>fiber-scheduler</code>&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x4E0B;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x7684;<code>FiberRoot</code>&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x3002;&#x6CE8;&#x610F;&#x4ED6;&#x5220;&#x9009;&#x7684;&#x65F6;&#x5019;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x4E2D;&#x6240;&#x6709;<code>FiberRoot</code>&#x7684;&#x4F18;&#x5148;&#x7EA7;&#xFF08;&#x662F;&#x7684;&#xFF0C;&#x4F60;&#x6CA1;&#x770B;&#x9519;&#xFF0C;&#x5E94;&#x8BE5; React &#x5E94;&#x7528;&#x662F;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;<code>FiberRoot</code>&#xFF0C;&#x6BD4;&#x5982;&#x4F60;&#x6267;&#x884C;&#x4E24;&#x6B21;<code>ReactDOM.render</code>&#xFF09;&#xFF0C;&#x5E76;&#x4E0D;&#x5173;&#x5FC3;&#x6BCF;&#x4E2A;<code>FiberRoot</code>&#x5B50;&#x6811;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x3002;</p>
+<p>&#x4ED6;&#x662F;&#x5728;<code>findHighestPriorityRoot</code>&#x4E2D;&#x88AB;&#x8D4B;&#x503C;&#x7684;&#xFF0C;&#x4F1A;&#x904D;&#x5386;<code>firstScheduleRoot -&gt; lastScheduledRoot</code>&#x94FE;&#x8868;&#x4E2D;&#x6240;&#x6709;<code>root</code>&#xFF0C;&#x5E76;&#x627E;&#x5230;&#x4F18;&#x5148;&#x7EA7;&#x6700;&#x9AD8;&#xFF08;&#x4E5F;&#x5C31;&#x662F;<code>expirationTime</code>&#x6700;&#x5C0F;&#xFF09;&#x7684;&#x90A3;&#x4E2A;<code>root</code>&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#xFF0C;&#x5E76;&#x5B89;&#x6392;&#x6E32;&#x67D3;</p>
+<h4 id="nextlatestabsolutetimeoutms-"><a name="nextlatestabsolutetimeoutms-" class="anchor-navigation-ex-anchor" href="#nextlatestabsolutetimeoutms-"><i class="fa fa-link" aria-hidden="true"></i></a>nextLatestAbsoluteTimeoutMs <a id="nextlatestabsolutetimeoutms"></a></h4>
+<p>&#x4ED6;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5728;<code>Suspense</code>&#x7EC4;&#x4EF6;&#x6355;&#x83B7;&#x5230;&#x6302;&#x8D77;&#x4E4B;&#x540E;&#xFF0C;&#x589E;&#x52A0;&#x4E00;&#x4E2A;<code>timeout</code>&#x6765;&#x5F3A;&#x5236;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x4E00;&#x6B21;&#x7684;&#xFF0C;&#x4E0D;&#x8FC7;&#x76EE;&#x524D;&#x770B;&#x4E0D;&#x51FA;&#x8FD9;&#x4E2A;<code>timeout</code>&#x6709;&#x4EC0;&#x4E48;&#x7528;</p>
+<p>&#x8FD9;&#x4E2A;&#x8DDF;<code>Suspense</code>&#x7EC4;&#x4EF6;&#x7684;<code>maxDuration</code>&#x6709;&#x5173;&#xFF0C;&#x4F46;&#x662F;&#x5B98;&#x65B9;&#x6CA1;&#x516C;&#x5E03;&#x7528;&#x6CD5;&#xFF0C;&#x4ECE;&#x6E90;&#x7801;&#x4E2D;&#x4E5F;&#x770B;&#x4E0D;&#x51FA;&#x6709;&#x4EC0;&#x4E48;&#x7528;&#x5904;&#xFF0C;&#x539F;&#x4EE5;&#x4E3A;&#x662F;<strong>&#x591A;&#x5C11;&#x6BEB;&#x79D2;&#x5185;&#x4E0D;&#x663E;&#x793A;<code>fallback</code>&#x7684;&#x5185;&#x5BB9;</strong>&#xFF0C;&#x7ED3;&#x679C;&#x6D4B;&#x8BD5;&#x4E86;&#x4E00;&#x4E0B;&#x53D1;&#x73B0;&#x6CA1;&#x7528;&#x3002;&#x7B49;&#x6709;&#x7A7A;&#x518D;&#x7814;&#x7A76;&#x4E00;&#x4E0B;&#xFF0C;&#x6216;&#x8005;&#x7B49;&#x5B98;&#x65B9;&#x6B63;&#x5F0F;&#x53D1;&#x5E03;&#x5427;&#xFF0C;<em>&#x6BD5;&#x7ADF;&#x73B0;&#x5728;&#x5C31;&#x7B97;&#x7814;&#x7A76;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x53EF;&#x80FD;&#x5206;&#x5206;&#x949F;&#x5C31;&#x88AB;&#x6539;&#x4E86;&#xFF0C;16.5 &#x7684;&#x65F6;&#x5019;&#x8FD8;&#x53EB;<code>delayMs</code>&#xFF0C;16.6 &#x5C31;&#x6539;&#x6210;<code>maxDuration</code>&#x4E86;</em>&#x3002;</p>
+<h4 id="currentschedulertime--currentrenderertime-"><a name="currentschedulertime--currentrenderertime-" class="anchor-navigation-ex-anchor" href="#currentschedulertime--currentrenderertime-"><i class="fa fa-link" aria-hidden="true"></i></a>currentSchedulerTime &amp; currentRendererTime <a id="currentschedulertime--currentrenderertime"></a></h4>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x65F6;&#x95F4;&#x662F;&#x7528;&#x6765;&#x662F;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#xFF0C;&#x5728;<strong>&#x8BA1;&#x7B97;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</strong>&#x548C;<strong>&#x6BD4;&#x8F83;&#x4EFB;&#x52A1;&#x662F;&#x5426;&#x8FC7;&#x671F;</strong>&#x7684;&#x65F6;&#x5019;&#x90FD;&#x4F1A;&#x7528;&#x5230;<code>currentRendererTime</code>&#xFF0C;<code>currentSchedulerTime</code>&#x5927;&#x90E8;&#x5206;&#x65F6;&#x5019;&#x90FD;&#x662F;&#x7B49;&#x4E8E;<code>currentRendererTime</code>&#x7684;&#xFF0C;&#x90A3;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8BBE;&#x7F6E;&#x4E24;&#x4E2A;&#x65F6;&#x95F4;&#x5462;&#xFF1F;</p>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x56E0;&#x4E3A;<code>batchedUpdates</code>&#x4E86;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x5982;&#x679C;&#x540C;&#x65F6;&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;&#x66F4;&#x65B0;&#x662F;&#x4F1A;&#x4E3A;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x8BA1;&#x7B97;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x7684;&#xFF0C;&#x800C;&#x8BA1;&#x7B97;&#x662F;&#x8981;&#x82B1;&#x65F6;&#x95F4;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x6B21;&#x90FD;&#x662F;&#x8BF7;&#x6C42;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#xFF0C;&#x90A3;&#x4E48;&#x540C;&#x4E00;&#x4E2A;<code>batch</code>&#x4E2D;&#x7684;&#x4E0D;&#x540C;&#x66F4;&#x65B0;&#x5F97;&#x5230;&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x5C31;&#x4F1A;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;<code>batch</code>&#x4E2D;&#x83B7;&#x53D6;&#x7684;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x5E94;&#x8BE5;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x8BBE;&#x7F6E;&#x4E86;&#x8FD9;&#x4E48;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x8BF7;&#x6C42;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x6709;&#x8FD9;&#x4E48;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-javascript">findHighestPriorityRoot()
+<span class="hljs-keyword">if</span> (
+  nextFlushedExpirationTime === NoWork ||
+  nextFlushedExpirationTime === Never
+) {
+  recomputeCurrentRendererTime()
+  currentSchedulerTime = currentRendererTime
+  <span class="hljs-keyword">return</span> currentSchedulerTime
+}
+</code></pre>
+<p><code>findHighestPriorityRoot</code>&#x4F1A;&#x8BBE;&#x7F6E;<code>nextFlushedExpirationTime</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x6709;&#x5728;&#x5F53;&#x524D;&#x6CA1;&#x6709;&#x7B49;&#x5F85;&#x4E2D;&#x7684;&#x66F4;&#x65B0;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x624D;&#x4F1A;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="fiber.html" class="navigation navigation-prev " aria-label="Previous page: Fiber">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.html" class="navigation navigation-next " aria-label="Next page: React源码常用方法、全局变量<一>">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"搬运：https://react.jokcy.me/book/update/expiration-time.html （jocy老师的react源码分析）","title":"ExpirationTime","level":"1.5.2","depth":2,"next":{"title":"React源码常用方法、全局变量<一>","level":"1.5.3","depth":2,"path":"react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.md","ref":"react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.md","articles":[]},"previous":{"title":"Fiber","level":"1.5.1","depth":2,"path":"react-xiang-guan-1/fiber.md","ref":"react-xiang-guan-1/fiber.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","theme-comscore","ga","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Github","base":"https://github.com/AieraFlyyyy/NoteBook"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react-xiang-guan-1/expirationtime.md","mtime":"2021-03-06T03:02:13.751Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-06T03:50:49.302Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

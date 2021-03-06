@@ -1,0 +1,767 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>767.重构字符串 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shang-sheng-xia-jiang-zi-fu-chuan.html" />
+    
+    
+    <link rel="prev" href="yi-diaokwei-shu-zi.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/">
+            
+                    
+                    面试知识点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/js-fu-zhi-zi-ding-yi-nei-rong.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/js-fu-zhi-zi-ding-yi-nei-rong.html">
+            
+                    
+                    JS复制自定义内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shu-zu-fang-fa.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shu-zu-fang-fa.html">
+            
+                    
+                    数组方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/untitled-1.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/untitled-1.html">
+            
+                    
+                    字符串方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/fang-dou-jie-liu-han-shu.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/fang-dou-jie-liu-han-shu.html">
+            
+                    
+                    防抖节流函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/guan-yu-react-de-setstate.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/guan-yu-react-de-setstate.html">
+            
+                    
+                    关于react的setState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/wei-yun-suan.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/wei-yun-suan.html">
+            
+                    
+                    位运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/liu-lan-qi-huan-cun-ce-lve.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/liu-lan-qi-huan-cun-ce-lve.html">
+            
+                    
+                    浏览器缓存策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/pan-duan-ye-mian-shi-fou-hua-dong-dao-zui-di-bu.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/pan-duan-ye-mian-shi-fou-hua-dong-dao-zui-di-bu.html">
+            
+                    
+                    判断页面是否滑动到最底部
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/zu-zhi-mao-pao-he-bu-huo.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/zu-zhi-mao-pao-he-bu-huo.html">
+            
+                    
+                    阻止冒泡和捕获
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/kua-yu-jie-jue-fang-an.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/kua-yu-jie-jue-fang-an.html">
+            
+                    
+                    跨域解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-shi-xian-new.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-shi-xian-new.html">
+            
+                    
+                    手写实现new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.html">
+            
+                    
+                    手写Intenceof
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-promise.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-promise.html">
+            
+                    
+                    手写Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../js-fu-zhi-zi-ding-yi-nei-rong/event-loop.html">
+            
+                <a href="../js-fu-zhi-zi-ding-yi-nei-rong/event-loop.html">
+            
+                    
+                    Event Loop中的宏任务与微任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    算法题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="xuan-zhuan-tu-xiang.html">
+            
+                <a href="xuan-zhuan-tu-xiang.html">
+            
+                    
+                    48.旋转图像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="bu-tong-lu-jing.html">
+            
+                <a href="bu-tong-lu-jing.html">
+            
+                    
+                    62.不同路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="188.-mai-mai-gu-piao-de-zui-jia-shi-ji.html">
+            
+                <a href="188.-mai-mai-gu-piao-de-zui-jia-shi-ji.html">
+            
+                    
+                    86.分隔链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="ji-shu-zhi-shu.html">
+            
+                <a href="ji-shu-zhi-shu.html">
+            
+                    
+                    204.计数质数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="zhao-bu-tong.html">
+            
+                <a href="zhao-bu-tong.html">
+            
+                    
+                    389.找不同
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="yi-diaokwei-shu-zi.html">
+            
+                <a href="yi-diaokwei-shu-zi.html">
+            
+                    
+                    402.移掉K位数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="zhong-gou-zi-fu-chuan.html">
+            
+                <a href="zhong-gou-zi-fu-chuan.html">
+            
+                    
+                    767.重构字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="shang-sheng-xia-jiang-zi-fu-chuan.html">
+            
+                <a href="shang-sheng-xia-jiang-zi-fu-chuan.html">
+            
+                    
+                    1370.上升下降字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/">
+            
+                    
+                    工具类知识整理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/git-fen-zhi-guan-li.html">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/git-fen-zhi-guan-li.html">
+            
+                    
+                    Git 分支管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/qing-chu-git-zhong-de-huan-cun-ping-ju.html">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/qing-chu-git-zhong-de-huan-cun-ping-ju.html">
+            
+                    
+                    清除Git中的缓存凭据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/moment.js-chang-jian-yong-fa-zong-jie.html">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/moment.js-chang-jian-yong-fa-zong-jie.html">
+            
+                    
+                    Moment.js常见用法总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../react-xiang-guan-1/">
+            
+                <a href="../react-xiang-guan-1/">
+            
+                    
+                    React相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../react-xiang-guan-1/fiber.html">
+            
+                <a href="../react-xiang-guan-1/fiber.html">
+            
+                    
+                    Fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../react-xiang-guan-1/expirationtime.html">
+            
+                <a href="../react-xiang-guan-1/expirationtime.html">
+            
+                    
+                    ExpirationTime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.html">
+            
+                <a href="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.html">
+            
+                    
+                    React源码常用方法、全局变量<一>
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang-er.html">
+            
+                <a href="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang-er.html">
+            
+                    
+                    React源码常用方法、全局变量<二>
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >767.重构字符串</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#767&#x91CD;&#x6784;&#x5B57;&#x7B26;&#x4E32;"><b></b>767.&#x91CD;&#x6784;&#x5B57;&#x7B26;&#x4E32;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#xFF1A;"><b></b>&#x9898;&#x76EE;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#xFF1A;"><b></b>&#x601D;&#x8DEF;&#xFF1A;</a></li></ul></ul></ul></div><a href="#767&#x91CD;&#x6784;&#x5B57;&#x7B26;&#x4E32;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="767&#x91CD;&#x6784;&#x5B57;&#x7B26;&#x4E32;"><a name="767&#x91CD;&#x6784;&#x5B57;&#x7B26;&#x4E32;" class="anchor-navigation-ex-anchor" href="#767&#x91CD;&#x6784;&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a>767.&#x91CD;&#x6784;&#x5B57;&#x7B26;&#x4E32;</h1>
+<h3 id="&#x9898;&#x76EE;&#xFF1A;"><a name="&#x9898;&#x76EE;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9898;&#x76EE;&#xFF1A;</h3>
+<pre><code class="lang-javascript">&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;S&#xFF0C;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x80FD;&#x91CD;&#x65B0;&#x6392;&#x5E03;&#x5176;&#x4E2D;&#x7684;&#x5B57;&#x6BCD;&#xFF0C;&#x4F7F;&#x5F97;&#x4E24;&#x76F8;&#x90BB;&#x7684;&#x5B57;&#x7B26;&#x4E0D;&#x540C;&#x3002;
+
+&#x82E5;&#x53EF;&#x884C;&#xFF0C;&#x8F93;&#x51FA;&#x4EFB;&#x610F;&#x53EF;&#x884C;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x82E5;&#x4E0D;&#x53EF;&#x884C;&#xFF0C;&#x8FD4;&#x56DE;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;
+
+&#x793A;&#x4F8B; <span class="hljs-number">1</span>:
+
+&#x8F93;&#x5165;: S = <span class="hljs-string">&quot;aab&quot;</span>
+&#x8F93;&#x51FA;: <span class="hljs-string">&quot;aba&quot;</span>
+
+&#x793A;&#x4F8B; <span class="hljs-number">2</span>:
+
+&#x8F93;&#x5165;: S = <span class="hljs-string">&quot;aaab&quot;</span>
+&#x8F93;&#x51FA;: <span class="hljs-string">&quot;&quot;</span>
+</code></pre>
+<h3 id="&#x601D;&#x8DEF;&#xFF1A;"><a name="&#x601D;&#x8DEF;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x601D;&#x8DEF;&#xFF1A;</h3>
+<p>1.&#x9996;&#x5148;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;hash&#xFF0C;&#x8BB0;&#x5F55;&#x4E0B;&#x4ECE;a-z&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x51FA;&#x73B0;&#x6B21;&#x6570;<br>2.&#x7136;&#x540E;&#x6839;&#x636E;&#x5927;&#x5C0F;sort&#x6392;&#x5E8F;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x628A;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x6700;&#x591A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x627E;&#x51FA;&#x6765;<br>3.&#x5224;&#x65AD;&#x53EF;&#x4E0D;&#x53EF;&#x4EE5;&#x7EC4;&#x6210;&#x76EE;&#x6807;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x770B;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x6700;&#x591A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6570;&#x91CF;&#x662F;&#x5426;&#x5927;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x603B;&#x6570;&#x91CF;&#x7684;&#x4E00;&#x534A;<br>4.&#x5982;&#x679C;&#x53EF;&#x4EE5;&#x7EC4;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;&#x5FAA;&#x73AF;&#x62FC;&#x63A5;</p>
+<p>&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> reorganizeString = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">S</span>) </span>{
+    <span class="hljs-keyword">let</span> hashArr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">26</span>).fill(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>;i&lt;S.length;i++){
+        <span class="hljs-keyword">let</span> item = hashArr[S[i].charCodeAt()<span class="hljs-number">-97</span>];
+        <span class="hljs-keyword">if</span>(item){
+            item.count++;
+        }<span class="hljs-keyword">else</span>{
+            hashArr[S[i].charCodeAt()<span class="hljs-number">-97</span>] = {name:S[i],count:<span class="hljs-number">1</span>}
+        }
+    }
+    hashArr = hashArr.filter((v)=&gt;v!=<span class="hljs-number">0</span>);
+    hashArr.sort((a,b)=&gt;(b.count-a.count));
+
+    <span class="hljs-keyword">let</span> ans = []
+    <span class="hljs-keyword">if</span>(hashArr[<span class="hljs-number">0</span>].count&gt;<span class="hljs-built_in">Math</span>.ceil(S.length/<span class="hljs-number">2</span>)){
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>;i&lt;hashArr[<span class="hljs-number">0</span>].count;i++){
+            ans.push(hashArr[<span class="hljs-number">0</span>].name);
+        }
+        <span class="hljs-keyword">let</span> cur = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">while</span>(cur &lt; hashArr.length){
+            ans.splice(i,<span class="hljs-number">0</span>,hashArr[cur].name);
+            hashArr[cur].count--;
+            <span class="hljs-keyword">if</span>(!hashArr[cur].count){
+                cur++;
+            }
+            i+=<span class="hljs-number">2</span>;
+            <span class="hljs-keyword">if</span>(i&gt;=ans.length+<span class="hljs-number">1</span>){
+                i=<span class="hljs-number">1</span>;
+            }
+
+        }
+    }
+    <span class="hljs-keyword">return</span> ans.join(<span class="hljs-string">&apos;&apos;</span>);
+};
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="yi-diaokwei-shu-zi.html" class="navigation navigation-prev " aria-label="Previous page: 402.移掉K位数字">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shang-sheng-xia-jiang-zi-fu-chuan.html" class="navigation navigation-next " aria-label="Next page: 1370.上升下降字符串">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"767.重构字符串","level":"1.3.7","depth":2,"next":{"title":"1370.上升下降字符串","level":"1.3.8","depth":2,"path":"suan-fa-ti-1/shang-sheng-xia-jiang-zi-fu-chuan.md","ref":"suan-fa-ti-1/shang-sheng-xia-jiang-zi-fu-chuan.md","articles":[]},"previous":{"title":"402.移掉K位数字","level":"1.3.6","depth":2,"path":"suan-fa-ti-1/yi-diaokwei-shu-zi.md","ref":"suan-fa-ti-1/yi-diaokwei-shu-zi.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","theme-comscore","ga","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Github","base":"https://github.com/AieraFlyyyy/NoteBook"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"suan-fa-ti-1/zhong-gou-zi-fu-chuan.md","mtime":"2021-03-06T03:02:13.753Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-06T03:50:49.302Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

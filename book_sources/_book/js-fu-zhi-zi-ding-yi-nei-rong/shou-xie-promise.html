@@ -1,0 +1,1152 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>手写Promise · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="event-loop.html" />
+    
+    
+    <link rel="prev" href="shou-xie-intenceof.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    面试知识点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="js-fu-zhi-zi-ding-yi-nei-rong.html">
+            
+                <a href="js-fu-zhi-zi-ding-yi-nei-rong.html">
+            
+                    
+                    JS复制自定义内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="shu-zu-fang-fa.html">
+            
+                <a href="shu-zu-fang-fa.html">
+            
+                    
+                    数组方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="untitled-1.html">
+            
+                <a href="untitled-1.html">
+            
+                    
+                    字符串方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="fang-dou-jie-liu-han-shu.html">
+            
+                <a href="fang-dou-jie-liu-han-shu.html">
+            
+                    
+                    防抖节流函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="guan-yu-react-de-setstate.html">
+            
+                <a href="guan-yu-react-de-setstate.html">
+            
+                    
+                    关于react的setState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="wei-yun-suan.html">
+            
+                <a href="wei-yun-suan.html">
+            
+                    
+                    位运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="liu-lan-qi-huan-cun-ce-lve.html">
+            
+                <a href="liu-lan-qi-huan-cun-ce-lve.html">
+            
+                    
+                    浏览器缓存策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="pan-duan-ye-mian-shi-fou-hua-dong-dao-zui-di-bu.html">
+            
+                <a href="pan-duan-ye-mian-shi-fou-hua-dong-dao-zui-di-bu.html">
+            
+                    
+                    判断页面是否滑动到最底部
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="zu-zhi-mao-pao-he-bu-huo.html">
+            
+                <a href="zu-zhi-mao-pao-he-bu-huo.html">
+            
+                    
+                    阻止冒泡和捕获
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="kua-yu-jie-jue-fang-an.html">
+            
+                <a href="kua-yu-jie-jue-fang-an.html">
+            
+                    
+                    跨域解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="shou-xie-shi-xian-new.html">
+            
+                <a href="shou-xie-shi-xian-new.html">
+            
+                    
+                    手写实现new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="shou-xie-intenceof.html">
+            
+                <a href="shou-xie-intenceof.html">
+            
+                    
+                    手写Intenceof
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.13" data-path="shou-xie-promise.html">
+            
+                <a href="shou-xie-promise.html">
+            
+                    
+                    手写Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="event-loop.html">
+            
+                <a href="event-loop.html">
+            
+                    
+                    Event Loop中的宏任务与微任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../suan-fa-ti-1/">
+            
+                <a href="../suan-fa-ti-1/">
+            
+                    
+                    算法题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../suan-fa-ti-1/xuan-zhuan-tu-xiang.html">
+            
+                <a href="../suan-fa-ti-1/xuan-zhuan-tu-xiang.html">
+            
+                    
+                    48.旋转图像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../suan-fa-ti-1/bu-tong-lu-jing.html">
+            
+                <a href="../suan-fa-ti-1/bu-tong-lu-jing.html">
+            
+                    
+                    62.不同路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../suan-fa-ti-1/188.-mai-mai-gu-piao-de-zui-jia-shi-ji.html">
+            
+                <a href="../suan-fa-ti-1/188.-mai-mai-gu-piao-de-zui-jia-shi-ji.html">
+            
+                    
+                    86.分隔链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../suan-fa-ti-1/ji-shu-zhi-shu.html">
+            
+                <a href="../suan-fa-ti-1/ji-shu-zhi-shu.html">
+            
+                    
+                    204.计数质数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../suan-fa-ti-1/zhao-bu-tong.html">
+            
+                <a href="../suan-fa-ti-1/zhao-bu-tong.html">
+            
+                    
+                    389.找不同
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../suan-fa-ti-1/yi-diaokwei-shu-zi.html">
+            
+                <a href="../suan-fa-ti-1/yi-diaokwei-shu-zi.html">
+            
+                    
+                    402.移掉K位数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../suan-fa-ti-1/zhong-gou-zi-fu-chuan.html">
+            
+                <a href="../suan-fa-ti-1/zhong-gou-zi-fu-chuan.html">
+            
+                    
+                    767.重构字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../suan-fa-ti-1/shang-sheng-xia-jiang-zi-fu-chuan.html">
+            
+                <a href="../suan-fa-ti-1/shang-sheng-xia-jiang-zi-fu-chuan.html">
+            
+                    
+                    1370.上升下降字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/">
+            
+                    
+                    工具类知识整理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/git-fen-zhi-guan-li.html">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/git-fen-zhi-guan-li.html">
+            
+                    
+                    Git 分支管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/qing-chu-git-zhong-de-huan-cun-ping-ju.html">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/qing-chu-git-zhong-de-huan-cun-ping-ju.html">
+            
+                    
+                    清除Git中的缓存凭据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../gong-ju-lei-zhi-shi-zheng-li-1/moment.js-chang-jian-yong-fa-zong-jie.html">
+            
+                <a href="../gong-ju-lei-zhi-shi-zheng-li-1/moment.js-chang-jian-yong-fa-zong-jie.html">
+            
+                    
+                    Moment.js常见用法总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../react-xiang-guan-1/">
+            
+                <a href="../react-xiang-guan-1/">
+            
+                    
+                    React相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../react-xiang-guan-1/fiber.html">
+            
+                <a href="../react-xiang-guan-1/fiber.html">
+            
+                    
+                    Fiber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../react-xiang-guan-1/expirationtime.html">
+            
+                <a href="../react-xiang-guan-1/expirationtime.html">
+            
+                    
+                    ExpirationTime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.html">
+            
+                <a href="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang.html">
+            
+                    
+                    React源码常用方法、全局变量<一>
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang-er.html">
+            
+                <a href="../react-xiang-guan-1/react-yuan-ma-chang-yong-fang-fa-quan-ju-bian-liang-er.html">
+            
+                    
+                    React源码常用方法、全局变量<二>
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >手写Promise</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x624B;&#x5199;promise"><b></b>&#x624B;&#x5199;Promise</a></li><ul><li><span class="title-icon "></span><a href="#&#x5F00;&#x95E8;&#x89C1;&#x5C71;"><b></b>&#x5F00;&#x95E8;&#x89C1;&#x5C71;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E00;&#x3001;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;promise&#x903B;&#x8F91;"><b></b>&#x4E00;&#x3001;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;Promise&#x903B;&#x8F91;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x3001;&#x6EE1;&#x8DB3;&#x94FE;&#x5F0F;&#x8C03;&#x7528;"><b></b>&#x4E8C;&#x3001;&#x6EE1;&#x8DB3;&#x94FE;&#x5F0F;&#x8C03;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x4E09;&#x3001;promise&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;"><b></b>&#x4E09;&#x3001;Promise&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;</a></li></ul></ul></ul></div><a href="#&#x624B;&#x5199;promise" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x624B;&#x5199;promise"><a name="&#x624B;&#x5199;promise" class="anchor-navigation-ex-anchor" href="#&#x624B;&#x5199;promise"><i class="fa fa-link" aria-hidden="true"></i></a>&#x624B;&#x5199;Promise</h1>
+<h2 id="&#x5F00;&#x95E8;&#x89C1;&#x5C71;"><a name="&#x5F00;&#x95E8;&#x89C1;&#x5C71;" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x95E8;&#x89C1;&#x5C71;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x95E8;&#x89C1;&#x5C71;</h2>
+<h4 id="&#x6839;&#x636E;promise&#x7684;&#x51E0;&#x4E2A;&#x7279;&#x70B9;&#xFF1A;"><a name="&#x6839;&#x636E;promise&#x7684;&#x51E0;&#x4E2A;&#x7279;&#x70B9;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x6839;&#x636E;promise&#x7684;&#x51E0;&#x4E2A;&#x7279;&#x70B9;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6839;&#x636E;Promise&#x7684;&#x51E0;&#x4E2A;&#x7279;&#x70B9;&#xFF1A;</h4>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Promise</span> &#x6838;&#x5FC3;&#x5B9E;&#x73B0; - &#x72B6;&#x6001;&#x3001;then
+
+<span class="hljs-built_in">Promise</span>.resolve&#x3001;reject
+
+<span class="hljs-built_in">Promise</span> &#x5F02;&#x6B65;&#x5B9E;&#x73B0;
+
+then &#x65B9;&#x6CD5;&#x591A;&#x6B21;&#x8C03;&#x7528;&#xFF1A;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x5B9E;&#x73B0;
+
+promise.prototype.all
+
+promise.prototype.finally
+
+promise.prototype.catch
+
+...
+</code></pre>
+<h4 id="&#x5168;&#x6587;&#x6211;&#x4EEC;&#x5206;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#x6765;&#x63A8;&#x5BFC;&#xFF1A;&#x4E00;&#x3001;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;&#x903B;&#x8F91;&#xFF1B;&#x4E8C;&#x3001;&#x6EE1;&#x8DB3;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#xFF1B;&#x4E09;&#x3001;&#x5176;&#x4ED6;"><a name="&#x5168;&#x6587;&#x6211;&#x4EEC;&#x5206;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#x6765;&#x63A8;&#x5BFC;&#xFF1A;&#x4E00;&#x3001;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;&#x903B;&#x8F91;&#xFF1B;&#x4E8C;&#x3001;&#x6EE1;&#x8DB3;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#xFF1B;&#x4E09;&#x3001;&#x5176;&#x4ED6;" class="anchor-navigation-ex-anchor" href="#&#x5168;&#x6587;&#x6211;&#x4EEC;&#x5206;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#x6765;&#x63A8;&#x5BFC;&#xFF1A;&#x4E00;&#x3001;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;&#x903B;&#x8F91;&#xFF1B;&#x4E8C;&#x3001;&#x6EE1;&#x8DB3;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#xFF1B;&#x4E09;&#x3001;&#x5176;&#x4ED6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5168;&#x6587;&#x6211;&#x4EEC;&#x5206;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#x6765;&#x63A8;&#x5BFC;&#xFF1A;&#x4E00;&#x3001;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;&#x903B;&#x8F91;&#xFF1B;&#x4E8C;&#x3001;&#x6EE1;&#x8DB3;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#xFF1B;&#x4E09;&#x3001;&#x5176;&#x4ED6;</h4>
+<h3 id="&#x4E00;&#x3001;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;promise&#x903B;&#x8F91;"><a name="&#x4E00;&#x3001;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;promise&#x903B;&#x8F91;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;promise&#x903B;&#x8F91;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;Promise&#x903B;&#x8F91;</h3>
+<p>1.&#x9996;&#x5148;&#x5B9A;&#x4E49;Promise&#x7684;&#x72B6;&#x6001;<strong>STATUS</strong>&#xFF0C;&#x56E0;&#x4E3A;<strong>STATUS</strong>&#x5FC5;&#x987B;&#x662F;&#x4EE5;&#x4E0B;&#x4E09;&#x79CD;&#x72B6;&#x6001;&#x4E2D;&#x7684;&#x4E00;&#x79CD;&#xFF1A;<strong>Pending&#x3001;Fulfilled&#x3001;Rejected</strong><br>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x6BCF;&#x79CD;<strong>STATUS</strong>&#x662F;&#x552F;&#x4E00;&#x7684; </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> STATUS = {
+    PENDING: <span class="hljs-built_in">Symbol</span>(),
+    FULFILLED: <span class="hljs-built_in">Symbol</span>(),
+    REJECTED: <span class="hljs-built_in">Symbol</span>(),
+}
+</code></pre>
+<p>2.&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E00;&#x4E0B;&#x5168;&#x5C40;&#x5BF9;&#x8C61;</p>
+<pre><code class="lang-javascript">status = STATUS.PENDING;  <span class="hljs-comment">// Promise&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;</span>
+value = <span class="hljs-literal">undefined</span>;        <span class="hljs-comment">// &#x6210;&#x529F;&#x540E;&#x7684;&#x8FD4;&#x56DE;&#x503C;</span>
+reason = <span class="hljs-literal">undefined</span>;       <span class="hljs-comment">// &#x51FA;&#x9519;&#x540E;&#x8FD4;&#x56DE;&#x7684;&#x539F;&#x56E0;</span>
+</code></pre>
+<p>3.&#x63A5;&#x4E0B;&#x6765;&#x5206;&#x522B;&#x5B9A;&#x4E49;resolve&#x3001;reject&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x7528;constructor&#x7ACB;&#x5373;&#x6267;&#x884C;callback&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x628A;resolve&#x3001;reject&#x51FD;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x540E;&#x7EED;&#x56DE;&#x8C03;</p>
+<pre><code class="lang-javascript">  <span class="hljs-comment">// &#x5B9A;&#x4E49;resolve</span>
+  resolve = value =&gt; {
+
+    <span class="hljs-comment">// STATUS&#x72B6;&#x6001;&#x4E00;&#x65E6;&#x6539;&#x53D8;&#xFF0C;&#x5219;&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x4E3A;&#x5176;&#x4ED6;&#x72B6;&#x6001;</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.PENDING) {
+      <span class="hljs-comment">// &#x72B6;&#x6001;&#x6539;&#x4E3A;FULFILLED</span>
+      <span class="hljs-keyword">this</span>.status = STATUS.FULFILLED;
+      <span class="hljs-comment">// &#x8D4B;&#x503C;</span>
+      <span class="hljs-keyword">this</span>.value = value;
+    }
+  }
+
+  <span class="hljs-comment">// &#x5B9A;&#x4E49;reject</span>
+  reject = reason =&gt; {
+
+    <span class="hljs-comment">// STATUS&#x72B6;&#x6001;&#x4E00;&#x65E6;&#x6539;&#x53D8;&#xFF0C;&#x5219;&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x4E3A;&#x5176;&#x4ED6;&#x72B6;&#x6001;</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.PENDING) {
+
+      <span class="hljs-comment">// &#x72B6;&#x6001;&#x6539;&#x4E3A;REJECTED</span>
+      <span class="hljs-keyword">this</span>.status = STATUS.REJECTED;
+      <span class="hljs-comment">// error&#x8D4B;&#x503C;</span>
+      <span class="hljs-keyword">this</span>.reason = reason;
+    }
+  }
+
+  <span class="hljs-keyword">constructor</span>(callback) { 
+    <span class="hljs-comment">//&#x628A;resolve&#x3001;reject&#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x7ED9;&#x4F7F;&#x7528;&#x8005;</span>
+    callback(<span class="hljs-keyword">this</span>.resolve, <span class="hljs-keyword">this</span>.reject);   
+  }
+</code></pre>
+<p>4.&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;then&#x65B9;&#x6CD5;</p>
+<pre><code class="lang-javascript">then = (onFulfilled,onRejected) =&gt;{
+    <span class="hljs-comment">// FULFILLED&#x72B6;&#x6001;&#x8C03;&#x7528;onFulfilled&#x65B9;&#x6CD5;</span>
+    <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.status === STATUS.FULFILLED){
+        onFulfilled(<span class="hljs-keyword">this</span>.value);
+    }
+    <span class="hljs-comment">// REJECTED&#x72B6;&#x6001;&#x8C03;&#x7528;onRejected&#x65B9;&#x6CD5;</span>
+    <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.status === STATUS.REJECTED){
+        onRejected(<span class="hljs-keyword">this</span>.reason)
+    }
+}
+</code></pre>
+<p>&#x7B2C;&#x4E00;&#x9636;&#x6BB5;&#x5B8C;&#x6574;&#x4EE3;&#x7801;:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> STATUS = {
+    PENDING: <span class="hljs-built_in">Symbol</span>(),
+    FULFILLED: <span class="hljs-built_in">Symbol</span>(),
+    REJECTED: <span class="hljs-built_in">Symbol</span>(),
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPromise</span></span>{
+    status = STATUS.PENDING;  <span class="hljs-comment">// Promise&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;</span>
+    value = <span class="hljs-literal">undefined</span>;        <span class="hljs-comment">// &#x6210;&#x529F;&#x540E;&#x7684;&#x8FD4;&#x56DE;&#x503C;</span>
+    reason = <span class="hljs-literal">undefined</span>;       <span class="hljs-comment">// &#x51FA;&#x9519;&#x540E;&#x8FD4;&#x56DE;&#x7684;&#x539F;&#x56E0;</span>
+
+    <span class="hljs-comment">// &#x5B9A;&#x4E49;resolve</span>
+    resolve = value =&gt; {
+
+      <span class="hljs-comment">// STATUS&#x72B6;&#x6001;&#x4E00;&#x65E6;&#x6539;&#x53D8;&#xFF0C;&#x5219;&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x4E3A;&#x5176;&#x4ED6;&#x72B6;&#x6001;</span>
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.PENDING) {
+          <span class="hljs-comment">// &#x72B6;&#x6001;&#x6539;&#x4E3A;FULFILLED</span>
+          <span class="hljs-keyword">this</span>.status = STATUS.FULFILLED;
+          <span class="hljs-comment">// &#x8D4B;&#x503C;</span>
+          <span class="hljs-keyword">this</span>.value = value;
+      }
+    }
+
+    <span class="hljs-comment">// &#x5B9A;&#x4E49;reject</span>
+    reject = reason =&gt; {
+
+      <span class="hljs-comment">// STATUS&#x72B6;&#x6001;&#x4E00;&#x65E6;&#x6539;&#x53D8;&#xFF0C;&#x5219;&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x4E3A;&#x5176;&#x4ED6;&#x72B6;&#x6001;</span>
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.PENDING) {
+          <span class="hljs-comment">// &#x72B6;&#x6001;&#x6539;&#x4E3A;REJECTED</span>
+          <span class="hljs-keyword">this</span>.status = STATUS.REJECTED;
+          <span class="hljs-comment">// error&#x8D4B;&#x503C;</span>
+          <span class="hljs-keyword">this</span>.reason = reason;
+      }
+
+    }
+
+    <span class="hljs-keyword">constructor</span>(callback) { 
+      <span class="hljs-comment">//&#x628A;resolve&#x3001;reject&#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x7ED9;&#x4F7F;&#x7528;&#x8005;</span>
+      callback(<span class="hljs-keyword">this</span>.resolve, <span class="hljs-keyword">this</span>.reject);   
+    }
+
+    then = (onFulfilled,onRejected) =&gt;{
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.status === STATUS.FULFILLED){
+            onFulfilled(<span class="hljs-keyword">this</span>.value);
+        }
+
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.status === STATUS.REJECTED){
+            onRejected(<span class="hljs-keyword">this</span>.reason)
+        }
+    }
+}
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x6548;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+  resolve(<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>);
+}).then(
+  (data) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;success&apos;</span>, data)
+  },
+  (err) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;faild&apos;</span>, err)
+  }
+)
+</code></pre>
+<p>&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;&#xFF1A;</p>
+<p><code>&quot;success &#x6210;&#x529F;&quot;</code></p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x597D;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x6D01;&#x7248;&#x7684;Promise&#x4E86;&#xFF5E;  &#x4F46;&#x5B83;&#x4ECD;&#x7136;&#x6709;&#x5F88;&#x591A;&#x95EE;&#x9898;&#x5B58;&#x5728;&#xFF0C;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x6211;&#x4EEC;&#x7684;MyPromise&#x53EA;&#x80FD;&#x5904;&#x7406;&#x540C;&#x6B65;&#x903B;&#x8F91;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x903B;&#x8F91;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+  setTimeout(() =&gt; {
+    resolve(<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>);
+  },<span class="hljs-number">1000</span>);
+}).then(
+  (data) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;success&apos;</span>, data)
+  },
+  (err) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;faild&apos;</span>, err)
+  }
+)
+</code></pre>
+<p>&#x6267;&#x884C;&#x540E;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x8F93;&#x51FA;&#x3002;<br>&#x56E0;&#x4E3A;&#x5F53;&#x6267;&#x884C;<code>MyPromise.then()</code>&#x65F6;&#xFF0C;resolve&#x8FD8;&#x6CA1;&#x6709;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x6B64;&#x65F6;<code>STATUS</code>&#x5904;&#x4E8E;PENDING&#x72B6;&#x6001;&#xFF0C;&#x5BFC;&#x81F4;&#x4E0D;&#x4F1A;&#x6709;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x4F18;&#x5316;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPromise</span></span>{
+
+    onFulfilledList = []; <span class="hljs-comment">// &#x5B58;&#x653E;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x7684;&#x5217;&#x8868;</span>
+    onRejectedList = [];  <span class="hljs-comment">// &#x5B58;&#x653E;&#x5931;&#x8D25;&#x56DE;&#x8C03;&#x7684;&#x5217;&#x8868;</span>
+
+    resolve = value =&gt; {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.PENDING) {
+          <span class="hljs-keyword">this</span>.status = STATUS.FULFILLED;
+          <span class="hljs-keyword">this</span>.value = value;
+
+          <span class="hljs-comment">// &#x5F53;onFulfilledList &#x5217;&#x8868;&#x4E2D;&#x6709;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x65F6;</span>
+          <span class="hljs-keyword">while</span> (<span class="hljs-keyword">this</span>.onFulfilledList.length) {
+              <span class="hljs-comment">//&#x6267;&#x884C;&#x6240;&#x6709;&#x7684;&#x6210;&#x529F;&#x56DE;&#x8C03;</span>
+              <span class="hljs-keyword">this</span>.onFulfilledList.shift()()    
+          }
+      }
+    }
+
+    reject = reason =&gt; {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.PENDING) {
+          <span class="hljs-keyword">this</span>.status = STATUS.REJECTED;
+          <span class="hljs-keyword">this</span>.reason = reason;
+
+          <span class="hljs-comment">// &#x5F53;onRejectedList &#x5217;&#x8868;&#x4E2D;&#x6709;&#x5931;&#x8D25;&#x56DE;&#x8C03;&#x65F6;</span>
+          <span class="hljs-keyword">while</span> (<span class="hljs-keyword">this</span>.onRejectedList.length) {
+              <span class="hljs-comment">//&#x6267;&#x884C;&#x6240;&#x6709;&#x7684;&#x5931;&#x8D25;&#x56DE;&#x8C03;</span>
+              <span class="hljs-keyword">this</span>.onRejectedList.shift()()    
+          }
+      }
+
+    }
+
+    then = (onFulfilled,onRejected) =&gt;{
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.status === STATUS.FULFILLED){
+            onFulfilled(<span class="hljs-keyword">this</span>.value);
+        }
+
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.status === STATUS.REJECTED){
+            onRejected(<span class="hljs-keyword">this</span>.reason)
+        }
+
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.status === STATUS.PENDING){
+            <span class="hljs-comment">// &#x5982;&#x679C;promise&#x7684;&#x72B6;&#x6001;&#x662F; pending&#xFF0C;</span>
+            <span class="hljs-comment">// &#x9700;&#x8981;&#x5C06; onFulfilled &#x548C; onRejected &#x51FD;&#x6570;&#x5B58;&#x653E;&#x8D77;&#x6765;&#xFF0C;</span>
+            <span class="hljs-comment">// &#x7B49;&#x5F85;&#x72B6;&#x6001;&#x786E;&#x5B9A;&#x540E;&#xFF0C;&#x518D;&#x4F9D;&#x6B21;&#x5C06;&#x5BF9;&#x5E94;&#x7684;&#x51FD;&#x6570;&#x6267;&#x884C;</span>
+            <span class="hljs-keyword">this</span>.onFulfilledList.push(() =&gt; {
+                onFulfilled(<span class="hljs-keyword">this</span>.value)
+            });
+            <span class="hljs-keyword">this</span>.onRejectedList.push(()=&gt; {
+                onRejected(<span class="hljs-keyword">this</span>.reason);
+            })
+        }
+    }
+}
+</code></pre>
+<p>&#x518D;&#x6D4B;&#x8BD5;&#x4E00;&#x6B21;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+  setTimeout(() =&gt; {
+    resolve(<span class="hljs-string">&apos;&#x6210;&#x529F;&apos;</span>);
+  },<span class="hljs-number">1000</span>);
+}).then(
+  (data) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;success&apos;</span>, data)
+  },
+  (err) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;faild&apos;</span>, err)
+  }
+)
+</code></pre>
+<p>&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;&#xFF1A;</p>
+<p><code>&quot;success &#x6210;&#x529F;&quot;</code></p>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x54B1;&#x4EEC;&#x7684;MyPromise&#x7B97;&#x662F;&#x6EE1;&#x8DB3;&#x57FA;&#x672C;&#x9700;&#x6C42;&#x4E86;&#xFF5E;</p>
+<h3 id="&#x4E8C;&#x3001;&#x6EE1;&#x8DB3;&#x94FE;&#x5F0F;&#x8C03;&#x7528;"><a name="&#x4E8C;&#x3001;&#x6EE1;&#x8DB3;&#x94FE;&#x5F0F;&#x8C03;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x3001;&#x6EE1;&#x8DB3;&#x94FE;&#x5F0F;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x6EE1;&#x8DB3;&#x94FE;&#x5F0F;&#x8C03;&#x7528;</h3>
+<p>Promise&#x7684;&#x4E00;&#x4E2A;&#x7279;&#x70B9;&#x662F;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x5F88;&#x591A;&#x4E2A;<code>.then()</code>&#xFF0C;&#x5E76;&#x4E14;&#x524D;&#x4E00;&#x4E2A;then&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x88AB;&#x540E;&#x9762;&#x6240;&#x6709;then&#x83B7;&#x53D6;&#x5230;&#xFF08;&#x5982;&#x679C;&#x540E;&#x9762;&#x7684;then&#x4E0D;&#x505A;&#x4FEE;&#x6539;&#x7684;&#x8BDD;&#xFF09;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;then&#x7684;<strong>&#x94FE;&#x5F0F;&#x8C03;&#x7528;</strong>&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x4E00;&#x8D77;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#xFF1A;&#x5047;&#x5982;&#x6211;&#x4EEC;&#x5728;then&#x4E2D;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x5F53;&#x524D;&#x7684;&#x503C;&#x4F20;&#x7ED9;<code>Promise.then()</code>&#x4E0D;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E86;&#x5417;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5199;&#x4E00;&#x4E2A;&#x517C;&#x5BB9;&#x65B9;&#x6CD5;&#x6765;&#x786E;&#x5B9A;&#x662F;&#x5426;&#x8981;&#x8FD4;&#x56DE;&#x94FE;&#x5F0F;&#x8FD8;&#x662F;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-javascript">then = (onFulfilled,onRejected) =&gt;{
+  <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.status===FULFILLED){
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x72B6;&#x6001;&#x4E3A;FULFILLED&#xFF0C;&#x628A;value&#x4F20;&#x7ED9;&#x540E;&#x9762;&#x7684;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-keyword">const</span> x = onFulfilled(<span class="hljs-keyword">this</span>.value);
+    <span class="hljs-comment">// &#x8BE5;&#x65B9;&#x6CD5;&#x6839;&#x636E;x&#x7684;&#x503C;&#x662F;&#x5426;&#x4E3A;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;</span>
+    resolvePromise(promise2, x, resolve, reject)
+  }
+}
+
+<span class="hljs-keyword">const</span> resolvePromise = (promise2, x, resolve, reject) =&gt; {
+  <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#xFF1A; Promise2&#x5982;&#x679C;&#x7B49;&#x4E8E;x&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x62A5;&#x9519;&#xFF0C;&#x9632;&#x6B62;&#x5FAA;&#x73AF;&#x68C0;&#x7D22;</span>
+  <span class="hljs-keyword">if</span> (promise2 === x) {
+    <span class="hljs-keyword">return</span> reject(<span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">&apos;Chaining cycle detected form promise #&lt;Promise&gt;&apos;</span>))
+  }
+
+  <span class="hljs-keyword">if</span> (x <span class="hljs-keyword">instanceof</span> MyPromise) {
+    <span class="hljs-comment">// &#x5982;&#x679C;x&#x8FD8;&#x662F;Promise&#x8BF4;&#x660E;&#x540E;&#x9762;&#x8FD8;&#x6709;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x7528;then&#x6267;&#x884C;</span>
+    x.then(resolve, reject);
+    } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// &#x5982;&#x679C;x&#x662F;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x76F4;&#x63A5;resolve()</span>
+    resolve(x);
+  }
+}
+</code></pre>
+<p>&#x4F18;&#x5316;&#x540E;&#x7684;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#xFF1A;&#x200B;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> STATUS = {
+    PENDING: <span class="hljs-built_in">Symbol</span>(),
+    FULFILLED: <span class="hljs-built_in">Symbol</span>(),
+    REJECTED: <span class="hljs-built_in">Symbol</span>(),
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPromise</span></span>{
+  status = STATUS.PENDING;  <span class="hljs-comment">// &#x9996;&#x5148;&#x521D;&#x59CB;&#x5316;&#x72B6;&#x6001;&#x4E3A;PENDING</span>
+  value = <span class="hljs-literal">undefined</span>;        <span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x4E3A;undefined</span>
+  reason = <span class="hljs-literal">undefined</span>;       <span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;&#x51FA;&#x9519;&#x539F;&#x56E0;&#x4E3A;undefined</span>
+
+
+  onFulfilledList = []; <span class="hljs-comment">// &#x5B58;&#x653E;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x7684;&#x5217;&#x8868;</span>
+  onRejectedList = [];  <span class="hljs-comment">// &#x5B58;&#x653E;&#x5931;&#x8D25;&#x56DE;&#x8C03;&#x7684;&#x5217;&#x8868;</span>
+
+  resolve = value =&gt; {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.PENDING) {
+        <span class="hljs-keyword">this</span>.status = STATUS.FULFILLED;
+        <span class="hljs-keyword">this</span>.value = value;
+
+        <span class="hljs-comment">// &#x5F53;onFulfilledList &#x5217;&#x8868;&#x4E2D;&#x6709;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x65F6;</span>
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">this</span>.onFulfilledList.length) {
+            <span class="hljs-comment">//&#x6267;&#x884C;&#x6240;&#x6709;&#x7684;&#x6210;&#x529F;&#x56DE;&#x8C03;</span>
+            <span class="hljs-keyword">this</span>.onFulfilledList.shift()()    
+        }
+    }
+  }
+
+  reject = reason =&gt; {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.PENDING) {
+        <span class="hljs-keyword">this</span>.status = STATUS.REJECTED;
+        <span class="hljs-keyword">this</span>.reason = reason;
+
+        <span class="hljs-comment">// &#x5F53;onRejectedList &#x5217;&#x8868;&#x4E2D;&#x6709;&#x5931;&#x8D25;&#x56DE;&#x8C03;&#x65F6;</span>
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">this</span>.onRejectedList.length) {
+            <span class="hljs-comment">//&#x6267;&#x884C;&#x6240;&#x6709;&#x7684;&#x5931;&#x8D25;&#x56DE;&#x8C03;</span>
+            <span class="hljs-keyword">this</span>.onRejectedList.shift()()    
+        }
+    }
+  }
+
+  <span class="hljs-keyword">constructor</span>(callback) {
+    callback(<span class="hljs-keyword">this</span>.resolve, <span class="hljs-keyword">this</span>.reject);    <span class="hljs-comment">//&#x628A;resolve&#x3001;reject&#x65B9;&#x6CD5;&#x6254;&#x7ED9;&#x540E;&#x7EED;&#x56DE;&#x8C03;</span>
+  }
+
+  <span class="hljs-comment">// &#x6838;&#x5FC3;then&#x65B9;&#x6CD5;</span>
+  then = (onFulfilled = () =&gt; { }, onRejected = () =&gt; { }) =&gt; {
+    <span class="hljs-comment">// &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Promise&#x65B9;&#x6CD5;&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x5B83;</span>
+    <span class="hljs-keyword">const</span> promise2 = <span class="hljs-keyword">new</span> MyPromise((resolve, reject) =&gt; {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.FULFILLED) {
+        setTimeout(() =&gt; {
+          <span class="hljs-keyword">try</span> {
+            <span class="hljs-comment">// &#x5982;&#x679C;&#x72B6;&#x6001;&#x4E3A;FULFILLED&#xFF0C;&#x628A;value&#x4F20;&#x7ED9;&#x540E;&#x9762;&#x7684;&#x65B9;&#x6CD5;</span>
+            <span class="hljs-keyword">const</span> x = onFulfilled(<span class="hljs-keyword">this</span>.value);
+            <span class="hljs-comment">// &#x8BE5;&#x65B9;&#x6CD5;&#x6839;&#x636E;x&#x7684;&#x503C;&#x662F;&#x5426;&#x4E3A;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;</span>
+            resolvePromise(promise2, x, resolve, reject)
+          } <span class="hljs-keyword">catch</span> (e) {
+            reject(e)
+          }
+        }, <span class="hljs-number">0</span>)
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.REJECTED) {
+        setTimeout(() =&gt; {
+          <span class="hljs-keyword">try</span> {
+            <span class="hljs-comment">// &#x5982;&#x679C;&#x72B6;&#x6001;&#x4E3A;FULFILLED&#xFF0C;&#x628A;reason&#x4F20;&#x7ED9;&#x540E;&#x9762;&#x7684;&#x65B9;&#x6CD5;</span>
+            <span class="hljs-keyword">const</span> x = onRejected(<span class="hljs-keyword">this</span>.reason)
+            resolvePromise(promise2, x, resolve, reject)
+          } <span class="hljs-keyword">catch</span> (e) {
+            reject(e);
+          }
+        }, <span class="hljs-number">0</span>)
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.status === STATUS.PENDING) {
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x72B6;&#x6001;&#x4E3A;PENDING&#xFF0C;&#x7ED9;onFulfilled&#x3001;onRejected&#x5217;&#x8868;&#x90FD;&#x540C;&#x65F6;&#x65B0;&#x589E;&#x4E00;&#x6761;&#x6267;&#x884C;&#x65B9;&#x6CD5;</span>
+        <span class="hljs-keyword">this</span>.onFulfilledList.push(() =&gt; {
+          setTimeout(() =&gt; {
+            <span class="hljs-keyword">try</span> {
+              <span class="hljs-keyword">const</span> x = onFulfilled(<span class="hljs-keyword">this</span>.value);
+              resolvePromise(promise2, x, resolve, reject)
+            } <span class="hljs-keyword">catch</span> (e) {
+              reject(e)
+            }
+          }, <span class="hljs-number">0</span>)
+        });
+        <span class="hljs-keyword">this</span>.onRejectedList.push(() =&gt; {
+          setTimeout(() =&gt; {
+            <span class="hljs-keyword">try</span> {
+              <span class="hljs-keyword">const</span> x = onRejected(<span class="hljs-keyword">this</span>.reason)
+              resolvePromise(promise2, x, resolve, reject)
+            } <span class="hljs-keyword">catch</span> (e) {
+              reject(e);
+            }
+          }, <span class="hljs-number">0</span>)
+        });
+      }
+    })
+    <span class="hljs-keyword">return</span> promise2;
+  }
+}
+
+<span class="hljs-keyword">const</span> resolvePromise = (promise2, x, resolve, reject) =&gt; {
+  <span class="hljs-comment">// Promise2&#x5982;&#x679C;&#x7B49;&#x4E8E;x&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x62A5;&#x9519;&#xFF0C;&#x9632;&#x6B62;&#x5FAA;&#x73AF;&#x68C0;&#x7D22;</span>
+  <span class="hljs-keyword">if</span> (promise2 === x) {
+    <span class="hljs-keyword">return</span> reject(<span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">&apos;Chaining cycle detected form promise #&lt;Promise&gt;&apos;</span>))
+  }
+
+  <span class="hljs-keyword">if</span> (x <span class="hljs-keyword">instanceof</span> MyPromise) {
+    <span class="hljs-comment">// &#x5982;&#x679C;x&#x8FD8;&#x662F;Promise&#x8BF4;&#x660E;&#x540E;&#x9762;&#x8FD8;&#x6709;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x7528;then&#x6267;&#x884C;</span>
+    x.then(resolve, reject);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// &#x5982;&#x679C;x&#x662F;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x76F4;&#x63A5;resolve()</span>
+    resolve(x);
+  }
+}
+</code></pre>
+<h3 id="&#x4E09;&#x3001;promise&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;"><a name="&#x4E09;&#x3001;promise&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;promise&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;Promise&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;</h3>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6765;&#x5B9E;&#x73B0;promise&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x4E86;&#xFF1A;</p>
+<p>1.finally</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">finally</span> = (callback) =&gt; {
+  <span class="hljs-comment">// &#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5355;&#x72EC;&#x6267;&#x884C;&#x4E00;&#x904D;then&#x65B9;&#x6CD5; </span>
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.then(value =&gt; {
+    <span class="hljs-keyword">return</span> MyPromise.resolve(callback()).then(() =&gt; value)
+  }, reason =&gt; {
+    <span class="hljs-keyword">return</span> MyPromise.resolve(callback()).then(() =&gt; {
+      <span class="hljs-keyword">throw</span> reason
+    })
+  })
+}
+</code></pre>
+<ol>
+<li>all</li>
+</ol>
+<pre><code class="lang-javascript">all = (array) =&gt;{
+  <span class="hljs-keyword">let</span> result = [];
+  <span class="hljs-keyword">let</span> index = <span class="hljs-number">0</span>;
+
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MyPromise((resolve, reject) =&gt; {
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addData</span>(<span class="hljs-params">key, value</span>) </span>{
+      result[key] = value;
+      index++;
+
+      <span class="hljs-comment">// &#x5982;&#x679C;current&#x662F;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x5219;&#x7B49;&#x5230;&#x6240;&#x6709;array&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x518D;resolve()</span>
+      <span class="hljs-keyword">if</span> (index == array.length) {
+        resolve(result)
+      }
+    }
+
+    <span class="hljs-comment">// &#x5FAA;&#x73AF;&#x6267;&#x884C;array&#x4E2D;&#x7684;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; array.length; i++) {
+      <span class="hljs-keyword">const</span> current = array[i];
+
+      <span class="hljs-comment">// &#x6267;&#x884C;&#x4E4B;&#x524D;&#x4E5F;&#x662F;&#x5224;&#x65AD;current&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x5426;&#x662F;Promise</span>
+      <span class="hljs-keyword">if</span> (current <span class="hljs-keyword">instanceof</span> MyPromise) {
+        <span class="hljs-comment">// &#x662F;&#x5219;then&#xFF0C;&#x7EE7;&#x7EED;&#x4F20;&#x9012;</span>
+        current.then(value =&gt; {
+          addData(i, value);
+        }, err =&gt; {
+          <span class="hljs-comment">// &#x6709;&#x9519;&#x8BEF;&#x5C31;reject</span>
+          reject(err)
+        })
+      } <span class="hljs-keyword">else</span> {
+        addData(i, array[i])
+      }
+    }
+  })
+}
+</code></pre>
+<ol>
+<li>race</li>
+</ol>
+<pre><code class="lang-javascript">race = (promises) =&gt;{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+    <span class="hljs-comment">// &#x4E00;&#x8D77;&#x6267;&#x884C;&#x5C31;&#x662F;for&#x5FAA;&#x73AF;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; promises.length; i++) {
+      <span class="hljs-keyword">let</span> val = promises[i];
+      <span class="hljs-keyword">if</span> (val &amp;&amp; <span class="hljs-keyword">typeof</span> val.then === <span class="hljs-string">&apos;function&apos;</span>) {
+        val.then(resolve, reject);
+      } <span class="hljs-keyword">else</span> { <span class="hljs-comment">// &#x666E;&#x901A;&#x503C;</span>
+        resolve(val)
+      }
+    }
+  });
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="shou-xie-intenceof.html" class="navigation navigation-prev " aria-label="Previous page: 手写Intenceof">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="event-loop.html" class="navigation navigation-next " aria-label="Next page: Event Loop中的宏任务与微任务">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"手写Promise","level":"1.2.13","depth":2,"next":{"title":"Event Loop中的宏任务与微任务","level":"1.2.14","depth":2,"path":"js-fu-zhi-zi-ding-yi-nei-rong/event-loop.md","ref":"js-fu-zhi-zi-ding-yi-nei-rong/event-loop.md","articles":[]},"previous":{"title":"手写Intenceof","level":"1.2.12","depth":2,"path":"js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.md","ref":"js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","theme-comscore","ga","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Github","base":"https://github.com/AieraFlyyyy/NoteBook"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-promise.md","mtime":"2021-03-06T03:02:13.737Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-06T03:50:49.302Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
