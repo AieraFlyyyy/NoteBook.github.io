@@ -14,7 +14,25 @@
 
 他只会指向`workInProgress`
 
-3.
+### 3.scheduleWorkToRoot
+
+主要做了以下几个任务
+
+* 找到当前`Fiber`的 root
+* 给更新节点的父节点链上的每个节点的`expirationTime`设置为这个`update`的`expirationTime`，除非他本身时间要小于`expirationTime`
+* 给更新节点的父节点链上的每个节点的`childExpirationTime`设置为这个`update`的`expirationTime`，除非他本身时间要小于`expirationTime`
+
+最终返回 root 节点的`Fiber`对象
+
+### 4.requestWork/addRootToSchedule
+
+**requestWork**其实就是调用**addRootToSchedule**，再加上一些判断和处理，之后根据`expirationTime`调用`performSyncWork`还是`scheduleCallbackWithExpirationTime`
+
+`addRootToSchedule` 的作用是把root加入到调度队列，并且如果ExpirationTime为NoWork或者小于root.ExpirationTime时，则会更新ExpirationTime。 addroottoschedule
+
+
+
+
 
 
 
