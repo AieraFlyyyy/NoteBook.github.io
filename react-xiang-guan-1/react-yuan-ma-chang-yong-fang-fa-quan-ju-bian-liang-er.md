@@ -42,7 +42,7 @@
 
 只要`scheduledHostCallback`还在就继续调用`requestAnimationFrameWithTimeout`，因为这一帧渲染完了可能队列还没情况，本身也是要进入再次调用的，这边就省去了`requestHostCallback`在次调用的必要性
 
-接下去一段代码是用来计算相隔的`requestAnimationFrame`的时差的，这个时差如果连续两次都小鱼当前的`activeFrameTime`，说明平台的帧率是很高的，这种情况下会动态得缩小帧时间。
+接下去一段代码是用来计算相隔的`requestAnimationFrame`的时差的，这个时差如果连续两次都小于当前的`activeFrameTime`，说明平台的帧率是很高的，这种情况下会动态得缩小帧时间。
 
 最后更新`frameDeadline`，然后如果没有触发`idleTick`则发送消息
 
