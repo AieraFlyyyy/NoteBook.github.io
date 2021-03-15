@@ -1,6 +1,6 @@
 # React源码常用方法、全局变量&lt;一&gt;
 
-### 1.createUpdate
+### 1.createUpdate\(\)
 
 创建一个update对象
 
@@ -43,7 +43,7 @@ export function createUpdate(
 }
 ```
 
-### 2.computeExpirationForFiber
+### 2.computeExpirationForFiber\(\)
 
 为fiber对象计算expirationTime
 
@@ -80,7 +80,7 @@ export function computeExpirationForFiber(
 }
 ```
 
-### 3.computeExpirationBucket 、 computeAsyncExpiration、computeInteractiveExpiration
+### 3.computeExpirationBucket \(\)、 computeAsyncExpiration\(\)、computeInteractiveExpiration\(\)
 
 computeExpirationBucket是用来计算ExpirationTime的，根据传入参数的不同，得到不同大小的（用来区分优先级）ExpirationTime，具体可在[ExpirationTime](https://492467237.gitbook.io/notebook/react-xiang-guan-1/expirationtime#expirationtime-%E5%85%AC%E5%BC%8F)中详细查看。
 
