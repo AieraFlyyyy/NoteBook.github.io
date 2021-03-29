@@ -1,4 +1,4 @@
-# 位运算
+# 位运算符
 
 ## [赋值运算符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
 
