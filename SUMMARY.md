@@ -21,6 +21,7 @@
 * [算法题](suan-fa-ti-1/README.md)
   * [48.旋转图像](suan-fa-ti-1/xuan-zhuan-tu-xiang.md)
   * [62.不同路径](suan-fa-ti-1/bu-tong-lu-jing.md)
+  * [74.搜索二维矩阵](suan-fa-ti-1/74.-sou-suo-er-wei-ju-zhen.md)
   * [86.分隔链表](suan-fa-ti-1/188.-mai-mai-gu-piao-de-zui-jia-shi-ji.md)
   * [190. 颠倒二进制位](suan-fa-ti-1/190.-dian-dao-er-jin-zhi-wei.md)
   * [204.计数质数](suan-fa-ti-1/ji-shu-zhi-shu.md)
