@@ -18,6 +18,7 @@
   * [手写Intenceof](js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.md)
   * [手写Promise](js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-promise.md)
   * [Event Loop中的宏任务与微任务](js-fu-zhi-zi-ding-yi-nei-rong/event-loop.md)
+  * [原型与原型链](js-fu-zhi-zi-ding-yi-nei-rong/yuan-xing-yu-yuan-xing-lian.md)
 * [算法题](suan-fa-ti-1/README.md)
   * [48.旋转图像](suan-fa-ti-1/xuan-zhuan-tu-xiang.md)
   * [62.不同路径](suan-fa-ti-1/bu-tong-lu-jing.md)
