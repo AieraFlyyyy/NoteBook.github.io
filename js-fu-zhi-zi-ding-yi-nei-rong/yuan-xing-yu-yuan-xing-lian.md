@@ -87,7 +87,7 @@ Obj.constructor = Func
 
 我们用一个简单的图来尽量演示一下它们之间的关系
 
-![](../.gitbook/assets/image%20%2847%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 ### 
 
@@ -101,7 +101,7 @@ Obj.name = 'This is Obj'
 console.log(Obj.name) // This is Obj
 ```
 
-![](../.gitbook/assets/image%20%2841%29.png)
+![](../.gitbook/assets/image%20%2844%29.png)
 
 ### 原型链
 
@@ -125,5 +125,5 @@ console.log(Object.prototype.__proto__ === null) // true
 
 所以最终的关系图就是
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2842%29.png)
 
