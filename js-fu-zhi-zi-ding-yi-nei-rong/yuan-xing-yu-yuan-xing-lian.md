@@ -87,7 +87,7 @@ Obj.constructor = Func
 
 我们用一个简单的图来尽量演示一下它们之间的关系
 
-![](../.gitbook/assets/image%20%2851%29.png)
+![](../.gitbook/assets/image%20%2852%29.png)
 
 ### 
 
