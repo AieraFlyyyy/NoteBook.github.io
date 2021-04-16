@@ -3,6 +3,8 @@
         "disqus"
     ],
     "pluginsConfig": {
-        "shortName": "aieraflyyyy"
+        "disqus": {
+            "shortName": "book-aieraflyyyy"
+        }
     }
 }
