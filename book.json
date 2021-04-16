@@ -1,10 +1,15 @@
 {
     "plugins": [
-        "disqus"
+        "donate"
     ],
     "pluginsConfig": {
-        "disqus": {
-            "shortName": "book.aieraflyyyy"
+        "donate": {
+            "wechat": "https://ftp.bmp.ovh/imgs/2021/04/3a8cba187afa7979.png",
+            "alipay": "https://ftp.bmp.ovh/imgs/2021/04/d5f7406188dea90d.jpg",
+            "title": "觉得不错就赏杯咖啡钱吧～",
+            "button": "赏",
+            "alipayText": "支付宝打赏",
+            "wechatText": "微信打赏"
         }
     }
 }
