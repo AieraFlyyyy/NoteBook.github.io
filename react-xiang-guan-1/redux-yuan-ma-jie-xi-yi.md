@@ -1,10 +1,11 @@
 # Redux源码解析&lt;一&gt;
 
-今天咱们来研究**redux**的源码，放一下**redux**的文件解构
+研究一下**redux**源码，如下是**redux**的文件结构
 
 ![](../.gitbook/assets/image%20%2845%29.png)
 
-这里借鉴一下[**wuming**](https://segmentfault.com/a/1190000016460366)大佬的思路，我们先从简单工具类`utils`开始读，先易后难
+本文许多地方借鉴了[**wuming**](https://segmentfault.com/a/1190000016460366)大佬的思路，先对大佬表示膜拜～  
+那么我也先从简单工具类`utils`开始读，先易后难
 
 ### 
 
@@ -30,9 +31,9 @@ export default ActionTypes
 
 actionTypes文件里定义了三个类型，这个先不过多介绍，主要说一下**randomString\(\)**方法
 
-Math.random\(\)相当于生成一个随机Number对象，之后Number\(\).toString\(36\)可能大家就不太清楚了，其实toString\(radix\)是可以传参的，参数**radix**就是要转换的数字基数，比如toString\(2\)代表转化为2进制
+Math.random\(\)相当于生成一个随机数Number，之后Number\(\).toString\(36\)可能大家不太清楚，其实toString\(radix\)是可以传参的，参数**radix**就是要转换的数字基数，比如toString\(2\)代表转化为2进制
 
-所以这里radix的范围就是2到36， 36 =&gt; 10\(0-9个数字\) + a-z\(26个字母\)
+所以这里radix的范围就是2到36， 36 =&gt; 0-9\(10个数字\) + a-z\(26个字母\)
 
 ![](../.gitbook/assets/image%20%2843%29.png)
 
@@ -96,7 +97,7 @@ export default function warning(message) {
 }
 ```
 
-这里就是一个简单的打印错误信息
+这里就是一个简单的打印错误信息方法，我们只需要从这里知道，原来console方法也有兼容性就行了
 
 
 
@@ -141,7 +142,7 @@ export {
 }
 ```
 
-**index.js**是整个redux的入口文件，尾部的export出来的方法是不是都很熟悉，每个方法对应了一个js,这也是后面我们要分析的。这个有两个点需要讲一下：
+**index.js**是整个redux的入口文件，尾部的export出来的方法是不是都很熟悉，每个方法对应了一个js文件，这也是后面我们要分析的。这个有两个点需要讲一下：
 
 **第一个，\_\_DO\_NOT\_USE\_\_ActionTypes。** 这个很陌生，平时在项目里面我们是不太会用到的，redux的官方文档也没有提到这个，如果你不看源码你可能就不知道这个东西的存在。这个干嘛的呢？我们一点一点往上找，找到这么一行代码：
 
