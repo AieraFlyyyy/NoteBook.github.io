@@ -307,11 +307,13 @@ function dispatch(action) {
 }
 ```
 
+先进行三个错误判断
+
 1. dispatch先判断action是否是对象
 2. action.type是否是undefined
 3. 判断isDispatching，是否有其他reducer在同时操作
 
-isDispatching的作用是防止同时触发两个reducer操作，从而造成数据的紊乱
+**isDispatching**的作用是防止同时触发两个reducer操作，从而造成数据的紊乱
 
 执行前isDispatching设置为true，阻止后续的action进来触发reducer操作，得到的state值赋值给currentState，完成之后再finally里将isDispatching再改为false，允许后续的action进来触发reducer操作。接着一一通知订阅者做数据更新，不传入任何参数。最后返回当前的action。
 
@@ -381,10 +383,12 @@ function subscribe(listener) {
 }
 ```
 
-1. 首先判断listener是否是function
-2. 再判断是否有reducer正在执行
+先进行两个错误判断
 
-接下来执行了函数ensureCanMutateNextListeners，给nextListeners赋一份currentListeners的拷贝
+1. listener是否是function
+2. 是否有reducer正在执行
+
+接下来执行了函数**ensureCanMutateNextListeners\(\)**，给nextListeners赋一份currentListeners的拷贝
 
 ```javascript
 function ensureCanMutateNextListeners() {
@@ -398,15 +402,75 @@ function ensureCanMutateNextListeners() {
 
 ![](../.gitbook/assets/image%20%2840%29.png)
 
-如果不分开那么他俩指向同一个引用，nextListeners的变化会引起currentListeners的变化，所以这里使用浅拷贝给nextListeners赋一个新值
+如果不分开，那么他们俩会指向同一个引用，nextListeners的变化会引起currentListeners的变化
+
+所以为了不污染currentListeners，这里使用浅拷贝给nextListeners赋一个新值
 
 之后把listener入栈nextListeners，并返回一个unsubscribe\(\)方法，用来解绑listener
 
 
 
-#### replaceReducer、observable
+### replaceReducer
 
-这两个方法并不常用，这里暂时不讲
+```javascript
+function replaceReducer(nextReducer) {
+  if (typeof nextReducer !== 'function') {
+    throw new Error('Expected the nextReducer to be a function.')
+  }
+
+  currentReducer = nextReducer
+  dispatch({ type: ActionTypes.REPLACE })
+}
+```
+
+先判断nextReducer是否是函数 ，如果不是则抛出错误
+
+然后用新的nextReducer覆盖currentReducer
+
+之后执行一个`dispatch({ type: ActionTypes.REPLACE })` ，目的是更新所有数据
+
+#### 
+
+### observable
+
+```javascript
+function observable() {
+  const outerSubscribe = subscribe
+  return {
+    /**
+     * The minimal observable subscription method.
+     * @param {Object} observer Any object that can be used as an observer.
+     * The observer object should have a `next` method.
+     * @returns {subscription} An object with an `unsubscribe` method that can
+     * be used to unsubscribe the observable from the store, and prevent further
+     * emission of values from the observable.
+     */
+    subscribe(observer) {
+      if (typeof observer !== 'object' || observer === null) {
+        throw new TypeError('Expected the observer to be an object.')
+      }
+
+      function observeState() {
+        if (observer.next) {
+          observer.next(getState())
+        }
+      }
+
+      observeState()
+      const unsubscribe = outerSubscribe(observeState)
+      return { unsubscribe }
+    },
+
+    [$$observable]() {
+      return this
+    }
+  }
+}
+```
+
+observable，你可以理解为是一个订阅方法，它来自于 [symbol-observable](https://github.com/benlesh/symbol-observable) 这个 npm 包，这个包的作用就是使一个对象 observable, 并且避免掉 observable 对象调用完 error, complete 之后重复调用以及 unsubscribe 之后再调用 next, error, complete 函数
+
+（这个方法我也不是很理解，上面是我搜到的解释，大家知道一下就好
 
 
 
@@ -512,7 +576,7 @@ return function combination(state = {}, action) {
 
 ## compose.js
 
-compose方法也很简单
+compose方法要重点理解一下
 
 ```javascript
 export default function compose(...funcs) {
@@ -528,7 +592,7 @@ export default function compose(...funcs) {
 }
 ```
 
-分三种情况
+首先分三种情况
 
 1. funcs长度为0时，返回一个传入什么就返回什么的函数
 2. funcs长度为1时，返回funcs\[0\]中的函数
@@ -544,9 +608,9 @@ array.reduce((pre,current) =>{
 // 10
 ```
 
-所以这里其实就是把funcs函数数组处理成**函数一元链式调用**
+reduce可以把一个数组里的所有元素按照聚合函数聚合成一个结果
 
-要注意的是，这里的逻辑会时函数数组从右到左执行
+所以这里其实就是把funcs函数数组处理成**函数一元链式调用**
 
 ```javascript
 funcs大概类似这样
@@ -554,11 +618,19 @@ const funcs = [ function A(){},function B(){},function B(){} ]
 funcs.reduce((pre,current) => (...args) => pre(current(...args)) )
 ```
 
+要注意的是，这里的逻辑会时函数数组从右到左执行
+
+
+
 ### 柯里化
 
 可能还是有小伙伴看不懂，那我们来讲一下   \(\) =&gt; \(\) =&gt; \(\)  这种写法的意思
 
 这种函数写法叫做[柯里化](https://baike.baidu.com/item/%E6%9F%AF%E9%87%8C%E5%8C%96/10350525?fr=aladdin)
+
+在计算机科学中，_柯里化_（Currying）是把接受多个参数的函数变换成接受一个单一参数\(最初函数的第一个参数\)的函数，并且返回接受余下的参数且返回结果的新函数的技术。
+
+说人话就是柯里化把原来能接收**两个参数**的函数变为只接收**一个单一参数**的函数，然后函数中返回的是接收**另一个参数**的函数
 
 举个栗子🌰
 
@@ -580,7 +652,7 @@ var add3 = new add(3)    // function(y){ 3+y }
 add3(4) = 7
 ```
 
-在计算机科学中，_柯里化_（Currying）是把接受多个参数的函数变换成接受一个单一参数\(最初函数的第一个参数\)的函数，并且返回接受余下的参数且返回结果的新函数的技术。
 
 
+未完待续。
 
