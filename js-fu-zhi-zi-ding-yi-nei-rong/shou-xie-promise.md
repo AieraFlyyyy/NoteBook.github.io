@@ -26,8 +26,8 @@ promise.prototype.catch
 
 ### 一、满足基本Promise逻辑
 
-1.首先定义Promise的状态**STATUS**，因为**STATUS**必须是以下三种状态中的一种：**Pending、Fulfilled、Rejected**   
-所以我们需要保证每种**STATUS**是唯一的 
+1.首先定义Promise的状态**STATUS**，因为**STATUS**必须是以下三种状态中的一种：**Pending、Fulfilled、Rejected** ，且只能通过内部方法改变**STATUS**状态  
+所以我们需要保证每种**STATUS**的值唯一
 
 ```javascript
 const STATUS = {
