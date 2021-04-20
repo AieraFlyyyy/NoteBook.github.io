@@ -150,7 +150,7 @@ export {
 import __DO_NOT_USE__ActionTypes from './utils/actionTypes'
 ```
 
-这个引入的js不就是我们之前分析的utils的其中一员吗？里面定义了redux自带的action的类型，从这个变量的命名来看，这是帮助开发者检查不要使用redux自带的action的类型，以防出现错误。
+这个引入的js不就是我们之前分析的utils的其中一员吗？里面定义了redux自带的action的类型，从这个变量的命名来看，这是帮助开发者检查不要使用redux自带的action的类型，以防出现错误用的。
 
 **第二个，函数isCrushed。** 这里面定义了一个函数isCrushed，但是函数体里面并没有东西。第一次看的时候很奇怪，为啥要这么干？相信有不少小伙伴们跟我有一样的疑问，继续往下看，紧跟着后面有一段代码：
 
@@ -168,7 +168,13 @@ if (
 }
 ```
 
-看到process.env.NODE\_ENV，这里就要跟我们打包时用的环境变量联系起来。当process.env.NODE\_ENV==='production'这句话直接不成立，所以warning也就不会执行；当process.env.NODE\_ENV!=='production'，比如是我们的开发环境，我们不压缩代码的时候typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed'也不会成立；当process.env.NODE\_ENV!=='production'，同样是我们的开发环境，我们进行了代码压缩，此时isCrushed.name === 'string' && isCrushed.name !== 'isCrushed'就成立了，可能有人不理解isCrushed函数不是在的吗？为啥这句话就不成立了呢？其实很好理解，了解过代码压缩的原理的人都知道，函数isCrushed的函数名将会被一个字母所替代，这里我们举个例子，我将redux项目的在development环境下进行了一次压缩打包。代码做了这么一层转换：
+看到process.env.NODE\_ENV，这里就要跟我们打包时用的环境变量联系起来。
+
+1. 当`process.env.NODE_ENV==='production'`这句话直接不成立，所以warning也就不会执行；
+2. 当`process.env.NODE_ENV!=='production'`时，比如是我们的开发环境，我们不压缩代码的时候 `typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed'` 也不会成立；
+3. 当`process.env.NODE_ENV!=='production'`时，同样是我们的开发环境，我们进行了代码压缩，此时 `isCrushed.name === 'string' && isCrushed.name !== 'isCrushed'` 就成立了。
+
+可能有人不理解isCrushed函数不是在的吗？为啥这句话就不成立了呢？其实很好理解，了解过代码压缩的原理的人都知道，函数isCrushed的函数名将会被一个字母所替代，这里我们举个例子，我将redux项目的在development环境下进行了一次压缩打包。代码做了这么一层转换：
 
 **未压缩**
 
@@ -236,7 +242,7 @@ if (typeof enhancer !== 'undefined') {
 }
 ```
 
-常见的enhancer就是redux-thunk以及redux-saga，一般都会配合applyMiddleware一起使用，而applyMiddleware的作用就是将这些enhancer格式化成符合redux要求的enhancer。具体applyMiddleware实现，下面我们将会讲到。我们先看redux-thunk的使用的例子：
+常见的enhancer就是redux-thunk以及redux-saga，一般都会配合**applyMiddleware**一起使用，而**applyMiddleware**的作用就是将这些enhancer格式化成符合redux要求的enhancer。具体[applyMiddleware](redux-yuan-ma-jie-xi-er.md#applymiddleware-js)实现，下面我们将会讲到。我们先看redux-thunk的使用的例子：
 
 ```javascript
 import { createStore, applyMiddleware } from 'redux';
