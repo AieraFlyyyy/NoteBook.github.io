@@ -45,7 +45,7 @@ value = undefined;        // 成功后的返回值
 reason = undefined;       // 出错后返回的原因
 ```
 
-3.接下来分别定义resolve、reject方法，并用constructor立即执行callback，目的是把resolve、reject函数传递给后续回调
+3.接下来分别定义resolve、reject方法，并把resolve、reject函数传递给调用函数
 
 ```javascript
   // 定义resolve
@@ -271,6 +271,8 @@ const promise = new Promise((resolve, reject) => {
 
 至此，咱们的MyPromise算是满足基本需求了～
 
+
+
 ### 二、满足链式调用
 
 Promise的一个特点是可以执行很多个`.then()`，并且前一个then返回的值可以被后面所有then获取到（如果后面的then不做修改的话），这就是then的**链式调用**。
@@ -281,12 +283,20 @@ Promise的一个特点是可以执行很多个`.then()`，并且前一个then返
 
 ```javascript
 then = (onFulfilled,onRejected) =>{
-  if(this.status===FULFILLED){
-    // 如果状态为FULFILLED，把value传给后面的方法
-    const x = onFulfilled(this.value);
-    // 该方法根据x的值是否为Promise对象，进行不同的处理
-    resolvePromise(promise2, x, resolve, reject)
-  }
+  const promise2 = new MyPromise((resolve, reject) => {
+    if (this.status === STATUS.FULFILLED) {
+      setTimeout(() => {
+        try {
+          // 如果状态为FULFILLED，把value传给后面的方法
+          const x = onFulfilled(this.value);
+          // 该方法根据x的值是否为Promise对象，进行不同的处理
+          resolvePromise(promise2, x, resolve, reject)
+        } catch (e) {
+          reject(e)
+        }
+      }, 0)
+    }
+  })
 }
 
 const resolvePromise = (promise2, x, resolve, reject) => {
