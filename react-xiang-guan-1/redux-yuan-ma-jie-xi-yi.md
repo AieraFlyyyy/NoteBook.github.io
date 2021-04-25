@@ -58,7 +58,7 @@ export default function isPlainObject(obj) {
 }
 ```
 
-这里就一个判断是否是对象的方法**isPlainObject**，看不太懂的同学可以去看我总结的[原型与原型链](../js-fu-zhi-zi-ding-yi-nei-rong/yuan-xing-yu-yuan-xing-lian.md)
+这里就一个判断是否是对象的方法**isPlainObject**，看不太懂的同学可以去看我总结的[原型与原型链](../js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/yuan-xing-yu-yuan-xing-lian.md)
 
 ```javascript
 function MyObj (str){

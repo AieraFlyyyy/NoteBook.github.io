@@ -2,6 +2,9 @@
 
 * [介绍](README.md)
 * [面试知识点](js-fu-zhi-zi-ding-yi-nei-rong/README.md)
+  * [js基础部分](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/README.md)
+    * [原型与原型链](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/yuan-xing-yu-yuan-xing-lian.md)
+    * [bind\(\)、call\(\)、apply\(\)](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/bind-call-apply.md)
   * [数组方法](js-fu-zhi-zi-ding-yi-nei-rong/shu-zu-fang-fa.md)
   * [字符串方法](js-fu-zhi-zi-ding-yi-nei-rong/untitled-1.md)
   * [JS复制自定义内容](js-fu-zhi-zi-ding-yi-nei-rong/js-fu-zhi-zi-ding-yi-nei-rong.md)
@@ -17,7 +20,6 @@
   * [手写Intenceof](js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-intenceof.md)
   * [手写Promise](js-fu-zhi-zi-ding-yi-nei-rong/shou-xie-promise.md)
   * [Event Loop中的宏任务与微任务](js-fu-zhi-zi-ding-yi-nei-rong/event-loop.md)
-  * [原型与原型链](js-fu-zhi-zi-ding-yi-nei-rong/yuan-xing-yu-yuan-xing-lian.md)
 * [算法题](suan-fa-ti-1/README.md)
   * [48.旋转图像](suan-fa-ti-1/xuan-zhuan-tu-xiang.md)
   * [62.不同路径](suan-fa-ti-1/bu-tong-lu-jing.md)
