@@ -52,4 +52,6 @@
   * [关于知行合一](inspiration/guan-yu-zhi-hang-he-yi.md)
 * [游戏相关](you-xi-xiang-guan/README.md)
   * [DL如何入库steam国服](you-xi-xiang-guan/dl-ru-he-ru-ku-guo-fu.md)
+* [Gadget](gadget/README.md)
+  * [识别图片文字](gadget/shi-bie-tu-pian-wen-zi.md)
 
