@@ -4,6 +4,7 @@
 * [面试知识点](js-fu-zhi-zi-ding-yi-nei-rong/README.md)
   * [常用方法](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/README.md)
     * [手写Promise](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/shou-xie-promise.md)
+    * [手写Promise.allSettled](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/shou-xie-promise.allsettled.md)
     * [手写Intenceof](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/shou-xie-intenceof.md)
     * [手写实现new](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/shou-xie-shi-xian-new.md)
     * [阻止冒泡和捕获](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/zu-zhi-mao-pao-he-bu-huo.md)
