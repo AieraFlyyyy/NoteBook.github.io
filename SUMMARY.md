@@ -17,6 +17,7 @@
     * [作用域与闭包](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/zuo-yong-yu-yu-bi-bao.md)
     * [原型与原型链](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/yuan-xing-yu-yuan-xing-lian.md)
     * [bind\(\)、call\(\)、apply\(\)](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/bind-call-apply.md)
+    * [一道题教你弄懂变量/函数提升](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/yi-dao-ti-jiao-ni-nong-dong-bian-liang-han-shu-ti-sheng.md)
   * [常见概念](js-fu-zhi-zi-ding-yi-nei-rong/chang-jian-gai-nian/README.md)
     * [Event Loop中的宏任务与微任务](js-fu-zhi-zi-ding-yi-nei-rong/chang-jian-gai-nian/event-loop.md)
     * [跨域解决方案](js-fu-zhi-zi-ding-yi-nei-rong/chang-jian-gai-nian/kua-yu-jie-jue-fang-an.md)

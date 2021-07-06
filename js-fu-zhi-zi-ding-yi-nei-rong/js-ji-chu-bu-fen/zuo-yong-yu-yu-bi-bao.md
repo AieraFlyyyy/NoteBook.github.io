@@ -46,7 +46,6 @@ console.log(name); // 'Pika Chu'
 ```javascript
 function A (){
     var name = 'pika chu';
-    console.log(a)
     function getName(){
         console.log(name)
     }
