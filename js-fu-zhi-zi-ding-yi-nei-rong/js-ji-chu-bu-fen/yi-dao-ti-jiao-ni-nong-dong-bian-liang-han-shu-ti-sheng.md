@@ -32,7 +32,7 @@ new new Foo().getName();
 
 。。。？？？
 
-![](../../.gitbook/assets/image%20%2867%29.png)
+![](../../.gitbook/assets/image%20%2879%29.png)
 
 原谅我菜，一开始我是真没想到正确的思路
 
@@ -210,7 +210,7 @@ new new Foo().getName();
 
 要搞懂**\*3**，我要先给大家介绍下运算符执行顺序优先级
 
-![](../../.gitbook/assets/image%20%2868%29.png)
+![](../../.gitbook/assets/image%20%2882%29.png)
 
 可以看到 =&gt;  `. [] ()`  这三个运算符的优先级处于所有运算符之最，当程序中有他们三位存在时，他们三位的执行优先级处于最高位
 

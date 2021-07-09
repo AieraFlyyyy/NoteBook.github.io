@@ -2,7 +2,7 @@
 
 * [介绍](README.md)
 * [面试知识点](js-fu-zhi-zi-ding-yi-nei-rong/README.md)
-  * [常用方法](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/README.md)
+  * [高频面试题](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/README.md)
     * [手写Promise](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/shou-xie-promise.md)
     * [手写Promise.allSettled](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/shou-xie-promise.allsettled.md)
     * [手写Intenceof](js-fu-zhi-zi-ding-yi-nei-rong/chang-yong-fang-fa/shou-xie-intenceof.md)
@@ -18,6 +18,7 @@
     * [原型与原型链](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/yuan-xing-yu-yuan-xing-lian.md)
     * [bind\(\)、call\(\)、apply\(\)](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/bind-call-apply.md)
     * [一道题教你弄懂变量/函数提升](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/yi-dao-ti-jiao-ni-nong-dong-bian-liang-han-shu-ti-sheng.md)
+    * [JavaScript三大家族](js-fu-zhi-zi-ding-yi-nei-rong/js-ji-chu-bu-fen/javascript-san-da-jia-zu.md)
   * [常见概念](js-fu-zhi-zi-ding-yi-nei-rong/chang-jian-gai-nian/README.md)
     * [Event Loop中的宏任务与微任务](js-fu-zhi-zi-ding-yi-nei-rong/chang-jian-gai-nian/event-loop.md)
     * [跨域解决方案](js-fu-zhi-zi-ding-yi-nei-rong/chang-jian-gai-nian/kua-yu-jie-jue-fang-an.md)
