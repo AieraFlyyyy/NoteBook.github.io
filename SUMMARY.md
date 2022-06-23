@@ -60,3 +60,6 @@
   * [DL如何入库steam国服](you-xi-xiang-guan/dl-ru-he-ru-ku-guo-fu.md)
 * [Gadget](gadget/README.md)
   * [识别图片文字](gadget/shi-bie-tu-pian-wen-zi.md)
+* [Linx相关](linx-xiang-guan/README.md)
+  * [Linx目录](linx-xiang-guan/linx-mu-lu.md)
+  * [Linx基础命令](linx-xiang-guan/linx-ji-chu-ming-ling.md)
