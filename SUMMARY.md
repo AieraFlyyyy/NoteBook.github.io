@@ -63,3 +63,5 @@
 * [Linx相关](linx-xiang-guan/README.md)
   * [Linx目录](linx-xiang-guan/linx-mu-lu.md)
   * [Linx基础命令](linx-xiang-guan/linx-ji-chu-ming-ling.md)
+  * [Linx快捷键](linx-xiang-guan/linx-kuai-jie-jian.md)
+  * [Page 1](linx-xiang-guan/page-1.md)
