@@ -65,3 +65,4 @@
   * [Linx基础命令](linx-xiang-guan/linx-ji-chu-ming-ling.md)
   * [Linx快捷键](linx-xiang-guan/linx-kuai-jie-jian.md)
   * [Vi/Vim](linx-xiang-guan/vi-vim.md)
+  * [服务控制和安全开关](linx-xiang-guan/fu-wu-kong-zhi-he-an-quan-kai-guan.md)

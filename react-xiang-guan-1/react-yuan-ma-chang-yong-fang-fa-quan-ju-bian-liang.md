@@ -1,6 +1,6 @@
-# React源码常用方法、全局变量<一>
+# React源码常用方法、全局变量&lt;一&gt;
 
-### 1.createUpdate()
+### 1.createUpdate\(\)
 
 创建一个update对象
 
@@ -43,7 +43,7 @@ export function createUpdate(
 }
 ```
 
-### 2.computeExpirationForFiber()
+### 2.computeExpirationForFiber\(\)
 
 为fiber对象计算expirationTime
 
@@ -80,7 +80,7 @@ export function computeExpirationForFiber(
 }
 ```
 
-### 3.computeExpirationBucket ()、 computeAsyncExpiration()、computeInteractiveExpiration()
+### 3.computeExpirationBucket \(\)、 computeAsyncExpiration\(\)、computeInteractiveExpiration\(\)
 
 computeExpirationBucket是用来计算ExpirationTime的，根据传入参数的不同，得到不同大小的（用来区分优先级）ExpirationTime，具体可在[ExpirationTime](https://492467237.gitbook.io/notebook/react-xiang-guan-1/expirationtime#expirationtime-%E5%85%AC%E5%BC%8F)中详细查看。
 
@@ -151,7 +151,7 @@ export function computeInteractiveExpiration(currentTime: ExpirationTime) {
 * 同一个节点产生的连续两次更新，最红在父节点上只会体现一次`childExpirationTime`
 * 不同子树产生的更新，最终体现在跟节点上的是优先级最高的那个更新
 
-![](<../.gitbook/assets/image (21).png>)
+![](../.gitbook/assets/image%20%2821%29.png)
 
 以上图为例，App作为父节点有四个child节点，其中`child2`的ExpirationTime**优先级**最高，所以`App`的ExpirationTime也会是`sync`
 
@@ -159,10 +159,10 @@ export function computeInteractiveExpiration(currentTime: ExpirationTime) {
 
 在`FiberRoot`上有两个值`earliestPendingTime`和`lastestPedingTime`，他们是一对值，**用来记录所有子树中需要进行渲染的更新的`expirationTime`的区间**
 
-**通过追踪最大和最小值，React 可以判断在当前更新之后是否还具有优先级更低的任务需要执行（当前过期时间处理这两个值之间）**\
+**通过追踪最大和最小值，React 可以判断在当前更新之后是否还具有优先级更低的任务需要执行（当前过期时间处理这两个值之间）**  
 
 
-![](<../.gitbook/assets/image (22).png>)
+![](../.gitbook/assets/image%20%2822%29.png)
 
 ### 7**.**suspendedTime
 
@@ -173,7 +173,7 @@ export function computeInteractiveExpiration(currentTime: ExpirationTime) {
 * 出现可捕获的错误并且还有优先级更低的任务的情况下
 * 当捕获到`thenable`，并且需要设置`onTimeout`的时候
 
-我们称这个任务被`suspended`(挂起)了。记录这个时间主要是在`resolve`了`promise`之后，判断被挂起的组件更新是否依然处于目前已有的`suspenedTime`中间，如果不是的话是需要重新计算一个新的过期时间，然后从新加入队列进行调度更新的。
+我们称这个任务被`suspended`\(挂起\)了。记录这个时间主要是在`resolve`了`promise`之后，判断被挂起的组件更新是否依然处于目前已有的`suspenedTime`中间，如果不是的话是需要重新计算一个新的过期时间，然后从新加入队列进行调度更新的。
 
 ### **8**.root.expirationTime 和 root.nextExpirationTimeToWorkOn
 
@@ -193,7 +193,7 @@ export function computeInteractiveExpiration(currentTime: ExpirationTime) {
 
 他们都是通过`pendingTime`、`suspenededTime`和`pingedTime`中删选出来的，唯一的不同是，`nextExpirationTimeToWorkOn`在没有`pending`或者`pinged`的任务的时候会选择最晚的`suspendedTime`，而`expirationTime`会选择最早的
 
-### &#x20;9.currentSchedulerTime & currentRendererTime
+###  9.currentSchedulerTime & currentRendererTime
 
 这两个时间是用来是用来记录当前时间的，在**计算过期时间**和**比较任务是否过期**的时候都会用到`currentRendererTime`，`currentSchedulerTime`大部分时候都是等于`currentRendererTime`的，那为什么要设置两个时间呢？
 
@@ -212,4 +212,6 @@ if (
 ```
 
 `findHighestPriorityRoot`会设置`nextFlushedExpirationTime`，也就是只有在当前没有等待中的更新的情况下，才会重新计算当前时间。
+
+
 

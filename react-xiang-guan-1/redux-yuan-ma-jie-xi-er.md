@@ -1,4 +1,4 @@
-# Redux源码解析<二>
+# Redux源码解析&lt;二&gt;
 
 承接上一部，我们继续来讲redux源码
 
@@ -73,7 +73,7 @@ export const store = createStore(
 )
 ```
 
-&#x20;这里把applyMiddleware(...middlewares)当作第二参数传给**createStore**
+ 这里把applyMiddleware\(...middlewares\)当作第二参数传给**createStore**
 
 [之前](redux-yuan-ma-jie-xi-yi.md#createstore-js)我们讲过，根据createStore的内部逻辑，当preloadedState为function，enhancer为undefined时，会把他俩互换
 
@@ -96,7 +96,7 @@ if (typeof enhancer !== 'undefined') {
 }
 ```
 
-这里把两个参数传给enhancer，一个是createStore方法本身，另一个是替换后的preloadedState(值为undefined)
+这里把两个参数传给enhancer，一个是createStore方法本身，另一个是替换后的preloadedState\(值为undefined\)
 
 然后我们再来看applymiddleware的逻辑
 
@@ -154,7 +154,7 @@ export default function compose(...funcs) {
 
 可以看到，所谓执行middleware，其实也就是将原来的dispatch函数替换为会_遍历执行所有middleware_的新的dispatch函数。那么在执行完并return后，在我们的代码中拿到的store.dispatch函数就是经过修改的新的dispatch函数了，结果就是我们每次调用dispatch都会走一遍所有middlewares。
 
-\
+  
 
 
 ## bindActionCreators.js
@@ -202,3 +202,4 @@ bindActionCreators的逻辑也不复杂，无非就是把传入的actionCreator�
 到此，redux源码解析就算完成啦！
 
 这是我第一次尝试整体解析源码，希望能给大家带来一点收获～
+
