@@ -1,5 +1,5 @@
 ---
-description: '大佬笔记，咱理解到了就赶紧记下来 https://github.com/mqyqingfeng/Blog/issues/2'
+description: 大佬笔记，咱理解到了就赶紧记下来 https://github.com/mqyqingfeng/Blog/issues/2
 ---
 
 # 原型与原型链
@@ -14,9 +14,9 @@ description: '大佬笔记，咱理解到了就赶紧记下来 https://github.co
 
 大家一定要熟记于心的几个名词代表意思：
 
-1. **函数/构造函数**   =&gt;   function a \(\) {}
-2. **对象/实例对象**   =&gt;   var b = new a\(\)
-3. **原型**                     =&gt;   a.prototype / b.\_proto\_
+1. **函数/构造函数**   =>   function a () {}
+2. **对象/实例对象**   =>   var b = new a()
+3. **原型**                     =>   a.prototype / b.\_proto\_
 
 好的下面我们正式开始
 
@@ -40,7 +40,7 @@ console.log(example2.name)    // this is a Func
 
 让Func.prototype.name = 'this is a Func' ，给A的prototype指向的对象赋予一个name
 
-然后我们定义了两个实例对象 example1&example2，并打印他俩的name，发现都是 'this is a Func'
+然后我们定义了两个实例对象 example1\&example2，并打印他俩的name，发现都是 'this is a Func'
 
 ### \_proto\_
 
@@ -65,7 +65,7 @@ console.log(Func === Func.prototype.constructor); // true
 
 ### 什么是原型？
 
-你可以这样理解：每一个JavaScript对象\(null除外\)在创建的时候就会与之关联另一个对象，**这个对象就是我们所说的原型**，每一个对象都会从原型"继承"属性。  
+你可以这样理解：每一个JavaScript对象(null除外)在创建的时候就会与之关联另一个对象，**这个对象就是我们所说的原型**，每一个对象都会从原型"继承"属性。\
 
 
 ### 总结关系
@@ -87,9 +87,9 @@ Obj.constructor = Func
 
 我们用一个简单的图来尽量演示一下它们之间的关系
 
-![](../../.gitbook/assets/image%20%2852%29.png)
+![](<../../.gitbook/assets/image (52).png>)
 
-### 
+###
 
 ### 原型的原型
 
@@ -101,7 +101,7 @@ Obj.name = 'This is Obj'
 console.log(Obj.name) // This is Obj
 ```
 
-![](../../.gitbook/assets/image%20%2844%29.png)
+![](<../../.gitbook/assets/image (44).png>)
 
 ### 原型链
 
@@ -109,7 +109,7 @@ console.log(Obj.name) // This is Obj
 
 null，我们可以打印：
 
-```text
+```
 console.log(Object.prototype.__proto__ === null) // true
 ```
 
@@ -125,5 +125,4 @@ console.log(Object.prototype.__proto__ === null) // true
 
 所以最终的关系图就是
 
-![](../../.gitbook/assets/image%20%2842%29.png)
-
+![](<../../.gitbook/assets/image (42).png>)
